@@ -1,0 +1,24 @@
+<!--
+Copyright (c) 2021, salesforce.com, inc.
+All rights reserved.
+SPDX-License-Identifier: MIT
+For full license text, see the LICENSE file in the repo root or https://opensource.org/licenses/MIT
+-->
+<template>
+    <lightning-card title="WireGetObjectInfo" icon-name="custom:custom67">
+        <div class="slds-var-m-horizontal_medium">
+            <lightning-input value="Account" placeholder="Enter object API name" label="Search"></lightning-input>
+            <p class="slds-var-p-vertical_small">
+                <lightning-button label="Get Object Info" onclick={handleBtnClick}></lightning-button>
+            </p>
+            <template if:true={objectInfo.data}>
+                <div class="scroller">
+                    <pre>{objectInfoStr}</pre>
+                </div>
+            </template>
+        </div>
+        <template if:true={objectInfo.error}>
+            <c-error-panel errors={objectInfo.error}></c-error-panel>
+        </template>
+    </lightning-card>
+</template>

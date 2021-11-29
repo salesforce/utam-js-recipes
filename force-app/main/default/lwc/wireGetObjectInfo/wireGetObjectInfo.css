@@ -1,0 +1,13 @@
+/*
+ * Copyright (c) 2021, salesforce.com, inc.
+ * All rights reserved.
+ * SPDX-License-Identifier: MIT
+ * For full license text, see the LICENSE file in the repo root or https://opensource.org/licenses/MIT
+ */
+
+.scroller {
+    height: 220px;
+    overflow: auto;
+    padding: var(--lwc-varSpacingXSmall, 8px);
+    border: solid var(--lwc-borderWidthThin, 1px) #eee;
+}

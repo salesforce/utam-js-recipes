@@ -1,0 +1,11 @@
+{
+    "files.associations": {
+        "*.utam.json": "jsonc"
+    },
+    "json.schemas": [
+        {
+            "fileMatch": ["*.utam.json"],
+            "url": "https://utam.dev/schemas/v1/utam.json"
+        }
+    ]
+}

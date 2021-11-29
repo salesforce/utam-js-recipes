@@ -1,0 +1,9 @@
+{
+    "compilerOptions": {
+        "checkJs": true,
+        "module": "commonjs",
+        "target": "es2020"
+    },
+    "include": ["force-app/test/**/*"],
+    "exclude": ["node_modules", "utam-preview", "pageObjects"]
+}

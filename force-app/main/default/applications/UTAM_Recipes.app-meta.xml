@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<CustomApplication xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Easy-to-digest code examples for UTAM</description>
+    <formFactors>Large</formFactors>
+    <isNavAutoTempTabsDisabled>false</isNavAutoTempTabsDisabled>
+    <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
+    <label>UTAM Recipes</label>
+    <navType>Standard</navType>
+    <tabs>Hello</tabs>
+    <tabs>Wire</tabs>
+    <uiType>Lightning</uiType>
+</CustomApplication>

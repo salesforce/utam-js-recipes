@@ -1,0 +1,7 @@
+.github/
+build/
+dist/
+node_modules/
+**/pageObjects/
+**/utils/
+*.md

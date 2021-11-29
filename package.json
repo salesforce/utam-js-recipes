@@ -1,0 +1,50 @@
+{
+    "name": "utam-js-recipes",
+    "license": "MIT",
+    "version": "0.0.1",
+    "private": true,
+    "scripts": {
+        "format": "prettier --write .",
+        "test": "wdio",
+        "clean": "rimraf pageObjects/ node_modules/",
+        "build": "yarn compile:utam && cd utam-preview && yarn compile",
+        "compile:utam": "utam -c utam.config.js",
+        "generate:login": "node scripts/generate-login-url.js",
+        "prepare": "husky install"
+    },
+    "devDependencies": {
+        "@babel/cli": "^7.12.17",
+        "@babel/core": "^7.12.17",
+        "@babel/preset-env": "^7.12.17",
+        "@babel/register": "^7.12.13",
+        "@types/jasmine": "3.6.2",
+        "@wdio/cli": "^6.10.10",
+        "@wdio/jasmine-framework": "^6.11.0",
+        "@wdio/local-runner": "^6.12.1",
+        "@wdio/spec-reporter": "^6.11.0",
+        "chromedriver": "^96.0.0",
+        "dotenv": "^8.2.0",
+        "envfile": "^6.17.0",
+        "husky": ">=6",
+        "lint-staged": ">=10",
+        "magic-string": "^0.25.7",
+        "prettier": "2.3.2",
+        "rimraf": "^3.0.2",
+        "wdio-chromedriver-service": "^6.0.4",
+        "wdio-utam-service": "^0.0.12"
+    },
+    "volta": {
+        "node": "14.15.4",
+        "yarn": "1.22.5"
+    },
+    "engines": {
+        "node": ">=14.15.4 <15"
+    },
+    "workspaces": [
+        "./",
+        "utam-preview"
+    ],
+    "lint-staged": {
+        "*.{js,css,md}": "prettier --write"
+    }
+}

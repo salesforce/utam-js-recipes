@@ -1,0 +1,83 @@
+{
+    "shadow": {
+        "elements": [
+            {
+                "name": "lightningInput",
+                "public": true,
+                "type": "utam-lightning/pageObjects/input",
+                "selector": {
+                    "css": "lightning-input"
+                }
+            },
+            {
+                "name": "lightningButton",
+                "public": true,
+                "type": "utam-lightning/pageObjects/button",
+                "selector": {
+                    "css": "lightning-button"
+                }
+            },
+            {
+                "name": "content",
+                "selector": {
+                    "css": "div.slds-card__body pre"
+                }
+            }
+        ]
+    },
+    "methods": [
+        {
+            "name": "searchAndWaitForResponse",
+            "compose": [
+                {
+                    "element": "lightningInput",
+                    "apply": "setText",
+                    "args": [
+                        {
+                            "type": "string",
+                            "name": "textToSearch"
+                        }
+                    ]
+                },
+                {
+                    "element": "lightningButton",
+                    "apply": "click"
+                },
+                {
+                    "apply": "waitFor",
+                    "args": [
+                        {
+                            "type": "function",
+                            "predicate": [
+                                {
+                                    "element": "root",
+                                    "apply": "containsElement",
+                                    "args": [
+                                        {
+                                            "type": "locator",
+                                            "value": {
+                                                "css": "div.slds-card__body pre"
+                                            }
+                                        },
+                                        {
+                                            "value": true
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "getContent",
+            "compose": [
+                {
+                    "element": "content",
+                    "apply": "getText"
+                }
+            ]
+        }
+    ]
+}

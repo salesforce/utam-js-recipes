@@ -1,0 +1,15 @@
+{
+    "orgName": "Lightning UI Testing Scratch Org",
+    "edition": "Developer",
+    "settings": {
+        "lightningExperienceSettings": {
+            "enableS1DesktopEnabled": true
+        },
+        "userEngagementSettings": {
+            "enableShowSalesforceUserAssist": false
+        },
+        "mobileSettings": {
+            "enableS1EncryptedStoragePref2": false
+        }
+    }
+}

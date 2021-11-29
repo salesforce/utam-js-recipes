@@ -1,0 +1,25 @@
+{
+    "shadow": {
+        "elements": [
+            {
+                "name": "lightningCard",
+                "selector": {
+                    "css": "lightning-card"
+                },
+                "type": "utam-lightning/pageObjects/card"
+            }
+        ]
+    },
+    "methods": [
+        {
+            "name": "getText",
+            "compose": [
+                {
+                    "element": "lightningCard",
+                    "apply": "getBodyText",
+                    "returnType": "string"
+                }
+            ]
+        }
+    ]
+}

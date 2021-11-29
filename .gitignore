@@ -1,0 +1,32 @@
+# OS artifacts
+.DS_STORE
+
+# Tools artifacts
+node_modules
+coverage
+.eslintcache
+*.log
+*.pem
+tsconfig.tsbuildinfo
+tsconfig.build.tsbuildinfo
+dump.rdb
+logfile
+.sfdx
+
+# Project artifacts
+__benchmarks_results__/
+testing_dev/
+
+# Builds
+packages/*/build/
+packages/*/dist/
+
+# Generated Page Objects
+**/pageObjects/
+
+# Generated Utils
+**/utils/
+
+# Generated .env
+.env
+**.env

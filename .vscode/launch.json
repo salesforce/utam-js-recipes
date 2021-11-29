@@ -1,0 +1,55 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "debug utam-preview pos build",
+            "request": "launch",
+            "runtimeArgs": ["compile"],
+            "runtimeExecutable": "yarn",
+            "cwd": "${workspaceFolder}/utam-preview",
+            "skipFiles": ["<node_internals>/**"],
+            "type": "pwa-node"
+        },
+        {
+            "name": "debug sfdx pos build",
+            "request": "launch",
+            "runtimeArgs": ["build"],
+            "runtimeExecutable": "yarn",
+            "cwd": "${workspaceFolder}",
+            "skipFiles": ["<node_internals>/**"],
+            "type": "pwa-node"
+        },
+        {
+            "name": "Debug 'crud' test",
+            "type": "node",
+            "request": "launch",
+            "cwd": "${workspaceRoot}",
+            "program": "./node_modules/.bin/wdio",
+            "args": ["--spec", "force-app/test/crud.spec.js"],
+            "console": "integratedTerminal",
+            "skipFiles": ["<node_internals>/**/*.js", "*/node_modules/**/*.js"],
+            "autoAttachChildProcesses": true,
+            "env": {
+                // org login credentials must be manually entered for test to function
+                "MY_ORG_URL": "",
+                "MY_ORG_USERNAME": "",
+                "MY_ORG_PASSWORD": ""
+            }
+        },
+        {
+            "name": "wdio - tests",
+            "env": {
+                "CHROME_HEADLESS": "false",
+                "DEBUG": "true"
+            },
+            "type": "node",
+            "request": "launch",
+            "args": ["--spec", "${file}"],
+            "cwd": "${workspaceFolder}",
+            "autoAttachChildProcesses": true,
+            "program": "${workspaceRoot}/node_modules/.bin/wdio",
+            "skipFiles": ["<node_internals>/**"],
+            "console": "integratedTerminal"
+        }
+    ]
+}

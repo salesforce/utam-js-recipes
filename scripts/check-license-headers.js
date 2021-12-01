@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2018, salesforce.com, inc.
+ * Copyright (c) 2021, salesforce.com, inc.
  * All rights reserved.
  * SPDX-License-Identifier: MIT
  * For full license text, see the LICENSE file in the repo root or https://opensource.org/licenses/MIT
@@ -18,7 +18,7 @@
 
 const fs = require('fs');
 const { execSync } = require('child_process');
-// const { isBinaryFileSync } = require('isbinaryfile');
+const { isBinaryFileSync } = require('isbinaryfile');
 
 const getFileContents = (path) => fs.readFileSync(path, { encoding: 'utf-8' });
 const isDirectory = (path) => fs.lstatSync(path).isDirectory();
@@ -133,7 +133,7 @@ function check() {
             INCLUDED_PATTERNS.some((pattern) => pattern.test(file)) &&
             !IGNORED_PATTERNS.some((pattern) => pattern.test(file)) &&
             !isDirectory(file) &&
-            // !isBinaryFileSync(file) &&
+            !isBinaryFileSync(file) &&
             needsCopyrightHeader(file),
     );
 

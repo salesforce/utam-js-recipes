@@ -209,7 +209,7 @@ $ yarn test --spec force-app/test/crud.spec.js
 
 > Note: that CRUD tests will modify real records in the org so only sandbox or development specific orgs should be used.
 
-### Testing the local app in a scratch org
+### Run the local app in a scratch org test
 
 These tests run under the assumption that the initial URL loaded contains an access token so no manual login is required.
 To generate such URL, follow the Org Setup steps above and then run:

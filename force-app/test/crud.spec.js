@@ -15,8 +15,10 @@ import { RecordType } from './utilities/record-type';
 import { login } from './utilities/salesforce-test';
 import { TestEnvironment } from './utilities/test-environment';
 
+const TEST_ENVIRONMENT_PREFIX = 'na45';
+
 describe('Account Record CRUD recipe', () => {
-    const testEnvironment = new TestEnvironment('na45');
+    const testEnvironment = new TestEnvironment(TEST_ENVIRONMENT_PREFIX);
 
     /**
      * Utility function that open a given record type modal

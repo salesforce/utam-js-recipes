@@ -42,6 +42,7 @@ async function openRecordModal(baseUrl, recordType) {
 
 describe('Record creation tests', () => {
     const testEnvironment = new TestEnvironment('na45');
+    const baseUrl = testEnvironment.redirectUrl;
 
     beforeEach(async () => {
         await login(testEnvironment, 'home');
@@ -77,11 +78,30 @@ describe('Record creation tests', () => {
     });
 */
     it('Create a new Opportunity Record', async () => {
-        let recordFormModal = await openRecordModal(testEnvironment.redirectUrl, RecordType.Opportunity);
+        let recordFormModal = await openRecordModal(baseUrl, RecordType.Opportunity);
         const recordForm = await recordFormModal.getRecordForm();
         const recordLayout = await recordForm.getRecordLayout();
 
-        console.log('Access record form item by index');
-        const item = await recordLayout.getItem(1, 2, 1);
+        console.log("Enter 'Close date' as 01/01/2020");
+        let item = await recordLayout.getItem(1, 1, 2);
+        const datePicker = await item.getDatepicker();
+        await datePicker.setDateText('01/01/2020');
+
+        console.log("Pick first option in a 'Stage' combobox");
+        item = await recordLayout.getItem(1, 2, 2);
+        const stageCombobox = await (await item.getPicklist()).getBaseCombobox();
+        await stageCombobox.expandDisabledAndPickItem(2);
+
+        console.log('Find and pick first account, link it to the opportunity');
+        item = await recordLayout.getItem(1, 3, 1);
+        const accountLookup = await (await item.getLookup()).getBaseCombobox();
+        await accountLookup.expandAndPickItem(1);
+
+        console.log('Enter opportunity name');
+        item = await recordLayout.getItem(1, 2, 1);
+        const nameInput = await item.getTextInput();
+        await nameInput.setText('Opportunity name');
+
+        await browser.pause(2000);
     });
 });

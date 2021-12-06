@@ -125,7 +125,27 @@
                     "chain": true
                 }
             ]
-        }
+        },
+        {
+            "name" : "getDatepicker",
+            "compose" : [
+              {
+                "returnType" : "utam-lightning/pageObjects/input",
+                "element" : "inputField",
+                "args" : [
+                  {
+                    "type" : "pageObject",
+                    "value" : "utam-lightning/pageObjects/input"
+                  }
+                ]
+              },
+              {
+                "chain" : true,
+                "element": "datepicker",
+                "returnType": "utam-lightning/pageObjects/datepicker"
+              }
+            ]
+          }
     ],
     "elements": [
         {

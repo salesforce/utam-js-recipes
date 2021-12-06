@@ -10,6 +10,7 @@
 
 import ConsoleObjectHome from 'utam-preview/pageObjects/consoleObjectHome';
 import RecordActionWrapper from 'utam-preview/pageObjects/recordActionWrapper';
+import RecordHomeFlexipage2 from 'utam-preview/pageObjects/recordHomeFlexipage2';
 import { RecordType } from './utilities/record-type';
 import { login } from './utilities/salesforce-test';
 import { TestEnvironment } from './utilities/test-environment';
@@ -47,7 +48,7 @@ describe('Record creation tests', () => {
     beforeEach(async () => {
         await login(testEnvironment, 'home');
     });
-    /*
+
     it('Create a new Account Record', async () => {
         let recordFormModal = await openRecordModal(testEnvironment.redirectUrl, RecordType.Account);
 
@@ -76,7 +77,7 @@ describe('Record creation tests', () => {
         console.log('Load Accounts Record Home page');
         await utam.load(RecordHomeFlexipage2);
     });
-*/
+
     it('Create a new Opportunity Record', async () => {
         let recordFormModal = await openRecordModal(baseUrl, RecordType.Opportunity);
         const recordForm = await recordFormModal.getRecordForm();
@@ -90,18 +91,25 @@ describe('Record creation tests', () => {
         console.log("Pick first option in a 'Stage' combobox");
         item = await recordLayout.getItem(1, 2, 2);
         const stageCombobox = await (await item.getPicklist()).getBaseCombobox();
-        await stageCombobox.expandDisabledAndPickItem(2);
+        await stageCombobox.expandForDisabledInput();
+        await stageCombobox.pickItem(2);
 
         console.log('Find and pick first account, link it to the opportunity');
         item = await recordLayout.getItem(1, 3, 1);
         const accountLookup = await (await item.getLookup()).getBaseCombobox();
-        await accountLookup.expandAndPickItem(1);
+        await accountLookup.expand();
+        await accountLookup.pickItem(1);
 
         console.log('Enter opportunity name');
         item = await recordLayout.getItem(1, 2, 1);
         const nameInput = await item.getTextInput();
         await nameInput.setText('Opportunity name');
 
-        await browser.pause(2000);
+        console.log('Save new record');
+        await recordForm.clickFooterButton('Save');
+        await recordFormModal.waitForAbsence();
+
+        console.log('Load Record Home page');
+        await utam.load(RecordHomeFlexipage2);
     });
 });

@@ -50,7 +50,7 @@ describe('Record creation tests', () => {
     });
 
     it('Create a new Account Record', async () => {
-        let recordFormModal = await openRecordModal(testEnvironment.redirectUrl, RecordType.Account);
+        let recordFormModal = await openRecordModal(baseUrl, RecordType.Account);
 
         // TODO - depending on org setup, modal might not present, then comment next lines
         console.log("Change Record Type Modal: click button 'Next'");

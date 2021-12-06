@@ -109,7 +109,7 @@
                     ]
                 },
                 {
-                    "apply" : "returnSelf"
+                    "apply": "returnSelf"
                 }
             ]
         }

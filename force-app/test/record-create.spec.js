@@ -22,7 +22,7 @@ const TEST_ENVIRONMENT_PREFIX = 'na45';
  * Utility function that open a given record type modal
  * @param {string} baseUrl test environment
  * @param {RecordType} recordType type of record used in the UI test
- * @returns {RecordActionWrapper} instance of the record modal Page Object
+ * @returns {Promise<RecordActionWrapper>} instance of the record modal Page Object
  */
 async function openRecordModal(baseUrl, recordType) {
     console.log(`Navigate to an Object Home for ${recordType.name}`);

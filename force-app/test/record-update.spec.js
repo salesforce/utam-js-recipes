@@ -14,6 +14,11 @@ import { RecordType } from './utilities/record-type';
 import { login } from './utilities/salesforce-test';
 import { TestEnvironment } from './utilities/test-environment';
 
+// TODO: replace with prefix of the environment from .env file
+const TEST_ENVIRONMENT_PREFIX = 'na45';
+// TODO: replace with existing Account Id for the environment
+const ACCOUNT_RECORD_ID = '001S7000001pSmBIAU';
+
 /**
  * Utility function that returns a given record URL
  * @param {string} baseUrl test environment
@@ -27,16 +32,14 @@ async function gotoRecordHomeByUrl(baseUrl, recordType, recordId) {
 }
 
 describe('Account Record create and update test', () => {
-    const testEnvironment = new TestEnvironment('na45');
+    const testEnvironment = new TestEnvironment(TEST_ENVIRONMENT_PREFIX);
 
     beforeEach(async () => {
         await login(testEnvironment, 'home');
     });
 
     it('Update an existing Account Record', async () => {
-        // TODO: replace with existing Account Id for the environment
-        const accountRecordId = '001S7000001pSmBIAU';
-        await gotoRecordHomeByUrl(testEnvironment.redirectUrl, RecordType.Account, accountRecordId);
+        await gotoRecordHomeByUrl(testEnvironment.redirectUrl, RecordType.Account, ACCOUNT_RECORD_ID);
 
         console.log('Load Accounts Record Home page"');
         const recordHome = await utam.load(RecordHomeFlexipage2);

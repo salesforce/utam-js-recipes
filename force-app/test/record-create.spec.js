@@ -15,10 +15,14 @@ import { RecordType } from './utilities/record-type';
 import { login } from './utilities/salesforce-test';
 import { TestEnvironment } from './utilities/test-environment';
 
+// TODO: replace with prefix of the environment from .env file
+const TEST_ENVIRONMENT_PREFIX = 'na45';
+
 /**
  * Utility function that open a given record type modal
  * @param {string} baseUrl test environment
  * @param {RecordType} recordType type of record used in the UI test
+ * @returns {RecordActionWrapper} instance of the record modal Page Object
  */
 async function openRecordModal(baseUrl, recordType) {
     console.log(`Navigate to an Object Home for ${recordType.name}`);
@@ -42,7 +46,7 @@ async function openRecordModal(baseUrl, recordType) {
 }
 
 describe('Record creation tests', () => {
-    const testEnvironment = new TestEnvironment('na45');
+    const testEnvironment = new TestEnvironment(TEST_ENVIRONMENT_PREFIX);
     const baseUrl = testEnvironment.redirectUrl;
 
     beforeEach(async () => {

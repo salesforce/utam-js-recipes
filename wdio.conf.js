@@ -37,7 +37,8 @@ exports.config = {
     framework: 'jasmine',
     reporters: ['spec'],
     jasmineNodeOpts: {
-        defaultTimeoutInterval: DEBUG ? DEBUG_TIMEOUT : EXPLICIT_TIMEOUT,
+        // max execution time for a script, set to 5 min
+        defaultTimeoutInterval: 1000 * 60 * 5,
         // Temporary workaround to get babel to work in wdio tests
         helpers: [path.resolve(process.cwd(), 'wdioJasmineHelper.js')],
     },

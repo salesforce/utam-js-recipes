@@ -108,18 +108,24 @@ Replace SANDBOX with your test environment name.
 Alternatively, if you don't want to configure the dotenv file, you can also prefix the test command with environment variables:
 
 ```sh
-$ SANDBOX_URL=my-sandbox.com SANDBOX_USERNAME=user@salesforce.com SANDBOX_PASSWORD=password yarn test --spec force-app/test/crud.spec.js
+$ SANDBOX_URL=my-sandbox.com SANDBOX_USERNAME=user@salesforce.com SANDBOX_PASSWORD=password yarn test --spec force-app/test/record-*.spec.js
 ```
 
-### 3) Update the Web UI test
+### 3) Update the Web UI tests
 
-Open the Web UI test file located in `force-app/test/crud.spec.js` and update the value of the `TEST_ENVIRONMENT_PREFIX`
-global variable located after the import statements:
+Open the Web UI test files located in:
+- `force-app/test/record-create.spec.js` 
+- `force-app/test/record-update.spec.js`
+
+For each test file, update the value of the `TEST_ENVIRONMENT_PREFIX` global variable located after the import statements:
 
 ```js
 // Assuming your test environment is sandbox (must match the prefix used in the dotenv file)
 const TEST_ENVIRONMENT_PREFIX = 'sandbox';
 ```
+
+For the `force-app/test/record-update.spec.js` file, also update the `ACCOUNT_RECORD_ID` global variable to match the
+account id in your test environment.
 
 ## Setup SFDX scratch org test
 
@@ -201,10 +207,17 @@ This command run all UI tests in the repository, namely all tests in `force-app/
 
 These tests require login credentials to an existing org, make sure your test environment is setup as described in [Setup Salesforce Web UI tests](#setup-salesforce-web-ui-tests).
 
-Run the Web UI test against the environment you configured:
+Run the Web UI tests against the environment you configured:
 
 ```sh
-$ yarn test --spec force-app/test/crud.spec.js
+$ yarn test --spec force-app/test/record-create.spec.js
+$ yarn test --spec force-app/test/record-update.spec.js
+```
+
+To run all tests related to record, run:
+
+```sh
+$ yarn test --spec force-app/test/record-*.spec.js
 ```
 
 > Note: that CRUD tests will modify real records in the org so only sandbox or development specific orgs should be used.

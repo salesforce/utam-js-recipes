@@ -102,12 +102,14 @@
                                                 "css": "records-lwc-record-layout"
                                             }
                                         }
-                                    ],
-                                    "returnType": "self"
+                                    ]
                                 }
                             ]
                         }
                     ]
+                },
+                {
+                    "apply": "returnSelf"
                 }
             ]
         }

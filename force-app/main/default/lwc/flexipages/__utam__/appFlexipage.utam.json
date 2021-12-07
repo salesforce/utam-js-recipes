@@ -10,7 +10,6 @@
                             "type": "function",
                             "predicate": [
                                 {
-                                    "returnType": "self",
                                     "element": "module",
                                     "apply": "containsElement",
                                     "args": [
@@ -28,6 +27,9 @@
                             ]
                         }
                     ]
+                },
+                {
+                    "apply": "returnSelf"
                 }
             ]
         }

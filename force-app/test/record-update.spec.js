@@ -41,7 +41,7 @@ describe('Account Record create and update test', () => {
     it('Update an existing Account Record', async () => {
         await gotoRecordHomeByUrl(testEnvironment.redirectUrl, RecordType.Account, ACCOUNT_RECORD_ID);
 
-        console.log('Load Accounts Record Home page"');
+        console.log('Load Accounts Record Home page');
         const recordHome = await utam.load(RecordHomeFlexipage2);
 
         console.log('Access Record Highlights panel');

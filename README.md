@@ -70,7 +70,7 @@ Both tests demonstrate how UTAM can be used to author and compile page objects, 
 
 ### 1) Create a .env file
 
-We use a `env` file to contain the URL and authentication credentials for test environments that we use.
+We use a `.env` file to contain the URL and authentication credentials for test environments that we use.
 
 > Note: don't commit your `.env` files. Those files contain sensitive credentials. The repository is set up so that we don't track those files by default.
 

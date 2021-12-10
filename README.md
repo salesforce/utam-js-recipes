@@ -8,12 +8,9 @@ __IMPORTANT: This repository's page objects and UI tests are compatible with the
 
 ## Project structure
 
-This repository contains two npm packages:
+This repository contains two npm packages, both packages demonstrate how to setup page objects authoring and compilation.
 
-1. `utam-js-recipes` (project root)
-2. `utam-preview`
-
-### 1) utam-js-recipes package
+### 1) utam-js-recipes package (project root)
 
 This package contains:
 
@@ -22,9 +19,32 @@ This package contains:
 - UI tests
 - Scripts that ease the initial setup
 
+Here's an outline of the directory structure and few of the important configuration files.
+
+```txt
+├── force-app // contains JSON page objects and tests
+├── pageObjects (created after build)
+├── package.json
+├── utam.config.js
+└── wdio.conf.js
+```
+
+The repo has a [hello](https://github.com/salesforce/utam-recipes-sfdx/tree/main/force-app/main/default/lwc/hello) Lightning web component. The JSON page object is in a `__utam__` folder beside the component source.
+
+```txt
+├── lwc
+    ├── hello
+         ├── hello.html
+         ├── hello.js
+         ├── hello.js-meta.xml
+         └── __utam__
+             └── hello.utam.json
+```
+
 ### 2) utam-preview package
 
-This package contains the page objects used in the UI tests that interact with the Salesforce UI.
+This package contains the page objects used in the UI tests that interact with the Salesforce UI. 
+__Important: Page Objects from this package are compatible with application version 236__
 
 Both packages demonstrate how to setup page objects authoring and compilation.
 
@@ -246,6 +266,11 @@ Finally, run tests:
 ```sh
 $ yarn test --spec force-app/test/sfdx-scratch-org.spec.js
 ```
+
+### Run the test against utam.dev
+
+Repository contains [example of the test against https://utam.dev]:(https://github.com/salesforce/utam-js-recipes/blob/main/force-app/test/utam-portal.spec.js).
+Test does not require any special setup, running instructions are inside the test.
 
 [enable-dev-hub]: https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_setup_enable_devhub.htm
 [utam-js]: https://www.github.com/salesforce/utam-js

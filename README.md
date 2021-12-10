@@ -1,7 +1,5 @@
 # UTAM JavaScript Recipes
 
-[UTAM JS][utam-js] UI tests examples in a typical Salesforce DX workspace. 
-
 This repository contains examples of how to test the Salesforce UI using the [UTAM][utam-doc] framework.
 
 > Note: This repository uses UTAM JavaScript. If you want to use UTAM with Java, visit the [UTAM Java recipes repository][utam-java-recipes].
@@ -61,8 +59,6 @@ Execute `yarn build` to generate page objects:
 $ yarn build
 ```
 
-> Note: `yarn prepare` shows an error if you run it more than once. That is expected because once yarn link is created, you must unlink to run again.
-
 There are two types of tests in this project:
 
 1. The first test (`force-app/test/crud.spec.js`) loads a provided URL and logs in through the standard login page before beginning the test.
@@ -70,25 +66,27 @@ There are two types of tests in this project:
 
 Both tests demonstrate how UTAM can be used to author and compile page objects, and how to integrate the UTAM runtime with WebdriverIO.
 
-## Setup Salesforce Web UI tests
+## Set up Salesforce Web UI tests
 
 ### 1) Create a .env file
 
-Create a new dotenv file by executing:
+We use a `env` file to contain the URL and authentication credentials for test environments that we use.
+
+> Note: don't commit your `.env` files. Those files contain sensitive credentials. The repository is set up so that we don't track those files by default.
+
+Create a `.env` file by executing:
 
 ```sh
 $ yarn create:env
 ```
 
-This script creates a dotenv file: `.env` located at the project root.
-
-> Note: don't commit your `.env` files. Those files contain sensible credentials. The repository is setup so that we don't track those files by default.
+This script creates a `.env` file located at the project root.
 
 ### 2) Configure your test environment variables
 
 Open the `.env` file created during the previous step and configure your test environment credentials.
 
-Assuming the name of the test environment is `sandbox`, edit the `.env` file so that the content as a similar structure:
+Here's a `.env` file that references a `SANDBOX` test environment. Each variable for the test environment starts with the test environment name followed by an underscore.
 
 ```shell-script
 # Required variables
@@ -103,7 +101,14 @@ SANDBOX_REDIRECT_URL=https://lightningapp.lightning.test1234.salesforce.com/
 
 Replace SANDBOX with your test environment name.
 
-> Note: Add as many test environments as needed. Just duplicate the variables and adjust the prefix and the values.
+A test references a test environment name in a call to the `TestEnvironment` constructor. For example:
+
+```java
+const TEST_ENVIRONMENT_PREFIX = 'SANDBOX';
+const testEnvironment = new TestEnvironment(TEST_ENVIRONMENT_PREFIX);
+```
+
+> Note: Add as many test environments as needed in your `.env` file. Just duplicate the variables and adjust the prefix and the values.
 
 Alternatively, if you don't want to configure a `.env` file, you can prefix the test command with environment variables:
 
@@ -147,14 +152,7 @@ Follow the steps in the [Quick Start: Lightning Web Components](https://trailhea
     $ sfdx auth:web:login -d -a myhuborg
     ```
 
-2. Clone the utam-js-recipes repository:
-
-    ```sh
-    $ git clone https://github.com/salesforce/utam-js-recipes.git
-    $ cd utam-js-recipes
-    ```
-
-3. Create a scratch org and provide it with an alias (**utam-js-recipes** in the command below):
+2. Create a scratch org and provide it with an alias (**utam-js-recipes** in the command below):
 
     ```sh
     $ sfdx force:org:create -s -f config/project-scratch-def.json -a utam-js-recipes
@@ -171,13 +169,13 @@ Follow the steps in the [Quick Start: Lightning Web Components](https://trailhea
     6. Click on the `Enable Dev Hub` toggle.
     7. Create a scratch org using the `sfdx force:org:create` command mentioned previously
 
-4. Push the app to your scratch org:
+3. Push the app to your scratch org:
 
     ```sh
     $ sfdx force:source:push
     ```
 
-5. Assign the **utam** permission set to the default user:
+4. Assign the **utam** permission set to the default user:
 
     ```sh
     $ sfdx force:user:permset:assign -n utam
@@ -185,7 +183,7 @@ Follow the steps in the [Quick Start: Lightning Web Components](https://trailhea
 
 > Note: if this step throws an error `Permission set not found in target org`, run `sfdx plugins:install user` and repeat from step 3
 
-6. Open the scratch org:
+5. Open the scratch org:
 
     ```sh
     $ sfdx force:org:open
@@ -205,11 +203,11 @@ Execute all tests at once by running:
 $ yarn test
 ```
 
-This command run all UI tests in the repository, namely all tests in `force-app/test/crud.spec.js` and `force-app/test/sfdx-scratch-org.spec.js`.
+This command runs all UI tests in the repository, namely all tests in `force-app/test/crud.spec.js` and `force-app/test/sfdx-scratch-org.spec.js`.
 
 ### Run the Web UI test
 
-These tests require login credentials to an existing org. Make sure that your test environment is setup as described in [Setup Salesforce Web UI tests](#setup-salesforce-web-ui-tests).
+These tests require login credentials to an existing org. Make sure that your test environment is set up as described in [Set up Salesforce Web UI tests](#set-up-salesforce-web-ui-tests).
 
 Run the Web UI tests against the environment you configured:
 

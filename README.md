@@ -108,7 +108,7 @@ const TEST_ENVIRONMENT_PREFIX = 'sandbox';
 const testEnvironment = new TestEnvironment(TEST_ENVIRONMENT_PREFIX);
 ```
 
-The environment name must be all upper case in the `.env` file but the name is case insensitive in the Java code.
+The environment name must be all uppercase in the `.env` file but the name is case insensitive in the JavaScript code. The environment name of `sandbox` in the test code matches the uppercase `SANDBOX` name in the `.env` file. A camel case environment name of `sandboxOrg` in the test code would match an uppercase `SANDBOX_ORG` name in the `.env` file.
 
 > Note: Add as many test environments as needed in your `.env` file. Just duplicate the variables and adjust the prefix and the values.
 

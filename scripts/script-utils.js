@@ -5,10 +5,15 @@
  * For full license text, see the LICENSE file in the repo root or https://opensource.org/licenses/MIT
  */
 
+'use strict';
+
+const { join } = require('path');
 const { parse, stringify } = require('envfile');
 const MagicString = require('magic-string');
 
 const SCRATCH_ORG_KEY = 'SCRATCH_ORG_LOGIN_URL';
+
+const DOTENV_FILEPATH = join(__dirname, '../.env');
 
 /**
  * Update the existing property file by appening the property for the scratch org login.
@@ -78,11 +83,11 @@ function getLocationInFile(fileContent, searchTerm, options) {
  * @param {string} url scratch org login url to set in the property file
  * @returns {string} the content of the property file to write to disk
  */
-function getDefaultTemplate(url) {
+function getDefaultTemplate(url = '') {
     return `# DO NOT CHECK THIS FILE IN WITH PERSONAL INFORMATION SAVED
 #
 # Environment variables required to run tests. Values here will be populated by
-# running "node scripts/generateLoginUrl.js"
+# running "node scripts/generate-login-url.js"
 #
 # Example:
 # SCRATCH_ORG_LOGIN_URL=https://<scratch-org-name>.cs22.my.salesforce.com/secur/frontdoor.jsp?sid=<generated-sid>
@@ -92,6 +97,7 @@ SCRATCH_ORG_LOGIN_URL=${url}`;
 
 module.exports = {
     SCRATCH_ORG_KEY,
+    DOTENV_FILEPATH,
     appendScratchOrgUrl,
     replaceScratchOrgUrl,
     getDefaultTemplate,

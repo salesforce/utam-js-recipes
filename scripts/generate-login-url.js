@@ -5,14 +5,19 @@
  * For full license text, see the LICENSE file in the repo root or https://opensource.org/licenses/MIT
  */
 
+'use strict';
+
 const util = require('util');
 const exec = util.promisify(require('child_process').exec);
 const { existsSync, readFileSync, writeFileSync } = require('fs');
-const { join } = require('path');
 const { parse } = require('envfile');
-const { appendScratchOrgUrl, replaceScratchOrgUrl, getDefaultTemplate, SCRATCH_ORG_KEY } = require('./script-utils');
-
-const envPath = join(__dirname, '../.env');
+const {
+    appendScratchOrgUrl,
+    replaceScratchOrgUrl,
+    getDefaultTemplate,
+    DOTENV_FILEPATH,
+    SCRATCH_ORG_KEY,
+} = require('./script-utils');
 
 /**
  * Generate the content of the property file that should be written to disk
@@ -57,9 +62,11 @@ async function getScratchOrgLoginUrl() {
 async function generateLoginUrl() {
     try {
         const url = await getScratchOrgLoginUrl();
-        const template = existsSync(envPath) ? createTemplateFromFile(envPath, url) : getDefaultTemplate(url);
-        writeFileSync(envPath, template);
-        console.log(`Property .env file successfully generated in ${envPath}`);
+        const template = existsSync(DOTENV_FILEPATH)
+            ? createTemplateFromFile(DOTENV_FILEPATH, url)
+            : getDefaultTemplate(url);
+        writeFileSync(DOTENV_FILEPATH, template);
+        console.log(`Property .env file successfully generated in ${DOTENV_FILEPATH}`);
     } catch (err) {
         console.log(err);
     }

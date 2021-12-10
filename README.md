@@ -104,9 +104,11 @@ Replace SANDBOX with your test environment name.
 A test references a test environment name in a call to the `TestEnvironment` constructor. For example:
 
 ```java
-const TEST_ENVIRONMENT_PREFIX = 'SANDBOX';
+const TEST_ENVIRONMENT_PREFIX = 'sandbox';
 const testEnvironment = new TestEnvironment(TEST_ENVIRONMENT_PREFIX);
 ```
+
+The environment name must be all upper case in the `.env` file but the name is case insensitive in the Java code.
 
 > Note: Add as many test environments as needed in your `.env` file. Just duplicate the variables and adjust the prefix and the values.
 

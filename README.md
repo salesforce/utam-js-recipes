@@ -8,7 +8,7 @@ __IMPORTANT: This repository's page objects and UI tests are compatible with the
 
 ## Project structure
 
-This repository contains two npm packages, both packages demonstrate how to setup page objects authoring and compilation.
+This repository contains two npm packages. Both packages demonstrate how to set up page object authoring and compilation.
 
 ### 1) utam-js-recipes package (project root)
 
@@ -269,8 +269,8 @@ $ yarn test --spec force-app/test/sfdx-scratch-org.spec.js
 
 ### Run the test against https://utam.dev
 
-Repository contains [example of the test against https://utam.dev](https://github.com/salesforce/utam-js-recipes/blob/main/force-app/test/utam-portal.spec.js).
-Test does not require any special setup, running instructions are inside the test.
+The repository contains [example of the test against https://utam.dev](https://github.com/salesforce/utam-js-recipes/blob/main/force-app/test/utam-portal.spec.js).
+The test doesn't require any special setup. The instructions to run it are inside the test.
 
 [enable-dev-hub]: https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_setup_enable_devhub.htm
 [utam-js]: https://www.github.com/salesforce/utam-js

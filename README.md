@@ -267,9 +267,9 @@ Finally, run tests:
 $ yarn test --spec force-app/test/sfdx-scratch-org.spec.js
 ```
 
-### Run the test against utam.dev
+### Run the test against https://utam.dev
 
-Repository contains [example of the test against https://utam.dev]:(https://github.com/salesforce/utam-js-recipes/blob/main/force-app/test/utam-portal.spec.js).
+Repository contains [example of the test against https://utam.dev](https://github.com/salesforce/utam-js-recipes/blob/main/force-app/test/utam-portal.spec.js).
 Test does not require any special setup, running instructions are inside the test.
 
 [enable-dev-hub]: https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_setup_enable_devhub.htm

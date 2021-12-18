@@ -1,4 +1,4 @@
-# Contributing to UTAM Recipes SFDX
+# Contributing to UTAM JavaScript recipes
 
 -   [Code of Conduct](#code-of-conduct)
 -   [Requirements](#requirements)
@@ -7,7 +7,7 @@
 
 ## [Code of Conduct](./CODE_OF_CONDUCT.md)
 
-The UTAM Recipes SFDX project has a [Code of Conduct](./CODE_OF_CONDUCT.md) to which all contributors must adhere.
+The UTAM JavaScript recipes project has a [Code of Conduct](./CODE_OF_CONDUCT.md) to which all contributors must adhere.
 
 ## Requirements
 

@@ -1,5 +1,9 @@
 # Contributing to UTAM JavaScript recipes
 
+We encourage the developer community to contribute to UTAM JavaScript recipes.
+
+> **Note: It might take months before we can review a pull request. Please be patient!**
+
 -   [Code of Conduct](#code-of-conduct)
 -   [Requirements](#requirements)
 -   [Installation](#installation)

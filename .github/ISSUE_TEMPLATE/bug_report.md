@@ -25,7 +25,6 @@ labels: bug, needs triaging
 
 ### Environment
 
-<!-- run ./node_modules/.bin/utam -v -->
 - Failing test [e.g force-app/test/record-create.spec.js]
 <!-- run node -v in your terminal inside the local copy of utam-js-recipes -->
 - Node.js: [e.g 14.18.2] vX.Y.Z

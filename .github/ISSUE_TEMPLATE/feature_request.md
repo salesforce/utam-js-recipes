@@ -3,8 +3,6 @@ name: Feature request
 about: Suggest an idea for this project
 title: "[Feat Request]"
 labels: feature request, needs triaging
-assignees: ''
-
 ---
 
 ### Is your feature request related to a problem? Please describe

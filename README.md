@@ -44,7 +44,7 @@ The repo has a [hello](https://github.com/salesforce/utam-recipes-sfdx/tree/main
 ### 2) utam-preview package
 
 This package contains the page objects used in the UI tests that interact with the Salesforce UI. 
-__Important: Page Objects from this package are compatible with application version 236__
+__Important: Page Objects from this package are compatible with application version Spring'22__
 
 Both packages demonstrate how to setup page objects authoring and compilation.
 

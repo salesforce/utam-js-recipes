@@ -16,9 +16,7 @@ const DEBUG_TIMEOUT = EXPLICIT_TIMEOUT * 30;
 
 exports.config = {
     runner: 'local',
-    specs: ['force-app/**/__wdio__/*.spec.js', 'force-app/test/**/*.spec.js'],
-    // do not run by default
-    exclude: ['force-app/test/dreamforce.spec.js'],
+    specs: ['force-app/test/**/*.spec.js'],
     maxInstances: 1,
     capabilities: [
         {

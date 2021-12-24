@@ -1144,30 +1144,30 @@
   dependencies:
     "@types/node" "*"
 
-"@utam/compiler@0.0.14":
-  version "0.0.14"
-  resolved "https://registry.yarnpkg.com/@utam/compiler/-/compiler-0.0.14.tgz#7443da1455b67d14cfc8c3b6a2c196cab3e7094a"
-  integrity sha512-FMEee9F6VHdgKupUGQJAbH6okQvfV5CJugGyn6GZAcac0sUkW+v0dpXo29FqJgs/FkNK35yajCmv7Mum9sKPRg==
+"@utam/compiler@1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@utam/compiler/-/compiler-1.0.0.tgz#e0cccff4ccd1c494a91a42968cfe94623ea5a55f"
+  integrity sha512-RK+804QReHLm4mjg0Joa2kDkhoIhI99ypuI4cCcwTBLOxrQvj/E2pZdPkU4DLfW8MIO2pYiWRJ3odS/XB/F7Hg==
   dependencies:
-    "@utam/diagnostics" "0.0.14"
+    "@utam/diagnostics" "1.0.0"
     jsonc-parser "^3.0.0"
 
-"@utam/core@0.0.14":
-  version "0.0.14"
-  resolved "https://registry.yarnpkg.com/@utam/core/-/core-0.0.14.tgz#2a27523ffb3401346265324007d39ef91d7a4b4f"
-  integrity sha512-E0pd/deLUW/y1/MOqXfEw+h1+IZMNIb150Q4m4k8SujNcbWIwgk9M5BtPP7Wuqci6CfOkyuADFpMt8ONfYmbmA==
+"@utam/core@1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@utam/core/-/core-1.0.0.tgz#509c9685c137bdb4aa7ce1ca4e59142e3e930e1b"
+  integrity sha512-7XScg7Ph3cr6HhMCULtTdsd6taukaBAafjIa+co/ctXPaQ2ARPhDzuy1cBSNGk/fi7yD7GNJPuMF5KNghYSvBA==
 
-"@utam/diagnostics@0.0.14":
-  version "0.0.14"
-  resolved "https://registry.yarnpkg.com/@utam/diagnostics/-/diagnostics-0.0.14.tgz#9c67c8f8165431ab00731e894150759855f7917b"
-  integrity sha512-qpRczwuUanj91e5jsJCNHblt0Fh2+oLUBdTf0+edl0hJqM0qjr78yvw7Q222u7g69yTc5rFndTPByiv//KxPDg==
+"@utam/diagnostics@1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@utam/diagnostics/-/diagnostics-1.0.0.tgz#ad09997a0f6204715a0386fccce7f5ef02953444"
+  integrity sha512-QlfiS6nkwPCsv38nMLeRDhueR6ZntqIGK9/iAEWGIRrlRV8zOsRnGef4F8PFWYIlsGgbXSGQlmDLejCVXS1aLQ==
 
-"@utam/loader@0.0.14":
-  version "0.0.14"
-  resolved "https://registry.yarnpkg.com/@utam/loader/-/loader-0.0.14.tgz#579b1c71073258db23c5462bb1f7feeb24c81553"
-  integrity sha512-b7VbMS9v367AaGrM8jg+xPlgC4MBl7e82MzMObZzY29dPJyFRcbXbyq+SXoWaTgN23q8D1+yc7LcTEOwLX9jqw==
+"@utam/loader@1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@utam/loader/-/loader-1.0.0.tgz#b970665c6861bff32b03ab1b8739d57d9fa73594"
+  integrity sha512-jTFPClAMZ0p8UvKClE96EhIOinEVp1ESVMDn+pqn7sZjFydz/yCrYlXzT0sTcLaK0Jna6SwQ/XE2FmVLYSPTWw==
   dependencies:
-    "@utam/core" "0.0.14"
+    "@utam/core" "1.0.0"
 
 "@wdio/cli@^6.10.10":
   version "6.12.1"
@@ -1337,6 +1337,11 @@ ansi-regex@^5.0.0:
   version "5.0.0"
   resolved "https://registry.yarnpkg.com/ansi-regex/-/ansi-regex-5.0.0.tgz#388539f55179bf39339c81af30a654d69f87cb75"
   integrity sha512-bY6fj56OUQ0hU1KjFNDQuJFezqKdrAyFdIevADiqrWHwSlbmBNMHp5ak2f40Pm8JTFyM2mqxkG6ngkHO11f/lg==
+
+ansi-regex@^5.0.1:
+  version "5.0.1"
+  resolved "https://registry.yarnpkg.com/ansi-regex/-/ansi-regex-5.0.1.tgz#082cb2c89c9fe8659a311a53bd6a4dc5301db304"
+  integrity sha512-quJQXlTSUGL2LH9SUXo8VwsY4soanhgo6LNSm84E1LBcE8s3O0wpdiRzyR9z/ZZJMlMWv37qOOb9pdJlMUEKFQ==
 
 ansi-styles@^2.2.1:
   version "2.2.1"
@@ -4314,6 +4319,15 @@ string-width@^4.1.0, string-width@^4.2.0:
     is-fullwidth-code-point "^3.0.0"
     strip-ansi "^6.0.0"
 
+string-width@^4.2.3:
+  version "4.2.3"
+  resolved "https://registry.yarnpkg.com/string-width/-/string-width-4.2.3.tgz#269c7117d27b05ad2e536830a8ec895ef9c6d010"
+  integrity sha512-wKyQRQpjJ0sIp62ErSZdGsjMJWsap5oRNihHhu6G7JVO/9jIB6UyevL+tXuOqrng8j/cxKTWyWUwvSTriiZz/g==
+  dependencies:
+    emoji-regex "^8.0.0"
+    is-fullwidth-code-point "^3.0.0"
+    strip-ansi "^6.0.1"
+
 string_decoder@^1.1.1:
   version "1.3.0"
   resolved "https://registry.yarnpkg.com/string_decoder/-/string_decoder-1.3.0.tgz#42f114594a46cf1a8e30b0a84f56c78c3edac21e"
@@ -4350,6 +4364,13 @@ strip-ansi@^6.0.0:
   integrity sha512-AuvKTrTfQNYNIctbR1K/YGTR1756GycPsg7b9bdV9Duqur4gv6aKqHXah67Z8ImS7WEz5QVcOtlfW2rZEugt6w==
   dependencies:
     ansi-regex "^5.0.0"
+
+strip-ansi@^6.0.1:
+  version "6.0.1"
+  resolved "https://registry.yarnpkg.com/strip-ansi/-/strip-ansi-6.0.1.tgz#9e26c63d30f53443e9489495b2105d37b67a85d9"
+  integrity sha512-Y38VPSHcqkFrCpFnQ9vuSXmquuv5oXOKpGeT6aGrr3o3Gc9AlVa6JBfUSOCnbxGGZF+/0ooI7KrPuUSztUdU5A==
+  dependencies:
+    ansi-regex "^5.0.1"
 
 strip-bom@^2.0.0:
   version "2.0.0"
@@ -4559,17 +4580,17 @@ use@^3.1.0:
   resolved "https://registry.yarnpkg.com/use/-/use-3.1.1.tgz#d50c8cac79a19fbc20f2911f56eb973f4e10070f"
   integrity sha512-cwESVXlO3url9YWlFW/TA9cshCEhtu7IKJ/p5soJ/gGpj7vbvFrAY/eIioQ6Dw23KjZhYgiIo8HOs1nQ2vr/oQ==
 
-utam@0.0.14, utam@^0.0.14:
-  version "0.0.14"
-  resolved "https://registry.yarnpkg.com/utam/-/utam-0.0.14.tgz#3ad95edcd2d69700ecd4ba86fb7e054373ebde10"
-  integrity sha512-VA4rRUDfCiBfe5p0ZJYugWFX1C8zPb8pNhUmnCx9MDOPtk578GqDnKvAPOSZwgSfyOLhtWjkQfLeqJpi/zeAvg==
+utam@1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/utam/-/utam-1.0.0.tgz#5b10f5f470599c36cff2aad89978befb44f4fcff"
+  integrity sha512-FSBSpuW3GjOit2MaNw/bzSdVvMhg18SmqJUZ2XadP6QmTiPufXcVXxbFTT0SJvL4faoN9u10EPluEJ3hsc72Yg==
   dependencies:
-    "@utam/compiler" "0.0.14"
-    "@utam/core" "0.0.14"
-    "@utam/loader" "0.0.14"
+    "@utam/compiler" "1.0.0"
+    "@utam/core" "1.0.0"
+    "@utam/loader" "1.0.0"
     fast-glob "^3.2.2"
     rollup "^2.38.0"
-    yargs "^16.2.0"
+    yargs "^17.3.0"
 
 util-deprecate@^1.0.1, util-deprecate@~1.0.1:
   version "1.0.2"
@@ -4603,12 +4624,12 @@ wdio-chromedriver-service@^6.0.4:
   dependencies:
     fs-extra "^9.0.0"
 
-wdio-utam-service@^0.0.14:
-  version "0.0.14"
-  resolved "https://registry.yarnpkg.com/wdio-utam-service/-/wdio-utam-service-0.0.14.tgz#6343dbcacff10d0275857ce423b2d6eb74a53d25"
-  integrity sha512-YaKYtGTcnIM7x8SsGrrGtn1ih1fQmGXVM2kWNW117qf5xSZU/x88VCtj2jnoOqMlL3L1NTq6T7aemocHhoONlQ==
+wdio-utam-service@1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/wdio-utam-service/-/wdio-utam-service-1.0.0.tgz#71764d58ef2c8dba3de0fdefb796859a13b1a441"
+  integrity sha512-KDRIn4WHAVNzTiuFlf1BdvhIiCIdLr14XSeNhJJJx38FjqDsbiEv3hkEp1j1pb7TwoUqDLqdMhaU28qzlPNJUA==
   dependencies:
-    utam "0.0.14"
+    utam "1.0.0"
 
 webdriver@6.12.1:
   version "6.12.1"
@@ -4713,7 +4734,12 @@ yargs-parser@^20.2.2:
   resolved "https://registry.yarnpkg.com/yargs-parser/-/yargs-parser-20.2.9.tgz#2eb7dc3b0289718fc295f362753845c41a0c94ee"
   integrity sha512-y11nGElTIV+CT3Zv9t7VKl+Q3hTQoT9a1Qzezhhl6Rp21gJ/IVTW7Z3y9EWXhuUBC2Shnf+DX0antecpAwSP8w==
 
-yargs@^16.0.3, yargs@^16.2.0:
+yargs-parser@^21.0.0:
+  version "21.0.0"
+  resolved "https://registry.yarnpkg.com/yargs-parser/-/yargs-parser-21.0.0.tgz#a485d3966be4317426dd56bdb6a30131b281dc55"
+  integrity sha512-z9kApYUOCwoeZ78rfRYYWdiU/iNL6mwwYlkkZfJoyMR1xps+NEBX5X7XmRpxkZHhXJ6+Ey00IwKxBBSW9FIjyA==
+
+yargs@^16.0.3:
   version "16.2.0"
   resolved "https://registry.yarnpkg.com/yargs/-/yargs-16.2.0.tgz#1c82bf0f6b6a66eafce7ef30e376f49a12477f66"
   integrity sha512-D1mvvtDG0L5ft/jGWkLpG1+m0eQxOfaBvTNELraWj22wSVUMWxZUvYgJYcKh6jGGIkJFhH4IZPQhR4TKpc8mBw==
@@ -4725,6 +4751,19 @@ yargs@^16.0.3, yargs@^16.2.0:
     string-width "^4.2.0"
     y18n "^5.0.5"
     yargs-parser "^20.2.2"
+
+yargs@^17.3.0:
+  version "17.3.1"
+  resolved "https://registry.yarnpkg.com/yargs/-/yargs-17.3.1.tgz#da56b28f32e2fd45aefb402ed9c26f42be4c07b9"
+  integrity sha512-WUANQeVgjLbNsEmGk20f+nlHgOqzRFpiGWVaBrYGYIGANIIu3lWjoyi0fNlFmJkvfhCZ6BXINe7/W2O2bV4iaA==
+  dependencies:
+    cliui "^7.0.2"
+    escalade "^3.1.1"
+    get-caller-file "^2.0.5"
+    require-directory "^2.1.1"
+    string-width "^4.2.3"
+    y18n "^5.0.5"
+    yargs-parser "^21.0.0"
 
 yarn-install@^1.0.0:
   version "1.0.0"

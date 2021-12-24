@@ -22,7 +22,7 @@ describe('Scratch Org Tests', () => {
         await browser.navigateTo(testEnvironment.sfdxLoginUrl);
 
         console.log('Wait for Home Page URL');
-        const domDocument = await utam.getCurrentDocument();
+        const domDocument = utam.getCurrentDocument();
         await domDocument.waitFor(async () => (await domDocument.getUrl()).includes('Hello'));
 
         console.log('Wait for Application Home Page to load');

@@ -17,7 +17,7 @@ import { TestEnvironment } from './utilities/test-environment';
 // TODO: replace with prefix of the environment from .env file
 const TEST_ENVIRONMENT_PREFIX = 'na45';
 // TODO: replace with existing Account Id for the environment
-const ACCOUNT_RECORD_ID = '001S7000001pSmBIAU';
+const ACCOUNT_RECORD_ID = '001S7000002aqamIAA';
 
 /**
  * Utility function that returns a given record URL
@@ -31,10 +31,10 @@ async function gotoRecordHomeByUrl(baseUrl, recordType, recordId) {
     await browser.navigateTo(recordHomeUrl);
 }
 
-describe('Account Record create and update test', () => {
+describe('Record update test', () => {
     const testEnvironment = new TestEnvironment(TEST_ENVIRONMENT_PREFIX);
 
-    beforeEach(async () => {
+    beforeAll(async () => {
         await login(testEnvironment, 'home');
     });
 

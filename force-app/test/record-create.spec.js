@@ -49,7 +49,7 @@ describe('Record creation tests', () => {
     const testEnvironment = new TestEnvironment(TEST_ENVIRONMENT_PREFIX);
     const baseUrl = testEnvironment.redirectUrl;
 
-    beforeEach(async () => {
+    beforeAll(async () => {
         await login(testEnvironment, 'home');
     });
 

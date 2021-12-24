@@ -182,7 +182,6 @@ Follow the steps in the [Quick Start: Lightning Web Components](https://trailhea
 
 > Note: If this step throws an error `ERROR running force:org:create:  You do not have access to the [ScratchOrgInfo] object`, you must [**enable Dev Hub**][enable-dev-hub].
 > To enable **Dev Hub**:
-
     1. Log in to the org you authenticated against during step 1 in a web browser.
     2. Click on the Setup icon in the upper right corner.
     3. Click Setup.
@@ -214,7 +213,7 @@ Follow the steps in the [Quick Start: Lightning Web Components](https://trailhea
 If you need to recreate a scratch org:
 
 - find created org `sfdx force:org:list --all`
-- delete previously created org with `sfdx force:org:delete`. It will prompt you to delete the org from the list, or specify an org alias or email `sfdx force:org:delete -u utam-recipes`
+- delete previously created org with `sfdx force:org:delete`. It will prompt you to delete the org from the list, or specify an org alias or email `sfdx force:org:delete -u utam-js-recipes`
 - recreate scratch orgs (repeat steps starting from step 3)
 
 ## Running UI tests

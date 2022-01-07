@@ -33,10 +33,10 @@ describe('Test utam.dev portal', () => {
         console.log('Assert that a root page is not loaded');
         const domDocument = await utam.getCurrentDocument();
         // random root page object that we know is not present
-        expect(await domDocument.containsObject(Dummy)).toBeFalsy();
+        expect(await domDocument.containsObject(Dummy)).toBeFalse();
 
         console.log('Assert that a root element with a given locator is not present');
-        expect(await domDocument.containsElement(utam.By.css('idonotexist'))).toBeFalsy();
+        expect(await domDocument.containsElement(utam.By.css('idonotexist'))).toBeFalse();
     });
 
     it('Checking absence of the elements on the page', async () => {

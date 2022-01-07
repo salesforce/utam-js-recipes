@@ -1,6 +1,6 @@
 {
-    "root" : true,
-    "selector" : {
-        "css" : "notexisting"
+    "root": true,
+    "selector": {
+        "css": "notexisting"
     }
 }

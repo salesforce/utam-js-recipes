@@ -31,7 +31,7 @@ describe('Test utam.dev portal', () => {
 
     it('Validate root element presence', async () => {
         console.log('Assert that a root page is not loaded');
-        const domDocument = await utam.getCurrentDocument();
+        const domDocument = utam.getCurrentDocument();
         // random root page object that we know is not present
         expect(await domDocument.containsObject(Dummy)).toBeFalse();
 

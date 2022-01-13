@@ -5,28 +5,44 @@
     "root": true,
     "elements": [
         {
-            "name": "menu",
+            "name": "persistentHeader",
             "selector": {
-                "css": ".menu"
+                "css": "header"
             },
             "elements": [
                 {
-                    "public": true,
-                    "name": "grammarMenuItem",
+                    "name": "menu",
                     "selector": {
-                        "css": "[data-navbar-id='grammar']"
+                        "css": ".menu"
                     },
-                    "type": "clickable"
-                },
-                {
-                    "public": true,
-                    "name": "menuItems",
-                    "selector": {
-                        "css": "li",
-                        "returnAll": true
-                    }
+                    "elements": [
+                        {
+                            "public": true,
+                            "name": "grammarMenuItem",
+                            "selector": {
+                                "css": "[data-navbar-id='grammar']"
+                            },
+                            "type": "clickable"
+                        },
+                        {
+                            "public": true,
+                            "type": "clickable",
+                            "name": "menuItems",
+                            "selector": {
+                                "css": "li",
+                                "returnAll": true
+                            }
+                        }
+                    ]
                 }
             ]
+        },
+        {
+            "name": "content",
+            "public": true,
+            "selector": {
+                "css": "main.content"
+            }
         }
     ]
 }

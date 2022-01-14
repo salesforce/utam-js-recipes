@@ -10,12 +10,12 @@
  */
 export class RecordType {
     static Account = new RecordType('Account');
-    static Lead = new RecordType('Lead');
+    static Contact = new RecordType('Contact');
     static Opportunity = new RecordType('Opportunity');
 
     /**
      * Create a record type
-     * @param {'Account'|'Lead'|'Opportunity'} name record name as specified in the static properties
+     * @param {'Account'|'Contact'|'Opportunity'} name record name as specified in the static properties
      */
     constructor(name) {
         this.name = name;

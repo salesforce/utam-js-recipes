@@ -8,6 +8,14 @@
                 "selector": {
                     "css": "lightning-button"
                 }
+            },
+            {
+                "name": "headlessAction",
+                "type": "utam-action/pageObjects/executorLwcHeadless",
+                "public": true,
+                "selector": {
+                    "css": "runtime_platform_actions-executor-lwc-headless"
+                }
             }
         ]
     },

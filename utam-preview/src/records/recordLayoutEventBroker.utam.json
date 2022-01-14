@@ -23,5 +23,37 @@
                 "css": ".forcegenerated-flexipage-template"
             }
         }
+    ],
+    "methods": [
+        {
+            "name": "waitForTemplate",
+            "compose": [
+                {
+                    "apply": "waitFor",
+                    "args": [
+                        {
+                            "type": "function",
+                            "predicate": [
+                                {
+                                    "element": "root",
+                                    "apply": "containsElement",
+                                    "args": [
+                                        {
+                                            "type": "locator",
+                                            "value": {
+                                                "css": ".forcegenerated-flexipage-template"
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "apply": "returnSelf"
+                }
+            ]
+        }
     ]
 }

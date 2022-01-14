@@ -1,0 +1,14 @@
+{
+    "shadow": {
+        "elements": [
+            {
+                "type": "utam-lightning/pageObjects/tabset",
+                "name": "tabset",
+                "public": true,
+                "selector": {
+                    "css": "lightning-tabset"
+                }
+            }
+        ]
+    }
+}

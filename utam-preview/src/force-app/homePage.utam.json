@@ -1,0 +1,44 @@
+{
+    "root": true,
+    "selector": {
+        "css": "body"
+    },
+    "elements": [
+        {
+            "name": "navigationBar",
+            "type": "utam-global/pageObjects/appNav",
+            "public": true,
+            "selector": {
+                "css": "one-appnav"
+            }
+        },
+        {
+            "name": "activeFlexiPage",
+            "selector": {
+                "css": ".oneContent.active app_flexipage-lwc-app-flexipage"
+            },
+            "type": "utam-sfdx/pageObjects/appFlexipage",
+            "public": true
+        }
+    ],
+    "methods": [
+        {
+            "name": "getComponent",
+            "compose": [
+                {
+                    "element": "activeFlexiPage"
+                },
+                {
+                    "chain": true,
+                    "apply": "waitForLoad",
+                    "returnType": "utam-sfdx/pageObjects/appFlexipage"
+                },
+                {
+                    "chain": true,
+                    "element": "flexipageComponent2",
+                    "returnType": "utam-flexipage/pageObjects/component2"
+                }
+            ]
+        }
+    ]
+}

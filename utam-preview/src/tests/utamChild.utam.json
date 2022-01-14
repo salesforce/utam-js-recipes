@@ -1,0 +1,12 @@
+{
+    "elements": [
+        {
+            "public": true,
+            "name": "grammarMenuItem",
+            "selector": {
+                "css": "[data-navbar-id='grammar']"
+            },
+            "type": "clickable"
+        }
+    ]
+}

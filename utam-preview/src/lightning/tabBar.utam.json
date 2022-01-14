@@ -1,0 +1,56 @@
+{
+    "methods": [
+        {
+            "name": "getActiveTabText",
+            "compose": [
+                {
+                    "element": "activeTab",
+                    "apply": "getText"
+                }
+            ]
+        },
+        {
+            "name": "clickTab",
+            "compose": [
+                {
+                    "element": "tabByLabel",
+                    "apply": "click"
+                }
+            ]
+        }
+    ],
+    "shadow": {
+        "elements": [
+            {
+                "name": "tabByLabel",
+                "selector": {
+                    "css": "li[title*='%s']",
+                    "args": [
+                        {
+                            "name": "label",
+                            "type": "string"
+                        }
+                    ]
+                },
+                "public": true,
+                "type": ["clickable"]
+            },
+            {
+                "name": "tabs",
+                "selector": {
+                    "css": "li a",
+                    "returnAll": true
+                },
+                "public": true,
+                "type": ["clickable"]
+            },
+            {
+                "name": "activeTab",
+                "selector": {
+                    "css": "li[class*='slds-is-active'] a"
+                },
+                "type": ["clickable"]
+            }
+        ]
+    }
+}

@@ -7,6 +7,14 @@
             },
             "type": "utam-records/pageObjects/lwcHighlightsPanel",
             "public": true
+        },
+        {
+            "name": "tabset2",
+            "selector": {
+                "css": "flexipage-tabset2"
+            },
+            "type": "utam-flexipage/pageObjects/tabset2",
+            "public": true
         }
     ]
 }

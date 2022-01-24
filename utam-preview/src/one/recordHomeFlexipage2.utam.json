@@ -98,7 +98,7 @@
             ]
         },
         {
-            "name": "getAccountHighlights",
+            "name": "getHighlights",
             "compose": [
                 {
                     "returnType": "utam-flexipage/pageObjects/recordHomeTemplateDesktop2",

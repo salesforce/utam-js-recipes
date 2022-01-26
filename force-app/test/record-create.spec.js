@@ -22,7 +22,7 @@ const TEST_ENVIRONMENT_PREFIX = 'na45';
  * Utility function that open a given record type modal
  * @param {string} baseUrl test environment
  * @param {RecordType} recordType type of record used in the UI test
- * @returns {Promise<RecordActionWrapper>} instance of the record modal Page Object
+ * @returns {Promise<void>} instance of the record modal Page Object
  */
 async function openRecordModal(baseUrl, recordType) {
     console.log(`Navigate to an Object Home for ${recordType.name}`);
@@ -41,8 +41,6 @@ async function openRecordModal(baseUrl, recordType) {
     const recordFormModal = await utam.load(RecordActionWrapper);
     const isRecordFormModalPresent = await recordFormModal.isPresent();
     expect(isRecordFormModalPresent).toBe(true);
-
-    return recordFormModal;
 }
 
 describe('Record creation tests', () => {
@@ -54,9 +52,12 @@ describe('Record creation tests', () => {
     });
 
     it('Create a new Account Record', async () => {
-        let recordFormModal = await openRecordModal(baseUrl, RecordType.Account);
+        await openRecordModal(baseUrl, RecordType.Account);
 
         // TODO - depending on org setup, modal might not present, then comment next lines
+        console.log('Load Change Record Type Modal');
+        let recordFormModal = await utam.load(RecordActionWrapper);
+
         console.log("Change Record Type Modal: click button 'Next'");
         const changeRecordTypeFooter = await recordFormModal.waitForChangeRecordFooter();
         await changeRecordTypeFooter.clickButton('Next');
@@ -83,30 +84,33 @@ describe('Record creation tests', () => {
     });
 
     it('Create a new Opportunity Record', async () => {
-        let recordFormModal = await openRecordModal(baseUrl, RecordType.Opportunity);
+        await openRecordModal(baseUrl, RecordType.Opportunity);
+
+        console.log('Load Record Form Modal');
+        const recordFormModal = await utam.load(RecordActionWrapper);
         const recordForm = await recordFormModal.getRecordForm();
         const recordLayout = await recordForm.getRecordLayout();
 
         console.log("Enter 'Close date' as 01/01/2020");
-        let item = await recordLayout.getItem(1, 1, 2);
+        const item = await recordLayout.getItem(1, 1, 2);
         const datePicker = await item.getDatepicker();
         await datePicker.setDateText('01/01/2020');
 
         console.log("Pick first option in a 'Stage' combobox");
-        item = await recordLayout.getItem(1, 2, 2);
-        const stageCombobox = await (await item.getPicklist()).getBaseCombobox();
+        const stageItem = await recordLayout.getItem(1, 2, 2);
+        const stageCombobox = await (await stageItem.getStageNamePicklist()).getBaseCombobox();
         await stageCombobox.expandForDisabledInput();
         await stageCombobox.pickItem(2);
 
         console.log('Find and pick first account, link it to the opportunity');
-        item = await recordLayout.getItem(1, 3, 1);
-        const accountLookup = await (await item.getLookup()).getBaseCombobox();
+        const accountLookupItem = await recordLayout.getItem(1, 3, 1);
+        const accountLookup = await (await accountLookupItem.getLookup()).getBaseCombobox();
         await accountLookup.expand();
         await accountLookup.pickItem(1);
 
         console.log('Enter opportunity name');
-        item = await recordLayout.getItem(1, 2, 1);
-        const nameInput = await item.getTextInput();
+        const nameItem = await recordLayout.getItem(1, 2, 1);
+        const nameInput = await nameItem.getTextInput();
         await nameInput.setText('Opportunity name');
 
         console.log('Save new record');

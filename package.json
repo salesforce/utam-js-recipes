@@ -34,7 +34,7 @@
         "prettier": "2.3.2",
         "rimraf": "^3.0.2",
         "wdio-chromedriver-service": "^6.0.4",
-        "wdio-utam-service": "1.0.0"
+        "wdio-utam-service": "1.0.1"
     },
     "volta": {
         "node": "14.15.4",

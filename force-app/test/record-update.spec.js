@@ -97,7 +97,7 @@ describe('Record update test', () => {
         const nameItem = await recordLayout.getItem(1, 2, 1);
 
         console.log('Remember value of the name field');
-        const formattedName = await nameItem.getOutputField(FormattedName);
+        let formattedName = await nameItem.getOutputField(FormattedName);
         const nameString = await formattedName.getInnerText();
         console.log(nameString);
 
@@ -116,7 +116,8 @@ describe('Record update test', () => {
         console.log('Wait for field to be updated');
         await nameItem.waitForOutputField();
 
-        // console.log('Check that field value has not changed');
-        // expect(await formattedName.getInnerText()).toStrictEqual(nameString);
+        console.log('Check that field value has not changed');
+        formattedName = await nameItem.getOutputField(FormattedName);
+        expect(await formattedName.getInnerText()).toBe(nameString);
     });
 });

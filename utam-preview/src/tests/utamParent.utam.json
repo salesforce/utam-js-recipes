@@ -1,0 +1,13 @@
+{
+    "root": true,
+    "selector": {
+        "css": "body"
+    },
+    "elements": [
+        {
+            "name": "container",
+            "type": "container",
+            "public": true
+        }
+    ]
+}

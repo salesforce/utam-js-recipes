@@ -956,10 +956,10 @@
   dependencies:
     defer-to-connect "^2.0.0"
 
-"@testim/chrome-version@^1.0.7":
-  version "1.0.7"
-  resolved "https://registry.yarnpkg.com/@testim/chrome-version/-/chrome-version-1.0.7.tgz#0cd915785ec4190f08a3a6acc9b61fc38fb5f1a9"
-  integrity sha512-8UT/J+xqCYfn3fKtOznAibsHpiuDshCb0fwgWxRazTT19Igp9ovoXMPhXyLD6m3CKQGTMHgqoxaFfMWaL40Rnw==
+"@testim/chrome-version@^1.1.2":
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/@testim/chrome-version/-/chrome-version-1.1.2.tgz#092005c5b77bd3bb6576a4677110a11485e11864"
+  integrity sha512-1c4ZOETSRpI0iBfIFUqU4KqwBAB2lHUAlBjZz/YqOHqwM9dTTzjV6Km0ZkiEiSCx/tLr1BtESIKyWWMww+RUqw==
 
 "@tsconfig/node14@^1.0.1":
   version "1.0.1"
@@ -1144,30 +1144,30 @@
   dependencies:
     "@types/node" "*"
 
-"@utam/compiler@1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@utam/compiler/-/compiler-1.0.0.tgz#e0cccff4ccd1c494a91a42968cfe94623ea5a55f"
-  integrity sha512-RK+804QReHLm4mjg0Joa2kDkhoIhI99ypuI4cCcwTBLOxrQvj/E2pZdPkU4DLfW8MIO2pYiWRJ3odS/XB/F7Hg==
+"@utam/compiler@1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@utam/compiler/-/compiler-1.0.1.tgz#34625d8ec0c01db854fdfb8ccbf05b6e48ba1f9a"
+  integrity sha512-493WejFgHWesCFUeAHahjl2nTp4jAE/g+KcknGbDHbWLpjm5GtgJpoYHhNzjnpLyz6h4TJ4/1mTcizCYSp4vOQ==
   dependencies:
-    "@utam/diagnostics" "1.0.0"
+    "@utam/diagnostics" "1.0.1"
     jsonc-parser "^3.0.0"
 
-"@utam/core@1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@utam/core/-/core-1.0.0.tgz#509c9685c137bdb4aa7ce1ca4e59142e3e930e1b"
-  integrity sha512-7XScg7Ph3cr6HhMCULtTdsd6taukaBAafjIa+co/ctXPaQ2ARPhDzuy1cBSNGk/fi7yD7GNJPuMF5KNghYSvBA==
+"@utam/core@1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@utam/core/-/core-1.0.1.tgz#7e108df6d8c90ad33c99762d751b125a65579e82"
+  integrity sha512-HxuzV8I2dE1q3NcslebyAIZOcM2mNFARArRy9ZM6EkCyxAVUPwu2Ay5DXoJDy1OHWc1XoFtSA+s4Wlsn/SSd/w==
 
-"@utam/diagnostics@1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@utam/diagnostics/-/diagnostics-1.0.0.tgz#ad09997a0f6204715a0386fccce7f5ef02953444"
-  integrity sha512-QlfiS6nkwPCsv38nMLeRDhueR6ZntqIGK9/iAEWGIRrlRV8zOsRnGef4F8PFWYIlsGgbXSGQlmDLejCVXS1aLQ==
+"@utam/diagnostics@1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@utam/diagnostics/-/diagnostics-1.0.1.tgz#cf28b5b9d06038a932730d96800a2f2f6bd93733"
+  integrity sha512-THZCOz+jzrzf/61FBYZzNXeorc3jwuQzvPHkQlLBTE2QKKBwk5ADejJntC1wlbcOeK13maqBaQRJVoXwkuafSQ==
 
-"@utam/loader@1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@utam/loader/-/loader-1.0.0.tgz#b970665c6861bff32b03ab1b8739d57d9fa73594"
-  integrity sha512-jTFPClAMZ0p8UvKClE96EhIOinEVp1ESVMDn+pqn7sZjFydz/yCrYlXzT0sTcLaK0Jna6SwQ/XE2FmVLYSPTWw==
+"@utam/loader@1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@utam/loader/-/loader-1.0.1.tgz#68a1931f830a3ce23c28cd678547fb8454161a69"
+  integrity sha512-G/I83Qt5EWHmFIiqiXWOyXR9W7CengvnsI2yqYWVWUSWjMPRI5GapiV2klDUpPYF5t5NSI9lcB8eo3TXgOJzYw==
   dependencies:
-    "@utam/core" "1.0.0"
+    "@utam/core" "1.0.1"
 
 "@wdio/cli@^6.10.10":
   version "6.12.1"
@@ -1472,12 +1472,12 @@ atob@^2.1.2:
   resolved "https://registry.yarnpkg.com/atob/-/atob-2.1.2.tgz#6d9517eb9e030d2436666651e86bd9f6f13533c9"
   integrity sha512-Wm6ukoaOGJi/73p/cl2GvLjTI5JM1k/O14isD73YML8StrH/7/lRFgmg8nICZgD3bZZvjwCGxtMOD3wWNAu8cg==
 
-axios@^0.21.2:
-  version "0.21.4"
-  resolved "https://registry.yarnpkg.com/axios/-/axios-0.21.4.tgz#c67b90dc0568e5c1cf2b0b858c43ba28e2eda575"
-  integrity sha512-ut5vewkiu8jjGBdqpM44XxjuCjq9LAKeHVmoVfHVzy8eHgxxq8SbAVQNovDA8mVi05kP0Ea/n/UzcSHcTJQfNg==
+axios@^0.24.0:
+  version "0.24.0"
+  resolved "https://registry.yarnpkg.com/axios/-/axios-0.24.0.tgz#804e6fa1e4b9c5288501dd9dff56a7a0940d20d6"
+  integrity sha512-Q6cWsys88HoPgAaFAVUb0WpPk0O8iTeisR9IMqy9G8AbO4NlpVknrnQS03zzF9PGAWgO3cgletO3VjV/P7VztA==
   dependencies:
-    follow-redirects "^1.14.0"
+    follow-redirects "^1.14.4"
 
 babel-plugin-dynamic-import-node@^2.3.3:
   version "2.3.3"
@@ -1754,13 +1754,13 @@ chrome-launcher@^0.13.1:
     mkdirp "^0.5.3"
     rimraf "^3.0.2"
 
-chromedriver@^96.0.0:
-  version "96.0.0"
-  resolved "https://registry.yarnpkg.com/chromedriver/-/chromedriver-96.0.0.tgz#c8473498e4c94950fa168187b112019cce9e5c6c"
-  integrity sha512-4g6Hn5RHGsbaBmOrJbDlz/hdVPOc22eRsbvoAAMqkZxR2NJCcddHzCw2FAQeW8lX/C7xWVz3nyDsKX3fE9lIIw==
+chromedriver@^97.0.4:
+  version "97.0.4"
+  resolved "https://registry.yarnpkg.com/chromedriver/-/chromedriver-97.0.4.tgz#69dbfae6194d32c64e34f88d60897835d86f7a99"
+  integrity sha512-mAOH1QSCaeYgniNOqceAzC8BVORQtWxsmgSOBuy8TV/CyyDTllLmKtNNORsxdqrDtefVlxRVQkEzYrlKiJsfFw==
   dependencies:
-    "@testim/chrome-version" "^1.0.7"
-    axios "^0.21.2"
+    "@testim/chrome-version" "^1.1.2"
+    axios "^0.24.0"
     del "^6.0.0"
     extract-zip "^2.0.1"
     https-proxy-agent "^5.0.0"
@@ -2398,10 +2398,10 @@ find-up@^4.0.0:
     locate-path "^5.0.0"
     path-exists "^4.0.0"
 
-follow-redirects@^1.14.0:
-  version "1.14.7"
-  resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.14.7.tgz#2004c02eb9436eee9a21446a6477debf17e81685"
-  integrity sha512-+hbxoLbFMbRKDwohX8GkTataGqO6Jb7jGwpAlwgy2bIz25XtRm7KEzJM76R1WiNT5SwZkX4Y75SwBolkpmE7iQ==
+follow-redirects@^1.14.4:
+  version "1.14.8"
+  resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.14.8.tgz#016996fb9a11a100566398b1c6839337d7bfa8fc"
+  integrity sha512-1x0S9UVJHsQprFcEC/qnNzBLcIxsjAV905f/UkQxbclCsoTWlacCNOpQa/anodLl2uaEKFhfWOvM2Qg77+15zA==
 
 for-in@^1.0.2:
   version "1.0.2"
@@ -4587,14 +4587,14 @@ use@^3.1.0:
   resolved "https://registry.yarnpkg.com/use/-/use-3.1.1.tgz#d50c8cac79a19fbc20f2911f56eb973f4e10070f"
   integrity sha512-cwESVXlO3url9YWlFW/TA9cshCEhtu7IKJ/p5soJ/gGpj7vbvFrAY/eIioQ6Dw23KjZhYgiIo8HOs1nQ2vr/oQ==
 
-utam@1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/utam/-/utam-1.0.0.tgz#5b10f5f470599c36cff2aad89978befb44f4fcff"
-  integrity sha512-FSBSpuW3GjOit2MaNw/bzSdVvMhg18SmqJUZ2XadP6QmTiPufXcVXxbFTT0SJvL4faoN9u10EPluEJ3hsc72Yg==
+utam@1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/utam/-/utam-1.0.1.tgz#a2fcfa9091566d7226a1dd94e493bcdb932987f6"
+  integrity sha512-/MGCS/vcwktSP14ssBjVP8fmGY8umCtyCFZFEMtAk2F7nG0PmA3dhVrQATpfxijdjmvY7xxiw3yFXxQNtQy/Vw==
   dependencies:
-    "@utam/compiler" "1.0.0"
-    "@utam/core" "1.0.0"
-    "@utam/loader" "1.0.0"
+    "@utam/compiler" "1.0.1"
+    "@utam/core" "1.0.1"
+    "@utam/loader" "1.0.1"
     fast-glob "^3.2.2"
     rollup "^2.38.0"
     yargs "^17.3.0"
@@ -4631,12 +4631,12 @@ wdio-chromedriver-service@^6.0.4:
   dependencies:
     fs-extra "^9.0.0"
 
-wdio-utam-service@1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/wdio-utam-service/-/wdio-utam-service-1.0.0.tgz#71764d58ef2c8dba3de0fdefb796859a13b1a441"
-  integrity sha512-KDRIn4WHAVNzTiuFlf1BdvhIiCIdLr14XSeNhJJJx38FjqDsbiEv3hkEp1j1pb7TwoUqDLqdMhaU28qzlPNJUA==
+wdio-utam-service@1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/wdio-utam-service/-/wdio-utam-service-1.0.1.tgz#14c11f3ed9bc6980b376119b94ae652db43acd03"
+  integrity sha512-TsfUUNrzF4oawA711G0/pshXisPtrZD/od0qtyCG1lpiK0FXrLa5jkEtfOU1WWpdX0YwSOg23hXBiomb4OBHxw==
   dependencies:
-    utam "1.0.0"
+    utam "1.0.1"
 
 webdriver@6.12.1:
   version "6.12.1"

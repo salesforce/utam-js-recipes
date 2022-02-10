@@ -68,7 +68,7 @@
     },
     "methods": [
         {
-            "name": "getAccountHighlights",
+            "name": "getRecordHomeTemplateDesktop2",
             "compose": [
                 {
                     "element": "decorator",
@@ -81,6 +81,11 @@
                 },
                 {
                     "chain": true,
+                    "apply": "waitForTemplate",
+                    "returnType": "utam-records/pageObjects/recordLayoutEventBroker"
+                },
+                {
+                    "chain": true,
                     "returnType": "utam-flexipage/pageObjects/recordHomeTemplateDesktop2",
                     "element": "generatedTemplate",
                     "args": [
@@ -89,11 +94,39 @@
                             "value": "utam-flexipage/pageObjects/recordHomeTemplateDesktop2"
                         }
                     ]
+                }
+            ]
+        },
+        {
+            "name": "getHighlights",
+            "compose": [
+                {
+                    "returnType": "utam-flexipage/pageObjects/recordHomeTemplateDesktop2",
+                    "apply": "getRecordHomeTemplateDesktop2"
                 },
                 {
                     "chain": true,
                     "element": "highlights",
                     "returnType": "utam-records/pageObjects/lwcHighlightsPanel"
+                }
+            ]
+        },
+        {
+            "name": "getContactTabset",
+            "compose": [
+                {
+                    "returnType": "utam-flexipage/pageObjects/recordHomeTemplateDesktop2",
+                    "apply": "getRecordHomeTemplateDesktop2"
+                },
+                {
+                    "chain": true,
+                    "element": "tabset2",
+                    "returnType": "utam-flexipage/pageObjects/tabset2"
+                },
+                {
+                    "chain": true,
+                    "element": "tabset",
+                    "returnType": "utam-lightning/pageObjects/tabset"
                 }
             ]
         }

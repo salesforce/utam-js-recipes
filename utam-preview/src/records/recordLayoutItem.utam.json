@@ -101,8 +101,30 @@
                 }
             ]
         },
+        // most record types use this picklist method
         {
             "name": "getPicklist",
+            "compose": [
+                {
+                    "returnType": "utam-records/pageObjects/recordPicklist",
+                    "element": "inputField",
+                    "args": [
+                        {
+                            "type": "pageObject",
+                            "value": "utam-records/pageObjects/recordPicklist"
+                        }
+                    ]
+                },
+                {
+                    "apply": "getBasePicklist",
+                    "returnType": "utam-lightning/pageObjects/picklist",
+                    "chain": true
+                }
+            ]
+        },
+        // opportunities have picklist wrapped
+        {
+            "name": "getStageNamePicklist",
             "compose": [
                 {
                     "returnType": "utam-sfa/pageObjects/inputStageName",
@@ -145,6 +167,33 @@
                     "returnType": "utam-lightning/pageObjects/datepicker"
                 }
             ]
+        },
+        {
+            "name": "waitForOutputField",
+            "compose": [
+                {
+                    "apply": "waitFor",
+                    "args": [
+                        {
+                            "type": "function",
+                            "predicate": [
+                                {
+                                    "element": "root",
+                                    "apply": "containsElement",
+                                    "args": [
+                                        {
+                                            "type": "locator",
+                                            "value": {
+                                                "css": "[slot='outputField']"
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
         }
     ],
     "elements": [
@@ -154,6 +203,14 @@
             "public": true,
             "selector": {
                 "css": "[slot='inputField']"
+            }
+        },
+        {
+            "type": "container",
+            "name": "outputField",
+            "public": true,
+            "selector": {
+                "css": "[slot='outputField']"
             }
         }
     ],

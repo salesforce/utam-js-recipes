@@ -6,6 +6,8 @@ This repository contains examples of how to test the Salesforce UI using the [UT
 
 __IMPORTANT: This repository's page objects and UI tests are compatible with the Salesforce Spring'22 release.__
 
+> Note: These recipes are designed to work with a generic Salesforce org. If your org has customizations, you might need to modify page objects or tests locally to avoid errors.
+
 ## Project structure
 
 This repository contains two npm packages. Both packages demonstrate how to set up page object authoring and compilation.

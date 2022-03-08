@@ -29,7 +29,7 @@
         "envfile": "^6.17.0",
         "husky": ">=6",
         "isbinaryfile": "^4.0.8",
-        "lint-staged": ">=10",
+        "lint-staged": "11.2.6",
         "magic-string": "^0.26.1",
         "prettier": "2.3.2",
         "rimraf": "^3.0.2",

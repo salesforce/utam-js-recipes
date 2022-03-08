@@ -22,7 +22,7 @@ describe('Test utam.dev portal', () => {
         console.log('Load Home Page');
         const homePage = await utam.load(UtamDevHome);
         const menuItems = await homePage.getMenuItems();
-        expect(menuItems.length).toBe(3);
+        expect(menuItems.length).toBe(4);
 
         console.log('Click Grammar menu item and check navigation');
         await (await homePage.getGrammarMenuItem()).click();

@@ -30,7 +30,7 @@
         "husky": ">=6",
         "isbinaryfile": "^4.0.8",
         "lint-staged": ">=10",
-        "magic-string": "^0.25.7",
+        "magic-string": "^0.26.1",
         "prettier": "2.3.2",
         "rimraf": "^3.0.2",
         "wdio-chromedriver-service": "^6.0.4",

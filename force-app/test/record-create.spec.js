@@ -28,7 +28,7 @@ async function openRecordModal(baseUrl, recordType) {
     console.log(`Navigate to an Object Home for ${recordType.name}`);
     await browser.navigateTo(recordType.getObjectHomeUrl(baseUrl));
 
-    console.log('Load Accounts Object Home page');
+    console.log(`Load ${recordType.name} Object Home page`);
     const objectHome = await utam.load(ConsoleObjectHome);
     const listView = await objectHome.getListView();
     const listViewHeader = await listView.getHeader();

@@ -6,7 +6,7 @@
     "elements": [
         {
             "name": "navigationBar",
-            "type": "utam-global/pageObjects/appNav",
+            "type": "salesforce-pageobjects/global/pageObjects/appNav",
             "public": true,
             "selector": {
                 "css": "one-appnav"
@@ -36,7 +36,7 @@
                 {
                     "chain": true,
                     "element": "flexipageComponent2",
-                    "returnType": "utam-flexipage/pageObjects/component2"
+                    "returnType": "salesforce-pageobjects/flexipage/pageObjects/component2"
                 }
             ]
         }

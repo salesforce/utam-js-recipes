@@ -1146,7 +1146,7 @@
 
 "@utam/compiler@1.0.2":
   version "1.0.2"
-  resolved "http://localhost:4873/@utam%2fcompiler/-/compiler-1.0.2.tgz#9b2329c8c6978365b21d15374ca4aba7e293370b"
+  resolved "https://registry.yarnpkg.com/@utam/compiler/-/compiler-1.0.2.tgz#9b2329c8c6978365b21d15374ca4aba7e293370b"
   integrity sha512-Qg28jsdTnkmt3PrgykVrVBuQFKOJ6ybwrWOT0MLdHaU/iBVwqEpcShB8XAUcMz/xBVvMULhuMtacheb2oLGJOg==
   dependencies:
     "@utam/diagnostics" "1.0.2"
@@ -1154,17 +1154,17 @@
 
 "@utam/core@1.0.2":
   version "1.0.2"
-  resolved "http://localhost:4873/@utam%2fcore/-/core-1.0.2.tgz#ba1206935eae424209d4e1c2e6d516dde48bd5ba"
+  resolved "https://registry.yarnpkg.com/@utam/core/-/core-1.0.2.tgz#ba1206935eae424209d4e1c2e6d516dde48bd5ba"
   integrity sha512-06M00jJ9ViMvhlpK0ThuayUakSdJJzMHDXjIudnmOEgrVO19fHNteWU7ADmEbUSqiVBOZ4hRlGSQpl10SBc99g==
 
 "@utam/diagnostics@1.0.2":
   version "1.0.2"
-  resolved "http://localhost:4873/@utam%2fdiagnostics/-/diagnostics-1.0.2.tgz#0486cbc5d1792098ec4b7215498e76e8eb895648"
+  resolved "https://registry.yarnpkg.com/@utam/diagnostics/-/diagnostics-1.0.2.tgz#0486cbc5d1792098ec4b7215498e76e8eb895648"
   integrity sha512-fLorAMWCbHbTG+Bh5zPnnWraekyZm/mV6LjQcVDPYVsVLEMmtGAKAsHuVZUfG58fMjFuVP2z+bnICzLOzHTTaw==
 
 "@utam/loader@1.0.2":
   version "1.0.2"
-  resolved "http://localhost:4873/@utam%2floader/-/loader-1.0.2.tgz#9352bb6ab4194fd7cb0001bf4f8a32663b0f8ea8"
+  resolved "https://registry.yarnpkg.com/@utam/loader/-/loader-1.0.2.tgz#9352bb6ab4194fd7cb0001bf4f8a32663b0f8ea8"
   integrity sha512-3pHxgZiT51A9JKu7OhK6jiw+KjDmokPz7sotKRFfLuT+qXSF3D9WHGS9R/gvTw3RnpjJ4ghWGnkZoLgwsKxqug==
   dependencies:
     "@utam/core" "1.0.2"
@@ -4114,9 +4114,9 @@ safe-regex@^1.1.0:
   integrity sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==
 
 salesforce-pageobjects@^1.0.0:
-  version "1.0.0"
-  resolved "http://localhost:4873/salesforce-pageobjects/-/salesforce-pageobjects-1.0.0.tgz#31c9bdbf90aca4ff15152ac57ba7e5fac3950bfb"
-  integrity sha512-v+653ZTDrSXuDqHeJfv0ZqKInv5grUYwIqpEnC4vDFSmud0rxtS8xCgVfK2OzkcDYS3RhYS23hYwfRVyKRxHfg==
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/salesforce-pageobjects/-/salesforce-pageobjects-1.0.1.tgz#912eff9ad083da6b5c2c12e1c0ed7805e6e0b001"
+  integrity sha512-ssqf2L87OVpQJR0VO8XsudwM9Ezz3S6e7ulH0xJ7WTJzyNbe2JeEHSdZ5HN2/WAUNkagi2t0NKzTnAlACFonRQ==
 
 semver-compare@^1.0.0:
   version "1.0.0"
@@ -4623,7 +4623,7 @@ use@^3.1.0:
 
 utam@1.0.2:
   version "1.0.2"
-  resolved "http://localhost:4873/utam/-/utam-1.0.2.tgz#4a23ce96b4e05a31ab582b3733af611eefe81dd8"
+  resolved "https://registry.yarnpkg.com/utam/-/utam-1.0.2.tgz#4a23ce96b4e05a31ab582b3733af611eefe81dd8"
   integrity sha512-KQTznBytbgO4t0pKvS3COsKrwMIwNYu4yWl8sCdVxuXu4WH+tzwB6pBXbUsAB9eGXKY/BF7w+SLfsIA8wGJg/Q==
   dependencies:
     "@utam/compiler" "1.0.2"
@@ -4667,7 +4667,7 @@ wdio-chromedriver-service@^6.0.4:
 
 wdio-utam-service@^1.0.2:
   version "1.0.2"
-  resolved "http://localhost:4873/wdio-utam-service/-/wdio-utam-service-1.0.2.tgz#b876c8144d1b73f11ff438cd7ac0006f8e79cb31"
+  resolved "https://registry.yarnpkg.com/wdio-utam-service/-/wdio-utam-service-1.0.2.tgz#b876c8144d1b73f11ff438cd7ac0006f8e79cb31"
   integrity sha512-AtiiFJ9cnhfbE6VMMwdJbKnuOvWjZHWAPIiTKU4shSHW1k/ls91g/7EUOp5ksg30bnVtMoZn8cfeA7rLBvLtBQ==
   dependencies:
     utam "1.0.2"

@@ -65,7 +65,7 @@
                                                     "elements": [
                                                         {
                                                             "name": "flexipageComponent2",
-                                                            "type": "utam-flexipage/pageObjects/component2",
+                                                            "type": "salesforce-pageobjects/flexipage/pageObjects/component2",
                                                             "selector": {
                                                                 "css": "flexipage-component2"
                                                             },

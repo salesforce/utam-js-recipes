@@ -4,7 +4,7 @@
             {
                 "name": "lightningInput",
                 "public": true,
-                "type": "utam-lightning/pageObjects/input",
+                "type": "salesforce-pageobjects/lightning/pageObjects/input",
                 "selector": {
                     "css": "lightning-input"
                 }
@@ -12,7 +12,7 @@
             {
                 "name": "lightningButton",
                 "public": true,
-                "type": "utam-lightning/pageObjects/button",
+                "type": "salesforce-pageobjects/lightning/pageObjects/button",
                 "selector": {
                     "css": "lightning-button"
                 }

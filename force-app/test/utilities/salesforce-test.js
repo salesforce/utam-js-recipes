@@ -5,7 +5,8 @@
  * For full license text, see the LICENSE file in the repo root or https://opensource.org/licenses/MIT
  */
 
-import Login from 'utam-preview/pageObjects/login';
+import Login from 'salesforce-pageobjects/helpers/pageObjects/login';
+import ActionRenderer from 'salesforce-pageobjects';
 
 /**
  * Helper function used in crud tests to login in STMFA environment
@@ -17,6 +18,11 @@ export async function login(testEnvironment, landingPagePartialUrl) {
 
     console.log(`Navigate to login URL: ${baseUrl}`);
     await browser.url(baseUrl);
-    const login = await utam.load(Login);
-    await login.loginToHomePage(username, password, landingPagePartialUrl);
+    const loginPage = await utam.load(Login);
+    await loginPage.login(username, password);
+    const document = utam.getCurrentDocument();
+    await document.waitFor(async () => {
+        const docUrl = await document.getUrl();
+        return docUrl.includes(landingPagePartialUrl);
+    });
 }

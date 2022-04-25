@@ -8,10 +8,9 @@
 // to run:
 // yarn test --spec force-app/test/record-update.spec.js
 
-import RecordActionWrapper from 'utam-preview/pageObjects/recordActionWrapper';
-import RecordHomeFlexipage2 from 'utam-preview/pageObjects/recordHomeFlexipage2';
-import FormattedName from 'utam-preview/pageObjects/formattedName';
-import Tab2 from 'utam-preview/pageObjects/tab2';
+import RecordHomeFlexipage2 from 'salesforce-pageobjects/global/pageObjects/recordHomeFlexipage2';
+import RecordActionWrapper from 'salesforce-pageobjects/global/pageObjects/recordActionWrapper';
+import Tab2 from 'salesforce-pageobjects/flexipage/pageObjects/tab2';
 import { RecordType } from './utilities/record-type';
 import { login } from './utilities/salesforce-test';
 import { TestEnvironment } from './utilities/test-environment';
@@ -54,7 +53,7 @@ describe('Record update test', () => {
 
         console.log("Wait for button 'Edit' and click on it");
         const actionsRibbon = await highlightsPanel.getActions();
-        const editButton = await actionsRibbon.waitForRenderedAction('Edit');
+        const editButton = await actionsRibbon.getActionRendererWithTitle('Edit');
         await editButton.clickButton();
 
         console.log('Load Record Form Modal');
@@ -81,9 +80,9 @@ describe('Record update test', () => {
 
         console.log('Load Accounts Record Home page');
         const recordHome = await utam.load(RecordHomeFlexipage2);
+        const tabset = await recordHome.getTabset();
 
         console.log('Select "Details" tab');
-        const tabset = await recordHome.getContactTabset();
         const tabBar = await tabset.getTabBar();
         const activeTabName = await tabBar.getActiveTabText();
         if (!equalsIgnoreCase(activeTabName, detailsTabLabel)) {
@@ -97,9 +96,8 @@ describe('Record update test', () => {
         const nameItem = await recordLayout.getItem(1, 2, 1);
 
         console.log('Remember value of the name field');
-        let formattedName = await nameItem.getOutputField(FormattedName);
+        let formattedName = await nameItem.getFormattedName();
         const nameString = await formattedName.getInnerText();
-        console.log(nameString);
 
         console.log('Click inline edit (pencil) next to the Name field');
         const inlineEditButton = await nameItem.getInlineEditButton();
@@ -108,7 +106,7 @@ describe('Record update test', () => {
         console.log('Click Save at the bottom of Details panel');
         const footer = await baseRecordForm.getFooter();
         const actionsRibbon = await footer.getActionsRibbon();
-        const actionRenderer = await actionsRibbon.waitForRenderedAction('Save');
+        const actionRenderer = await actionsRibbon.getActionRendererWithTitle('Save');
         const headlessAction = await actionRenderer.getHeadlessAction();
         const button = await headlessAction.getLightningButton();
         await button.click();
@@ -117,7 +115,7 @@ describe('Record update test', () => {
         await nameItem.waitForOutputField();
 
         console.log('Check that field value has not changed');
-        formattedName = await nameItem.getOutputField(FormattedName);
+        formattedName = await nameItem.getFormattedName();
         expect(await formattedName.getInnerText()).toBe(nameString);
     });
 });

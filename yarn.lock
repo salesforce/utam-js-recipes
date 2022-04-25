@@ -1144,30 +1144,30 @@
   dependencies:
     "@types/node" "*"
 
-"@utam/compiler@1.0.1":
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/@utam/compiler/-/compiler-1.0.1.tgz#34625d8ec0c01db854fdfb8ccbf05b6e48ba1f9a"
-  integrity sha512-493WejFgHWesCFUeAHahjl2nTp4jAE/g+KcknGbDHbWLpjm5GtgJpoYHhNzjnpLyz6h4TJ4/1mTcizCYSp4vOQ==
+"@utam/compiler@1.0.2":
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/@utam/compiler/-/compiler-1.0.2.tgz#9b2329c8c6978365b21d15374ca4aba7e293370b"
+  integrity sha512-Qg28jsdTnkmt3PrgykVrVBuQFKOJ6ybwrWOT0MLdHaU/iBVwqEpcShB8XAUcMz/xBVvMULhuMtacheb2oLGJOg==
   dependencies:
-    "@utam/diagnostics" "1.0.1"
+    "@utam/diagnostics" "1.0.2"
     jsonc-parser "^3.0.0"
 
-"@utam/core@1.0.1":
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/@utam/core/-/core-1.0.1.tgz#7e108df6d8c90ad33c99762d751b125a65579e82"
-  integrity sha512-HxuzV8I2dE1q3NcslebyAIZOcM2mNFARArRy9ZM6EkCyxAVUPwu2Ay5DXoJDy1OHWc1XoFtSA+s4Wlsn/SSd/w==
+"@utam/core@1.0.2":
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/@utam/core/-/core-1.0.2.tgz#ba1206935eae424209d4e1c2e6d516dde48bd5ba"
+  integrity sha512-06M00jJ9ViMvhlpK0ThuayUakSdJJzMHDXjIudnmOEgrVO19fHNteWU7ADmEbUSqiVBOZ4hRlGSQpl10SBc99g==
 
-"@utam/diagnostics@1.0.1":
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/@utam/diagnostics/-/diagnostics-1.0.1.tgz#cf28b5b9d06038a932730d96800a2f2f6bd93733"
-  integrity sha512-THZCOz+jzrzf/61FBYZzNXeorc3jwuQzvPHkQlLBTE2QKKBwk5ADejJntC1wlbcOeK13maqBaQRJVoXwkuafSQ==
+"@utam/diagnostics@1.0.2":
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/@utam/diagnostics/-/diagnostics-1.0.2.tgz#0486cbc5d1792098ec4b7215498e76e8eb895648"
+  integrity sha512-fLorAMWCbHbTG+Bh5zPnnWraekyZm/mV6LjQcVDPYVsVLEMmtGAKAsHuVZUfG58fMjFuVP2z+bnICzLOzHTTaw==
 
-"@utam/loader@1.0.1":
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/@utam/loader/-/loader-1.0.1.tgz#68a1931f830a3ce23c28cd678547fb8454161a69"
-  integrity sha512-G/I83Qt5EWHmFIiqiXWOyXR9W7CengvnsI2yqYWVWUSWjMPRI5GapiV2klDUpPYF5t5NSI9lcB8eo3TXgOJzYw==
+"@utam/loader@1.0.2":
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/@utam/loader/-/loader-1.0.2.tgz#9352bb6ab4194fd7cb0001bf4f8a32663b0f8ea8"
+  integrity sha512-3pHxgZiT51A9JKu7OhK6jiw+KjDmokPz7sotKRFfLuT+qXSF3D9WHGS9R/gvTw3RnpjJ4ghWGnkZoLgwsKxqug==
   dependencies:
-    "@utam/core" "1.0.1"
+    "@utam/core" "1.0.2"
 
 "@wdio/cli@^6.10.10":
   version "6.12.1"
@@ -1685,9 +1685,9 @@ camelcase@^3.0.0:
   integrity sha1-MvxLn82vhF/N9+c7uXysImHwqwo=
 
 caniuse-lite@^1.0.30001248:
-  version "1.0.30001249"
-  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001249.tgz#90a330057f8ff75bfe97a94d047d5e14fabb2ee8"
-  integrity sha512-vcX4U8lwVXPdqzPWi6cAJ3FnQaqXbBqy/GZseKNQzRj37J7qZdGcBtxq/QLFNLLlfsoXLUdHw8Iwenri86Tagw==
+  version "1.0.30001322"
+  resolved "https://registry.npmjs.org/caniuse-lite/-/caniuse-lite-1.0.30001322.tgz"
+  integrity sha512-neRmrmIrCGuMnxGSoh+x7zYtQFFgnSY2jaomjU56sCkTA6JINqQrxutF459JpWcWRajvoyn95sOXq4Pqrnyjew==
 
 chalk@^1.1.3:
   version "1.1.3"
@@ -4113,6 +4113,11 @@ safe-regex@^1.1.0:
   resolved "https://registry.yarnpkg.com/safer-buffer/-/safer-buffer-2.1.2.tgz#44fa161b0187b9549dd84bb91802f9bd8385cd6a"
   integrity sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==
 
+salesforce-pageobjects@^1.0.0:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/salesforce-pageobjects/-/salesforce-pageobjects-1.0.1.tgz#912eff9ad083da6b5c2c12e1c0ed7805e6e0b001"
+  integrity sha512-ssqf2L87OVpQJR0VO8XsudwM9Ezz3S6e7ulH0xJ7WTJzyNbe2JeEHSdZ5HN2/WAUNkagi2t0NKzTnAlACFonRQ==
+
 semver-compare@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/semver-compare/-/semver-compare-1.0.0.tgz#0dee216a1c941ab37e9efb1788f6afc5ff5537fc"
@@ -4616,14 +4621,14 @@ use@^3.1.0:
   resolved "https://registry.yarnpkg.com/use/-/use-3.1.1.tgz#d50c8cac79a19fbc20f2911f56eb973f4e10070f"
   integrity sha512-cwESVXlO3url9YWlFW/TA9cshCEhtu7IKJ/p5soJ/gGpj7vbvFrAY/eIioQ6Dw23KjZhYgiIo8HOs1nQ2vr/oQ==
 
-utam@1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/utam/-/utam-1.0.1.tgz#a2fcfa9091566d7226a1dd94e493bcdb932987f6"
-  integrity sha512-/MGCS/vcwktSP14ssBjVP8fmGY8umCtyCFZFEMtAk2F7nG0PmA3dhVrQATpfxijdjmvY7xxiw3yFXxQNtQy/Vw==
+utam@1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/utam/-/utam-1.0.2.tgz#4a23ce96b4e05a31ab582b3733af611eefe81dd8"
+  integrity sha512-KQTznBytbgO4t0pKvS3COsKrwMIwNYu4yWl8sCdVxuXu4WH+tzwB6pBXbUsAB9eGXKY/BF7w+SLfsIA8wGJg/Q==
   dependencies:
-    "@utam/compiler" "1.0.1"
-    "@utam/core" "1.0.1"
-    "@utam/loader" "1.0.1"
+    "@utam/compiler" "1.0.2"
+    "@utam/core" "1.0.2"
+    "@utam/loader" "1.0.2"
     fast-glob "^3.2.2"
     rollup "^2.38.0"
     yargs "^17.3.0"
@@ -4660,12 +4665,12 @@ wdio-chromedriver-service@^6.0.4:
   dependencies:
     fs-extra "^9.0.0"
 
-wdio-utam-service@1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/wdio-utam-service/-/wdio-utam-service-1.0.1.tgz#14c11f3ed9bc6980b376119b94ae652db43acd03"
-  integrity sha512-TsfUUNrzF4oawA711G0/pshXisPtrZD/od0qtyCG1lpiK0FXrLa5jkEtfOU1WWpdX0YwSOg23hXBiomb4OBHxw==
+wdio-utam-service@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/wdio-utam-service/-/wdio-utam-service-1.0.2.tgz#b876c8144d1b73f11ff438cd7ac0006f8e79cb31"
+  integrity sha512-AtiiFJ9cnhfbE6VMMwdJbKnuOvWjZHWAPIiTKU4shSHW1k/ls91g/7EUOp5ksg30bnVtMoZn8cfeA7rLBvLtBQ==
   dependencies:
-    utam "1.0.1"
+    utam "1.0.2"
 
 webdriver@6.12.1:
   version "6.12.1"

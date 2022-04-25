@@ -8,9 +8,9 @@
 // to run:
 // yarn test --spec force-app/test/record-create.spec.js
 
-import ConsoleObjectHome from 'utam-preview/pageObjects/consoleObjectHome';
-import RecordActionWrapper from 'utam-preview/pageObjects/recordActionWrapper';
-import RecordHomeFlexipage2 from 'utam-preview/pageObjects/recordHomeFlexipage2';
+import ConsoleObjectHome from 'salesforce-pageobjects/global/pageObjects/consoleObjectHome';
+import RecordActionWrapper from 'salesforce-pageobjects/global/pageObjects/recordActionWrapper';
+import RecordHomeFlexipage2 from 'salesforce-pageobjects/global/pageObjects/recordHomeFlexipage2';
 import { RecordType } from './utilities/record-type';
 import { login } from './utilities/salesforce-test';
 import { TestEnvironment } from './utilities/test-environment';
@@ -92,8 +92,8 @@ describe('Record creation tests', () => {
         const recordLayout = await recordForm.getRecordLayout();
 
         console.log("Enter 'Close date' as 01/01/2020");
-        const item = await recordLayout.getItem(1, 1, 2);
-        const datePicker = await item.getDatepicker();
+        const closeDateItem = await recordLayout.getItem(1, 1, 2);
+        const datePicker = await closeDateItem.getDatepicker();
         await datePicker.setDateText('01/01/2020');
 
         console.log("Pick first option in a 'Stage' combobox");

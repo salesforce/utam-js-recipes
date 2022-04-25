@@ -6,7 +6,7 @@
                 "selector": {
                     "css": "lightning-card"
                 },
-                "type": "utam-lightning/pageObjects/card"
+                "type": "salesforce-pageobjects/lightning/pageObjects/card"
             }
         ]
     },

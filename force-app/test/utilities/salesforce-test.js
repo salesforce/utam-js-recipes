@@ -18,8 +18,8 @@ export async function login(testEnvironment, landingPagePartialUrl) {
 
     console.log(`Navigate to login URL: ${baseUrl}`);
     await browser.url(baseUrl);
-    const login = await utam.load(Login);
-    await login.login(username, password);
+    const loginPage = await utam.load(Login);
+    await loginPage.login(username, password);
     const document = utam.getCurrentDocument();
     await document.waitFor(async () => {
         const docUrl = await document.getUrl();

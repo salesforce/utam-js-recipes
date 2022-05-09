@@ -88,6 +88,10 @@ There are two types of tests in this project:
 
 Both tests demonstrate how UTAM can be used to author and compile page objects, and how to integrate the UTAM runtime with WebdriverIO.
 
+## Dependency for Salesforce page objects
+
+The `package.json` file contains a dependency for the `salesforce-pageobjects` artifact, which contains page objects from Salesforce. The artifact is available on [npm](https://www.npmjs.com/package/salesforce-pageobjects).
+
 ## Set up Salesforce Web UI tests
 
 ### 1) Create a .env file
@@ -268,9 +272,9 @@ Finally, run tests:
 $ yarn test --spec force-app/test/sfdx-scratch-org.spec.js
 ```
 
-### Run the test against https://utam.dev
+### Run the test against the UTAM doc site
 
-The repository contains [example of the test against https://utam.dev](https://github.com/salesforce/utam-js-recipes/blob/main/force-app/test/utam-portal.spec.js).
+The repository contains a [test against utam.dev](https://github.com/salesforce/utam-js-recipes/blob/main/force-app/test/utam-portal.spec.js).
 The test doesn't require any special setup. The instructions to run it are inside the test.
 
 [enable-dev-hub]: https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_setup_enable_devhub.htm

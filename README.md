@@ -90,7 +90,7 @@ Both tests demonstrate how UTAM can be used to author and compile page objects, 
 
 ## Dependency for Salesforce page objects
 
-The `package.json` file contains a dependency for the `salesforce-pageobjects` artifact, which contains page objects from Salesforce. The artifact is available on [npm](https://www.npmjs.com/package/salesforce-pageobjects).
+The `package.json` file contains a dependency for the `salesforce-pageobjects` package, which contains page objects from Salesforce. The package is available on [npm](https://www.npmjs.com/package/salesforce-pageobjects).
 
 ## Set up Salesforce Web UI tests
 

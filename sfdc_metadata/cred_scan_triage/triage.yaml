@@ -1,0 +1,9 @@
+clean: true
+mock_secret:
+- id: utam-js-recipes://README.md_ce4a4e2583530c9507ee303de950441d048fdb50
+  justification: example in documentation
+- id: utam-js-recipes://README.md_1e975b74469bdda630e07c4a3a61f28e512aba17
+  justification: example in documentation
+false_positive: []
+non_production_secret: []
+production_secret: []

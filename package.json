@@ -24,7 +24,7 @@
         "@wdio/jasmine-framework": "^6.11.0",
         "@wdio/local-runner": "^6.12.1",
         "@wdio/spec-reporter": "^6.11.0",
-        "chromedriver": "^99.0.0",
+        "chromedriver": "^100.0.0",
         "dotenv": "^16.0.0",
         "envfile": "^6.17.0",
         "husky": ">=6",
@@ -33,9 +33,9 @@
         "magic-string": "^0.26.1",
         "prettier": "2.3.2",
         "rimraf": "^3.0.2",
-        "salesforce-pageobjects": "^1.0.0",
+        "salesforce-pageobjects": "^1.0.2",
         "wdio-chromedriver-service": "^6.0.4",
-        "wdio-utam-service": "^1.0.2"
+        "wdio-utam-service": "^1.0.3"
     },
     "volta": {
         "node": "14.15.4",

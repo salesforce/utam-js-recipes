@@ -28,6 +28,9 @@
  * When creating an instance of this class, pass the environment name prefix as a parameter to the constructor
  * (i.e new TestEnvironment("sandbox"))
  */
+
+const SESSION_TIMEOUT = 2 * 60 * 1000; // 2 hours by default
+
 export class TestEnvironment {
     #envPrefix;
     #baseUrl;
@@ -47,6 +50,13 @@ export class TestEnvironment {
         this.#username = this.#getKeyFromEnv('username');
         this.#password = this.#getKeyFromEnv('password');
         this.#sfdxLoginUrl = this.#getKeyFromEnv('loginUrl');
+
+        // Halt process if Salesforce session timed out
+        const loginTimestamp = this.#getKeyFromEnv('loginTimestamp');
+        if (!loginTimestamp || new Date().getTime() - parseInt(loginTimestamp, 10) > SESSION_TIMEOUT) {
+            console.error('FATAL ERROR: Salesforce session timed out. Re-authenticate before running tests.');
+            process.exit(-1);
+        }
     }
 
     /**

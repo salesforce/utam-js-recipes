@@ -10,28 +10,27 @@
 const util = require('util');
 const exec = util.promisify(require('child_process').exec);
 const { existsSync, readFileSync, writeFileSync } = require('fs');
-const { parse } = require('envfile');
 const {
-    appendScratchOrgUrl,
-    replaceScratchOrgUrl,
+    upsertKeyValue,
     getDefaultTemplate,
     DOTENV_FILEPATH,
     SCRATCH_ORG_KEY,
+    SCRATCH_ORG_TIMESTAMP,
 } = require('./script-utils');
 
 /**
- * Generate the content of the property file that should be written to disk
+ * Updates an existing property file and returns its content
  *
  * @param {string} filePath path the default property file
  * @param {string} url scratch org login url to set in the property file
+ * @param {number} timestamp scratch org login timestamp to set in the property file
  * @returns {string} the property file with the updated url
  */
-function createTemplateFromFile(filePath, url) {
-    const envFile = readFileSync(filePath, { encoding: 'utf-8' });
-    const parsedEnv = parse(envFile);
-    const isScratchOrgKeyPresent = Object.keys(parsedEnv).includes(SCRATCH_ORG_KEY);
-    const transformTemplateFn = !isScratchOrgKeyPresent ? appendScratchOrgUrl : replaceScratchOrgUrl;
-    return transformTemplateFn(envFile, url).toString();
+function getUpdatedEnvFile(filePath, url, timestamp) {
+    let envFile = readFileSync(filePath, { encoding: 'utf-8' });
+    envFile = upsertKeyValue(envFile, SCRATCH_ORG_KEY, url);
+    envFile = upsertKeyValue(envFile, SCRATCH_ORG_TIMESTAMP, timestamp);
+    return envFile;
 }
 
 /**
@@ -62,10 +61,11 @@ async function getScratchOrgLoginUrl() {
 async function generateLoginUrl() {
     try {
         const url = await getScratchOrgLoginUrl();
-        const template = existsSync(DOTENV_FILEPATH)
-            ? createTemplateFromFile(DOTENV_FILEPATH, url)
-            : getDefaultTemplate(url);
-        writeFileSync(DOTENV_FILEPATH, template);
+        const timestamp = new Date().getTime();
+        const envFile = existsSync(DOTENV_FILEPATH)
+            ? getUpdatedEnvFile(DOTENV_FILEPATH, url, timestamp)
+            : getDefaultTemplate(url, timestamp);
+        writeFileSync(DOTENV_FILEPATH, envFile);
         console.log(`Property .env file successfully generated in ${DOTENV_FILEPATH}`);
     } catch (err) {
         console.log(err);

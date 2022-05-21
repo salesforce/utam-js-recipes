@@ -54,7 +54,7 @@ export class TestEnvironment {
         // Halt process if Salesforce session timed out
         const loginTimestamp = this.#getKeyFromEnv('loginTimestamp');
         if (!loginTimestamp || new Date().getTime() - parseInt(loginTimestamp, 10) > SESSION_TIMEOUT) {
-            console.error('FATAL ERROR: Salesforce session timed out. Re-authenticate before running tests.');
+            console.error('ERROR: Salesforce session timed out. Re-authenticate before running tests.');
             process.exit(-1);
         }
     }

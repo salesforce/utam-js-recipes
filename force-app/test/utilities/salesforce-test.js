@@ -6,7 +6,6 @@
  */
 
 import Login from 'salesforce-pageobjects/helpers/pageObjects/login';
-import ActionRenderer from 'salesforce-pageobjects';
 
 /**
  * Helper function used in crud tests to login in STMFA environment

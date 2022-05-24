@@ -30,6 +30,7 @@
  */
 
 const SESSION_TIMEOUT = 2 * 60 * 1000; // 2 hours by default
+const SCRATCH_ORG_PREFIX = 'scratchOrg';
 
 export class TestEnvironment {
     #envPrefix;
@@ -52,10 +53,12 @@ export class TestEnvironment {
         this.#sfdxLoginUrl = this.#getKeyFromEnv('loginUrl');
 
         // Halt process if Salesforce session timed out
-        const loginTimestamp = this.#getKeyFromEnv('loginTimestamp');
-        if (!loginTimestamp || new Date().getTime() - parseInt(loginTimestamp, 10) > SESSION_TIMEOUT) {
-            console.error('ERROR: Salesforce session timed out. Re-authenticate before running tests.');
-            process.exit(-1);
+        if (this.#envPrefix === SCRATCH_ORG_PREFIX) {
+            const loginTimestamp = this.#getKeyFromEnv('loginTimestamp');
+            if (!loginTimestamp || new Date().getTime() - parseInt(loginTimestamp, 10) > SESSION_TIMEOUT) {
+                console.error('ERROR: Salesforce session timed out. Re-authenticate before running tests.');
+                process.exit(-1);
+            }
         }
     }
 

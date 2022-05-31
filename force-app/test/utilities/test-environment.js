@@ -29,7 +29,7 @@
  * (i.e new TestEnvironment("sandbox"))
  */
 
-const SESSION_TIMEOUT = 2 * 60 * 1000; // 2 hours by default
+const SESSION_TIMEOUT = 2 * 60 * 60 * 1000; // 2 hours by default
 const SCRATCH_ORG_PREFIX = 'scratchOrg';
 
 export class TestEnvironment {

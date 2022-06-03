@@ -7,7 +7,6 @@
 
 require('dotenv').config();
 
-const path = require('path');
 const { UtamWdioService } = require('wdio-utam-service');
 // use prefix 'DEBUG=true' to run test in debug mode
 const { DEBUG } = process.env;
@@ -16,7 +15,7 @@ const DEBUG_TIMEOUT = EXPLICIT_TIMEOUT * 30;
 
 exports.config = {
     runner: 'local',
-    specs: ['force-app/test/**/*.spec.js'],
+    specs: ['force-app/test/**/*.spec.ts'],
     maxInstances: 1,
     capabilities: [
         {
@@ -37,7 +36,12 @@ exports.config = {
     jasmineNodeOpts: {
         // max execution time for a script, set to 5 min
         defaultTimeoutInterval: 1000 * 60 * 5,
-        // Temporary workaround to get babel to work in wdio tests
-        helpers: [path.resolve(process.cwd(), 'wdioJasmineHelper.js')],
+    },
+    autoCompileOpts: {
+        autoCompile: true,
+        tsNodeOpts: {
+            transpileOnly: true,
+            project: 'tsconfig.json',
+        },
     },
 };

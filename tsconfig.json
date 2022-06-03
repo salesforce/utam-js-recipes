@@ -1,0 +1,13 @@
+{
+    "extends": "@tsconfig/node14/tsconfig.json",
+    "compilerOptions": {
+        "baseUrl": ".",
+        "paths": {
+            "salesforce-pageobjects/*": ["node_modules/salesforce-pageobjects/dist/*"]
+        },
+        // Note: we are still using WDIO 6 until we have proper support for v7 that's why
+        // we import the 'webdriverio' type
+        "types": ["node", "webdriverio", "@wdio/jasmine-framework", "wdio-utam-service"]
+    },
+    "include": ["force-app/**/*.ts"]
+}

@@ -7,5 +7,6 @@
             "fileMatch": ["*.utam.json"],
             "url": "https://utam.dev/schemas/v1/utam.json"
         }
-    ]
+    ],
+    "typescript.tsdk": "node_modules/typescript/lib"
 }

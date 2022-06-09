@@ -39,7 +39,7 @@ exports.config = {
             'appium:orientation': 'PORTRAIT',
             'appium:automationName': 'UiAutomator2',
             'appium:deviceName': 'emulator-5554',
-            'appium:app': '/Users/qren/Downloads/chatters/SApp-238.apk',
+            'appium:app': '<path to Android test app>',
             'appium:appActivity': 'com.salesforce.chatter.Chatter',
             'appium:appPackage': 'com.salesforce.chatter',
             'appium:newCommandTimeout': 240,

@@ -291,7 +291,7 @@ For an iOS test, update wdio.conf.ios.js file to configure, test device name and
 
 ```js
 'appium:deviceName': 'iPhone 12',
-'appium:app': '/Users/qren/Downloads/chatters/Chatter-238.app',
+'appium:app': '<path to iOS test app>',
 'appium:platformVersion': '15.2',
 ```
 
@@ -299,7 +299,7 @@ For an Android test, update wdio.conf.android.js file to configure the applicati
 
 ```js
 'appium:deviceName': 'emulator-5554',
-'appium:app': '/Users/qren/Downloads/chatters/SApp-238.apk',
+'appium:app': '<path to Android test app>',
 'appium:appActivity': 'com.salesforce.chatter.Chatter',
 'appium:appPackage': 'com.salesforce.chatter',
 ```

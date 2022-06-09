@@ -40,7 +40,7 @@ exports.config = {
             platformName: 'iOS',
             'appium:autoWebview': true,
             'appium:deviceName': 'iPhone 12',
-            'appium:app': '/Users/qren/Downloads/chatters/Chatter-238.app',
+            'appium:app': '<path to iOS test app>',
             'appium:automationName': 'XCUITest',
             'appium:platformVersion': '15.2',
         },

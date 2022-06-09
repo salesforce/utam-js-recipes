@@ -2,7 +2,6 @@ require('dotenv').config();
 
 const path = require('path');
 const { UtamWdioService } = require('wdio-utam-service');
-// use prefix 'DEBUG=true' to run test in debug mode
 const { DEBUG } = process.env;
 const EXPLICIT_TIMEOUT = 60 * 1000;
 const DEBUG_TIMEOUT = EXPLICIT_TIMEOUT * 30;
@@ -24,7 +23,7 @@ exports.config = {
     // ==================
     // Define which test specs should run. The pattern is relative to the directory
     // from which `wdio` was called.
-    specs: ['force-app/test/mobile/**/*.spec.ts'],
+    specs: ['force-app/test/mobile/**/*.spec.js'],
     //
     // ============
     // Capabilities

@@ -16,19 +16,17 @@ describe('Test Salesforce App', () => {
 
         if (browser.isAndroid) {
             const options = await utam.load(LoginNavBarOptions);
-            const isPresent = await options.isPresent();
-            expect(isPresent).toBeTruthy();
             await options.changeServer();
         }
-        
+
         const choosConn = await utam.load(ChooseConn);
         await choosConn.switchConnection('Sandbox');
 
         if (browser.isAndroid) {
             browser.back();
         }
-    
+
         utam.setBridgeAppTitle('Login | Salesforce');
         const login = await utam.load(Login);
-    })
-})
+    });
+});

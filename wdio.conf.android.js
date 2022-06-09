@@ -22,7 +22,7 @@ exports.config = {
     // ==================
     // Define which test specs should run. The pattern is relative to the directory
     // from which `wdio` was called.
-    specs: ['force-app/test/mobile/**/*.spec.ts'],
+    specs: ['force-app/test/mobile/**/*.spec.js'],
     //
     // ============
     // Capabilities

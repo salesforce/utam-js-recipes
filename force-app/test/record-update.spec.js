@@ -36,6 +36,12 @@ describe('Record update test', () => {
         await browser.navigateTo(recordHomeUrl);
     }
 
+    /**
+     * Case-insensitive equality comparaison between two strings
+     * @param {string} str1 first string to compare
+     * @param {string} str2 other string to compare
+     * @returns {boolean} true if the string are equals, false otherwise
+     */
     const equalsIgnoreCase = (str1, str2) => str1.toLowerCase() === str2.toLowerCase();
 
     beforeAll(async () => {

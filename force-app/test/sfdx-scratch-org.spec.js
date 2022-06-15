@@ -15,7 +15,7 @@ import { TestEnvironment } from './utilities/test-environment';
 
 describe('Scratch Org Tests', () => {
     const testEnvironment = new TestEnvironment('scratchOrg');
-    let appHomePage;
+    let /** @type {HomePage} */ appHomePage;
 
     beforeEach(async () => {
         console.log('Navigate to login URL for a scratch org');

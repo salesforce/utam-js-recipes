@@ -9,6 +9,9 @@
         "pageObjects"
     ],
     "compilerOptions": {
+        "noEmit": true,
+        "checkJs": true,
+        "strict": true,
         "paths": {
             "salesforce-pageobjects/*": [
                 "./node_modules/salesforce-pageobjects/dist/*"

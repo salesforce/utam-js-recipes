@@ -2,8 +2,7 @@
     "description": {
         "text": [
             "Selector: .navexDesktopLayoutContainer",
-            "Represents the navex:DesktopLayoutContainer  aura component.",
-            "Get force:DockingPanel and one-appnav components"
+            "Represents the navex:DesktopLayoutContainer component."
         ],
         "author": "Salesforce"
     },

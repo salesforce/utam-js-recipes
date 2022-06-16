@@ -1,11 +1,21 @@
 {
     "extends": "@tsconfig/node14/tsconfig.json",
-    "include": ["force-app/test/**/*"],
-    "exclude": ["node_modules", "utam-preview", "pageObjects"],
+    "include": [
+        "force-app/test/**/*"
+    ],
+    "exclude": [
+        "node_modules",
+        "utam-preview",
+        "pageObjects"
+    ],
     "compilerOptions": {
-        "baseUrl": ".",
+        "noEmit": true,
+        "checkJs": true,
+        "strict": true,
         "paths": {
-            "salesforce-pageobjects/*": ["node_modules/salesforce-pageobjects/dist/*"]
+            "salesforce-pageobjects/*": [
+                "./node_modules/salesforce-pageobjects/dist/*"
+            ]
         }
     }
 }

@@ -31,3 +31,6 @@ packages/*/dist/
 # Generated .env
 .env
 **.env
+
+# npmrc
+.npmrc

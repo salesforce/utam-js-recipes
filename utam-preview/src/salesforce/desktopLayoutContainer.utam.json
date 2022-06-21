@@ -13,7 +13,7 @@
     "elements": [
         {
             "name": "appNavPrivate",
-            "type": "utam-global/pageObjects/appNav",
+            "type": "salesforce-pageobjects/global/pageObjects/appNav",
             "selector": {
                 "css": "one-appnav"
             }

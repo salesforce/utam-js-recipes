@@ -8,40 +8,14 @@
 // to run:
 // yarn test --spec force-app/test/record-create.spec.js
 
-import ConsoleObjectHome from 'salesforce-pageobjects/global/pageObjects/consoleObjectHome';
-import RecordActionWrapper from 'salesforce-pageobjects/global/pageObjects/recordActionWrapper';
 import RecordHomeFlexipage2 from 'salesforce-pageobjects/global/pageObjects/recordHomeFlexipage2';
 import { RecordType } from './utilities/record-type';
-import { login } from './utilities/salesforce-test';
+import { login, openRecordModal } from './utilities/salesforce-test';
 import { TestEnvironment } from './utilities/test-environment';
+import RecordActionWrapper from 'salesforce-pageobjects/global/pageObjects/recordActionWrapper';
 
 // TODO: replace with prefix of the environment from .env file
 const TEST_ENVIRONMENT_PREFIX = 'na45';
-
-/**
- * Utility function that open a given record type modal
- * @param {string} baseUrl test environment
- * @param {RecordType} recordType type of record used in the UI test
- * @returns {Promise<void>} instance of the record modal Page Object
- */
-async function openRecordModal(baseUrl, recordType) {
-    console.log(`Navigate to an Object Home for ${recordType.name}`);
-    await browser.navigateTo(recordType.getObjectHomeUrl(baseUrl));
-
-    console.log(`Load ${recordType.name} Object Home page`);
-    const objectHome = await utam.load(ConsoleObjectHome);
-    const listView = await objectHome.getListView();
-    const listViewHeader = await listView.getHeader();
-
-    console.log("List view header: click button 'New'");
-    const actionLink = await listViewHeader.waitForAction('New');
-    await actionLink.click();
-
-    console.log('Load Record Form Modal');
-    const recordFormModal = await utam.load(RecordActionWrapper);
-    const isRecordFormModalPresent = await recordFormModal.isPresent();
-    expect(isRecordFormModalPresent).toBe(true);
-}
 
 describe('Record creation tests', () => {
     const testEnvironment = new TestEnvironment(TEST_ENVIRONMENT_PREFIX);
@@ -52,12 +26,9 @@ describe('Record creation tests', () => {
     });
 
     it('Create a new Account Record', async () => {
-        await openRecordModal(baseUrl, RecordType.Account);
-
         // TODO - depending on org setup, modal might not present, then comment next lines
         console.log('Load Change Record Type Modal');
-        let recordFormModal = await utam.load(RecordActionWrapper);
-
+        let recordFormModal = await openRecordModal(baseUrl, RecordType.Account);
         console.log("Change Record Type Modal: click button 'Next'");
         const changeRecordTypeFooter = await recordFormModal.waitForChangeRecordFooter();
         await changeRecordTypeFooter.clickButton('Next');
@@ -84,10 +55,8 @@ describe('Record creation tests', () => {
     });
 
     it('Create a new Opportunity Record', async () => {
-        await openRecordModal(baseUrl, RecordType.Opportunity);
-
         console.log('Load Record Form Modal');
-        const recordFormModal = await utam.load(RecordActionWrapper);
+        const recordFormModal = await openRecordModal(baseUrl, RecordType.Opportunity);
         const recordForm = await recordFormModal.getRecordForm();
         const recordLayout = await recordForm.getRecordLayout();
 

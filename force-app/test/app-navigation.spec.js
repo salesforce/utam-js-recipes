@@ -8,7 +8,7 @@
 // to run:
 // yarn test --spec force-app/test/app-navigation.spec.js
 
-import ApplicationHome from 'utam-preview/pageObjects/desktopLayoutContainer';
+import ApplicationHome from 'salesforce-pageobjects/navex/pageObjects/desktopLayoutContainer';
 import { login } from './utilities/salesforce-test';
 import { TestEnvironment } from './utilities/test-environment';
 

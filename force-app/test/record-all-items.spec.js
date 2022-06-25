@@ -24,9 +24,17 @@ describe('Test LwcRecordLayout methods', () => {
         const recordFormModal = await openRecordModal(baseUrl, RecordType.Opportunity);
         const recordForm = await recordFormModal.getRecordForm();
         const recordLayout = await recordForm.getRecordLayout();
+
+        // test sections count
         const sections = await recordLayout.getSections();
         const sectionsCount = sections.length;
         console.log('Number of sections: ' + sectionsCount);
         expect(sectionsCount).toBeGreaterThan(0);
+
+        // test items count
+        const items = await recordLayout.getAllItems();
+        const itemsCount = items.length;
+        console.log('Number of items: ' + itemsCount);
+        expect(itemsCount).toBeGreaterThan(0);
     });
 });

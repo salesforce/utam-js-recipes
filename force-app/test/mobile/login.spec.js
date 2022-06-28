@@ -1,13 +1,11 @@
-import ChooseConn from 'salesforceapp-pageobjects/pageObjects/authentication/chooseConn';
-import Eula from 'salesforceapp-pageobjects/pageObjects/authentication/eula';
+import ChooseConn from 'salesforce-pageobjects/salesforceapp/pageObjects/authentication/chooseConn';
+import Eula from 'salesforce-pageobjects/salesforceapp/pageObjects/authentication/eula';
 import Login from 'salesforce-pageobjects/helpers/pageObjects/login';
-import LoginNavBar from 'salesforceapp-pageobjects/pageObjects/authentication/loginNavBar';
-import LoginNavBarOptions from 'salesforceapp-pageobjects/pageObjects/authentication/loginNavBarOptions';
-import loaderConfig from 'salesforceapp-pageobjects/mobileSF.config.json';
+import LoginNavBar from 'salesforce-pageobjects/salesforceapp/pageObjects/authentication/loginNavBar';
+import LoginNavBarOptions from 'salesforce-pageobjects/salesforceapp/pageObjects/authentication/loginNavBarOptions';
 
 describe('Test Salesforce App', () => {
     it('testLogin', async () => {
-        utam.setLoaderConfig(loaderConfig);
         const eula = await utam.load(Eula);
         await eula.accept();
 

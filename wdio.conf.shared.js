@@ -41,7 +41,16 @@ exports.baseMobileConfig = {
     waitforTimeout: DEBUG ? DEBUG_TIMEOUT : EXPLICIT_TIMEOUT,
     connectionRetryTimeout: 120000,
     connectionRetryCount: 3,
-    services: ['selenium-standalone', [UtamWdioService, { implicitTimeout: 0 }]],
+    services: [
+        'selenium-standalone',
+        [
+            UtamWdioService,
+            {
+                implicitTimeout: 0,
+                injectionConfigs: ['salesforce-pageobjects/utam-salesforceapp-pageobjects.config.json'],
+            },
+        ],
+    ],
     framework: 'jasmine',
     reporters: ['spec'],
     jasmineNodeOpts: {

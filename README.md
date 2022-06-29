@@ -285,7 +285,7 @@ The test doesn't require any special setup. The instructions to run it are insid
 ## Run Salesforce Mobile test
 
 - Follow the instructions at [Get Started for Mobile](https://utam.dev/guide/get_started_utam#get-started-for-mobile) to set up your local simulator/emulator.
-- Make sure [Appium](https://github.com/appium/appium#readme) and [node.js](https://nodejs.org/en/) are installed in user home.
+- Make sure [Appium](https://github.com/appium/appium#readme) and [node.js](https://nodejs.org/en/) are installed on your machine.
 - Update the wdio configuration file:
 For an iOS test, update `wdio.conf.ios.js` file to configure, test device name and os version, the full path for the test application:
 
@@ -305,10 +305,10 @@ For an Android test, update `wdio.conf.android.js` file to configure the applica
 ```
 
 - Download the [debug build](https://developer.salesforce.com/tools/mobile-debugging) for SalesforceApp iOS and Android.
+- Start an Appium server at local before executing any test via: appium --port 4444.
 - Commands to execute test: 
 For iOS: yarn test wdio.conf.ios.js
 For Android: yarn test wdio.conf.android.js
-- Start an Appium server at local before executing any test via: appium --port 4444.
 - For a test on Android, make sure to start an emulator before the test run. Otherwise, will hit error like this: "Error: Failed to create session.
 An unknown server-side error occurred while processing the command. Original error: Could not find a connected Android device in 20190ms.".
 - Install the appropriate version of chromedriver based on the instructions on this [site](https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/web/chromedriver.md).

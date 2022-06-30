@@ -305,7 +305,6 @@ For an Android test, update `wdio.conf.android.js` file to configure the applica
 ```
 
 - Download the [debug build](https://developer.salesforce.com/tools/mobile-debugging) for SalesforceApp iOS and Android.
-- Start an Appium server at local before executing any test via: appium --port 4444.
 - Commands to execute test: 
 For iOS: yarn test wdio.conf.ios.js
 For Android: yarn test wdio.conf.android.js

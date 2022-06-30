@@ -287,7 +287,7 @@ The test doesn't require any special setup. The instructions to run it are insid
 - Follow the instructions at [Get Started for Mobile](https://utam.dev/guide/get_started_utam#get-started-for-mobile) to set up your local simulator/emulator.
 - Make sure that [Appium](https://github.com/appium/appium#readme) and [node.js](https://nodejs.org/en/) are installed on your machine.
 - Update the wdio configuration file:
-For an iOS test, update `wdio.conf.ios.js` file to configure the test device name, iOS version, and the full path for the test application:
+For an iOS test, update `wdio.conf.ios.js` file to configure the test device name(appium:deviceName), iOS version(appium:platformVersion), and the full path for the test application(appium:app):
 
 ```js
 'appium:deviceName': 'iPhone 12',
@@ -295,7 +295,7 @@ For an iOS test, update `wdio.conf.ios.js` file to configure the test device nam
 'appium:platformVersion': '15.2',
 ```
 
-For an Android test, update the `wdio.conf.android.js` file to configure the application bundleid, the full path for the test application, and the application's initial activity:
+For an Android test, update the `wdio.conf.android.js` file to configure the test device name(appium:deviceName), application bundleid(appium:appPackage), the full path for the test application(appium:app), and the application's initial activity(appium:appActivity):
 
 ```js
 'appium:deviceName': 'emulator-5554',

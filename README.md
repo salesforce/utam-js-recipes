@@ -305,7 +305,7 @@ For an Android test, update the `wdio.conf.android.js` file to configure the app
 ```
 
 - Download the [debug build](https://developer.salesforce.com/tools/mobile-debugging) for the Salesforce iOS and Android mobile apps.
-- Commands to execute test: 
+- Commands to execute a test: 
 For iOS: yarn test wdio.conf.ios.js
 For Android: yarn test wdio.conf.android.js
 - For a test on Android, make sure to start an emulator before the test run. Otherwise, will hit error like this: "Error: Failed to create session.

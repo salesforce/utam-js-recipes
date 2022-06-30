@@ -308,6 +308,6 @@ For an Android test, update the `wdio.conf.android.js` file to configure the app
 - Commands to execute a test: 
 For iOS: yarn test wdio.conf.ios.js
 For Android: yarn test wdio.conf.android.js
-- For a test on Android, make sure to start an emulator before the test run. Otherwise, will hit error like this: "Error: Failed to create session.
+- For a test on Android, make sure to start an emulator before the test run. Otherwise, you will get an error like this: "Error: Failed to create session.
 An unknown server-side error occurred while processing the command. Original error: Could not find a connected Android device in 20190ms.".
 - Install the appropriate version of chromedriver based on the instructions on this [site](https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/web/chromedriver.md).

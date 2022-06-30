@@ -295,7 +295,7 @@ For an iOS test, update `wdio.conf.ios.js` file to configure, test device name a
 'appium:platformVersion': '15.2',
 ```
 
-For an Android test, update `wdio.conf.android.js` file to configure the application bundleid, the full path for the test application and application initial activity:
+For an Android test, update the `wdio.conf.android.js` file to configure the application bundleid, the full path for the test application, and the application's initial activity:
 
 ```js
 'appium:deviceName': 'emulator-5554',

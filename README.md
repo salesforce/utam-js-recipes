@@ -304,7 +304,7 @@ For an Android test, update the `wdio.conf.android.js` file to configure the app
 'appium:appPackage': 'com.salesforce.chatter',
 ```
 
-- Download the [debug build](https://developer.salesforce.com/tools/mobile-debugging) for SalesforceApp iOS and Android.
+- Download the [debug build](https://developer.salesforce.com/tools/mobile-debugging) for the Salesforce iOS and Android mobile apps.
 - Commands to execute test: 
 For iOS: yarn test wdio.conf.ios.js
 For Android: yarn test wdio.conf.android.js

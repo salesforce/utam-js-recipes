@@ -18,9 +18,9 @@ import { TestEnvironment } from './utilities/test-environment';
 // TODO: replace with prefix of the environment from .env file
 const TEST_ENVIRONMENT_PREFIX = 'na45';
 // TODO: replace with existing Account Id for the environment
-const ACCOUNT_RECORD_ID = '001S7000002X6FSIA0';
+const ACCOUNT_RECORD_ID = '001S7000002XuhoIAC';
 // TODO: replace with existing Contact Id for the environment
-const CONTACT_RECORD_ID = '003S7000001vfDXIAY';
+const CONTACT_RECORD_ID = '003S7000001uXylIAE';
 
 describe('Record update test', () => {
     const testEnvironment = new TestEnvironment(TEST_ENVIRONMENT_PREFIX);
@@ -84,7 +84,7 @@ describe('Record update test', () => {
         const detailsTabLabel = 'Details';
         await gotoRecordHomeByUrl(RecordType.Contact, CONTACT_RECORD_ID);
 
-        console.log('Load Accounts Record Home page');
+        console.log('Load Contacts Record Home page');
         const recordHome = await utam.load(RecordHomeFlexipage2);
         const tabset = await recordHome.getTabset();
 
@@ -116,6 +116,7 @@ describe('Record update test', () => {
         const headlessAction = await actionRenderer.getHeadlessAction();
         const button = await headlessAction.getLightningButton();
         await button.click();
+        await button.waitForAbsence();
 
         console.log('Wait for field to be updated');
         await nameItem.waitForOutputField();

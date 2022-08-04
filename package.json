@@ -7,8 +7,9 @@
         "format": "prettier --write .",
         "test": "wdio",
         "clean": "rimraf pageObjects/ node_modules/",
-        "build": "yarn compile:utam && cd utam-preview && yarn compile",
-        "compile:utam": "utam -c utam.config.js",
+        "build": "yarn compile:utam && yarn generate:utam",
+        "compile:utam": "utam -c utam.config.js && cd utam-preview && yarn compile",
+        "generate:utam": "cd utam-generator && yarn generate && yarn compile",
         "create:env": "node scripts/create-env-file.js",
         "generate:login": "node scripts/generate-login-url.js",
         "prepare": "husky install"
@@ -35,7 +36,7 @@
         "rimraf": "^3.0.2",
         "salesforce-pageobjects": "^1.2.0",
         "wdio-chromedriver-service": "^6.0.4",
-        "wdio-utam-service": "^1.0.6"
+        "wdio-utam-service": "^1.0.9"
     },
     "volta": {
         "node": "14.15.4",

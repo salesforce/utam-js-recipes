@@ -1,0 +1,13 @@
+{
+    "inputRootDir" : "src/cpq",
+    "ignoreFolders": ["**/node_modules/**", "**/build/**"],
+    "inputFileMask": ["**/*.html"],
+    "outputFileExtension": ".utam.json",
+    "outputDir": "__generated__",
+    "defaultNamespace": "utam-generator/pageObjects/", 
+    "namespaces" : {
+        "c" : "utam-generator2/pageObjects/"
+    },
+    "relativeOutputDir": false,
+    "generateCustomContent": true
+}

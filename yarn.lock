@@ -1149,30 +1149,39 @@
   dependencies:
     "@types/node" "*"
 
-"@utam/compiler@1.0.6":
-  version "1.0.6"
-  resolved "https://registry.yarnpkg.com/@utam/compiler/-/compiler-1.0.6.tgz#a11111e7eab38eb35025fd5c70f6f2d5ab941844"
-  integrity sha512-9fsvtCs497Qi64+r3SlC9B5nwAowONk6Z7G1NQIe3byGJ7E2lEhnlCVfnr55mrM38oBClcbblTUgh5xSCTpotQ==
+"@utam/compiler@1.0.9":
+  version "1.0.9"
+  resolved "http://localhost:4873/@utam%2fcompiler/-/compiler-1.0.9.tgz#412dae009c0c74bd76eb896f95b3760246388981"
+  integrity sha512-HiHIYZ+fYuWuzGYcEf9gT9VI+ZcRmjGAKq/HY65ZiTfTsyFnKApSkRFgjjsOHwVX68SYoE1tzmOKwrSem4uXig==
   dependencies:
-    "@utam/diagnostics" "1.0.6"
+    "@utam/diagnostics" "1.0.9"
     jsonc-parser "^3.0.0"
 
-"@utam/core@1.0.6":
-  version "1.0.6"
-  resolved "https://registry.yarnpkg.com/@utam/core/-/core-1.0.6.tgz#b3837033c9026590288fdd7dd65acb2dea9a4fde"
-  integrity sha512-gB9cIBcKRjytquTj+twFPU/VLAU273yJutKspF2LxxvAkzk+RY78aBWxANbsYi6AjlrTKkElPbhY+mi3uBf4Bg==
+"@utam/core@1.0.9":
+  version "1.0.9"
+  resolved "http://localhost:4873/@utam%2fcore/-/core-1.0.9.tgz#a73ce396213fcf68b3b7826c10dc936f2761f22f"
+  integrity sha512-gP9x5Icy9Oybash0O2QHBJQ5kQcXsfKmG92n5wQ933LGGe1e5IaJ/XxrgwT9BkUsL3sJEzr0XSbJ0ZxJuV9e5w==
 
-"@utam/diagnostics@1.0.6":
-  version "1.0.6"
-  resolved "https://registry.yarnpkg.com/@utam/diagnostics/-/diagnostics-1.0.6.tgz#fa0adddcf0d0cd5baf2fee31af8ee54371cac3b8"
-  integrity sha512-P08aEMtbvTe7HwUDviGl4v0HYnXPoG9eLeLKd5D98LG/72MhnHKhNaYpenDbl6uEyUBans9qVmLgzQxL8uPVKg==
+"@utam/diagnostics@1.0.9":
+  version "1.0.9"
+  resolved "http://localhost:4873/@utam%2fdiagnostics/-/diagnostics-1.0.9.tgz#9a62d3afdd055254cee6a7d95c7b3db769268881"
+  integrity sha512-xsgqM/vuwdLuSzpUTXMDAGGs0oAcVj07e3kcM7NH06K6pMxJI60U5bAqajAEAjukYC1j6aDttgaEQRZIbLklcw==
 
-"@utam/loader@1.0.6":
-  version "1.0.6"
-  resolved "https://registry.yarnpkg.com/@utam/loader/-/loader-1.0.6.tgz#404ef6d51e873e7cf5651eb77b46c40dc5ceeecb"
-  integrity sha512-zJVAM4v5nPnxdbC7UV9Axv794AIBSWNxTTZtpy/9MUPEFjEmzZavAL9zWUJtlJTnkTmhGqc44BxohvU3sdv4PA==
+"@utam/generator@1.0.9":
+  version "1.0.9"
+  resolved "http://localhost:4873/@utam%2fgenerator/-/generator-1.0.9.tgz#44e3ba97c2bc44a98b4382f445ad0fb7045bbe82"
+  integrity sha512-oWo5YK6XgapJmbM3JIrZXKags0LL6brKq3ikZk/0hOV+qJecyVwV1UTRjBSygfPDpn9I4GRGlQHnrX7zk12vOw==
   dependencies:
-    "@utam/core" "1.0.6"
+    fast-glob "^3.2.11"
+    parse5 "^6.0.1"
+    prettier "2.7.1"
+
+"@utam/loader@1.0.9":
+  version "1.0.9"
+  resolved "http://localhost:4873/@utam%2floader/-/loader-1.0.9.tgz#96baa44a1c01c0a254101a9062e9d30149550013"
+  integrity sha512-MWFEXf7ltoWhZwDL5I+OjaSk3cQFg5zTp3xca0eCqYO665zYksKqR9Lk+hu28E5M8PfC5lKZ6e0hMDxmrKkg2w==
+  dependencies:
+    "@utam/core" "1.0.9"
 
 "@wdio/appium-service@^6.12.1":
   version "6.12.1"
@@ -3752,6 +3761,11 @@ parse-ms@^2.1.0:
   resolved "https://registry.yarnpkg.com/parse-ms/-/parse-ms-2.1.0.tgz#348565a753d4391fa524029956b172cb7753097d"
   integrity sha512-kHt7kzLoS9VBZfUsiKjv43mr91ea+U05EyKkEtqp7vNbHxmaVuEqN7XxeEVnGrMtYOAxGrDElSi96K7EgO1zCA==
 
+parse5@^6.0.1:
+  version "6.0.1"
+  resolved "http://localhost:4873/parse5/-/parse5-6.0.1.tgz#e1a1c085c569b3dc08321184f19a39cc27f7c30b"
+  integrity sha512-Ofn/CTFzRGTTxwpNEs9PP93gXShHcTq255nzRYSKe8AkVpZY7e1fpmTfOyoIvjP5HG7Z2ZM7VS9PPhQGW2pOpw==
+
 pascalcase@^0.1.1:
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/pascalcase/-/pascalcase-0.1.1.tgz#b363e55e8006ca6fe21784d2db22bd15d7917f14"
@@ -3872,6 +3886,11 @@ prettier@2.3.2:
   version "2.3.2"
   resolved "https://registry.yarnpkg.com/prettier/-/prettier-2.3.2.tgz#ef280a05ec253712e486233db5c6f23441e7342d"
   integrity sha512-lnJzDfJ66zkMy58OL5/NY5zp70S7Nz6KqcKkXYzn2tMVrNxvbqaBpg7H3qHaLxCJ5lNMsGuM8+ohS7cZrthdLQ==
+
+prettier@2.7.1:
+  version "2.7.1"
+  resolved "http://localhost:4873/prettier/-/prettier-2.7.1.tgz#e235806850d057f97bb08368a4f7d899f7760c64"
+  integrity sha512-ujppO+MkdPqoVINuDFDRLClm7D78qbDt0/NR+wp5FqEZOoTNAjPHWj17QRhu7geIHJfcNhRk1XVQmF8Bp3ye+g==
 
 pretty-format@^26.6.2:
   version "26.6.2"
@@ -4173,10 +4192,10 @@ rimraf@^3.0.2:
   dependencies:
     glob "^7.1.3"
 
-rollup@^2.75.6:
-  version "2.75.7"
-  resolved "https://registry.yarnpkg.com/rollup/-/rollup-2.75.7.tgz#221ff11887ae271e37dcc649ba32ce1590aaa0b9"
-  integrity sha512-VSE1iy0eaAYNCxEXaleThdFXqZJ42qDBatAwrfnPlENEZ8erQ+0LYX4JXOLPceWfZpV1VtZwZ3dFCuOZiSyFtQ==
+rollup@^2.77.0:
+  version "2.77.2"
+  resolved "http://localhost:4873/rollup/-/rollup-2.77.2.tgz#6b6075c55f9cc2040a5912e6e062151e42e2c4e3"
+  integrity sha512-m/4YzYgLcpMQbxX3NmAqDvwLATZzxt8bIegO78FZLl+lAgKJBd1DRAOeEiZcKOIOPjxE6ewHWHNgGEalFXuz1g==
   optionalDependencies:
     fsevents "~2.3.2"
 
@@ -4736,16 +4755,17 @@ use@^3.1.0:
   resolved "https://registry.yarnpkg.com/use/-/use-3.1.1.tgz#d50c8cac79a19fbc20f2911f56eb973f4e10070f"
   integrity sha512-cwESVXlO3url9YWlFW/TA9cshCEhtu7IKJ/p5soJ/gGpj7vbvFrAY/eIioQ6Dw23KjZhYgiIo8HOs1nQ2vr/oQ==
 
-utam@1.0.6, utam@^1.0.6:
-  version "1.0.6"
-  resolved "https://registry.yarnpkg.com/utam/-/utam-1.0.6.tgz#36eccceb25784c5c79a23934014c7fd3756462e8"
-  integrity sha512-LmmSgb9t+9Yz2rcc7f0CVRSnbNLD5UJ4Mjiu7ZRvYACaYrWIp2wseDgJ1IlI+dVQ0y6uBljXGmHV03IDSVvj9w==
+utam@1.0.9, utam@^1.0.9:
+  version "1.0.9"
+  resolved "http://localhost:4873/utam/-/utam-1.0.9.tgz#b4e9615dc97adb887caf81bbd757f17f2caee67e"
+  integrity sha512-a/1P97sYXXvFZSlJPpKdJuwFewZuMYUkiTVGcqfyya/oD2V0SC9FzyV0J5n0B4haxqYktBhVBSBLoVmjBegJMw==
   dependencies:
-    "@utam/compiler" "1.0.6"
-    "@utam/core" "1.0.6"
-    "@utam/loader" "1.0.6"
+    "@utam/compiler" "1.0.9"
+    "@utam/core" "1.0.9"
+    "@utam/generator" "1.0.9"
+    "@utam/loader" "1.0.9"
     fast-glob "^3.2.11"
-    rollup "^2.75.6"
+    rollup "^2.77.0"
     yargs "^17.5.1"
 
 util-deprecate@^1.0.1, util-deprecate@~1.0.1:
@@ -4780,12 +4800,12 @@ wdio-chromedriver-service@^6.0.4:
   dependencies:
     fs-extra "^9.0.0"
 
-wdio-utam-service@^1.0.6:
-  version "1.0.6"
-  resolved "https://registry.yarnpkg.com/wdio-utam-service/-/wdio-utam-service-1.0.6.tgz#88ac4b90cdb04f97721faf8cdd2f839d741651c0"
-  integrity sha512-a4SFoz32/tX7XsnPg9D+MItb74OudO/OnaRIlcNlY3fFQBaGNU0Wwl/Lh1S+SK7hFR1Qb4BvwGgm8h3ibKlmlg==
+wdio-utam-service@^1.0.9:
+  version "1.0.9"
+  resolved "http://localhost:4873/wdio-utam-service/-/wdio-utam-service-1.0.9.tgz#0178bf599e958f85a10b345484b2bdf0a1f33da1"
+  integrity sha512-ocxIKJ7AX08QFk2XlHRyHwiVwlIWUYceyO4neYLzXoQBKfdyGOVR8OnIl7I6doc9lgl2vq3TigXWOrW7O7Xd9g==
   dependencies:
-    utam "1.0.6"
+    utam "1.0.9"
 
 webdriver@6.12.1:
   version "6.12.1"

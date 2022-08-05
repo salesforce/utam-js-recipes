@@ -18,5 +18,5 @@ yarn build
 ```
 `yarn build` also generates page object whereas `yarn generate:utam` only generates and could run faster.
 
-5. Generated JSON files will be created in the folder configured as `outputDir` inside generator.config.json (`__generated__`)
+5. Generated JSON files will be created in the folder configured as `outputDir` in generator.config.json (`__generated__`)
 6. After generation, JSON files will be compiled by UTAM compiler to validate generated syntax is correct.

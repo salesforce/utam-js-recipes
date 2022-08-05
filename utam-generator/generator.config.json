@@ -1,0 +1,13 @@
+{
+    "inputRootDir" : "./",
+    "ignoreFolders": ["**/node_modules/**", "**/build/**"],
+    "inputFileMask": ["**/*.html"],
+    "outputFileExtension": ".utam.json",
+    "relativeOutputDir": false,
+    "outputDir": "__generated__",
+    "defaultNamespace": "utam-generator/pageObjects/", 
+    "namespaces" : {
+        "c" : "utam-generator/pageObjects/"
+    },
+    "generateCustomContent": true
+}

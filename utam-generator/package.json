@@ -1,5 +1,5 @@
 {
-    "name": "utam-preview",
+    "name": "utam-generator",
     "license": "MIT",
     "version": "0.0.1",
     "publishConfig": {
@@ -8,7 +8,8 @@
     "type": "commonjs",
     "main": "index.js",
     "scripts": {
-        "compile": "utam -c utam-preview.config.js"
+        "generate": "utam-generate -c generator.config.json",
+        "compile": "utam -c compiler.config.json"
     },
     "files": [
         "index.js",
@@ -22,10 +23,6 @@
         "./pageObjects/*": {
             "require": "./pageObjects/*.js",
             "import": "./pageObjects/*.mjs"
-        },
-        "./utils/*": {
-            "require": "./utils/*.js",
-            "import": "./utils/*.mjs"
         }
     },
     "devDependencies": {

@@ -34,3 +34,9 @@ packages/*/dist/
 
 # npmrc
 .npmrc
+
+# Generated JSON files
+utam-generator/__utam__/**.json
+utam-generator/__generated__/**.json
+# HTML sources
+utam-generator/src/**

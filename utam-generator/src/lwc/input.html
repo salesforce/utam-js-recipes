@@ -1,0 +1,352 @@
+<!--
+Copyright (c) 2022, salesforce.com, inc.
+All rights reserved.
+SPDX-License-Identifier: MIT
+For full license text, see the LICENSE file in the repo root or https://opensource.org/licenses/MIT
+-->
+<template>
+    <template if:true={isTypeSimple}>
+        <div part="input-text">
+            <template if:false={hasExternalLabel}>
+                <label class={computedLabelClass} for="input" part="label">
+                    <template if:true={required}>
+                        <abbr class="slds-required" title={i18n.required}>*</abbr>
+                    </template>
+                    {label}
+                </label>
+                <lightning-helptext if:true={fieldLevelHelp} content={fieldLevelHelp} alternative-text={helptextAlternativeText}></lightning-helptext>
+            </template>
+            <div class={computedFormElementClass} part="input-container">
+                <input type={_internalType}
+                       id="input"
+                       class="slds-input"
+                       part="input"
+                       aria-label={computedAriaLabel}
+                       aria-invalid={computedAriaInvalid}
+                       aria-errormessage="help-message"
+                       aria-haspopup={ariaHasPopup}
+                       onblur={handleBlur}
+                       onfocus={handleFocus}
+                       onchange={handleChange}
+                       oninput={handleInput}
+                       onkeydown={handleKeyDown}
+                       accesskey={accesskey}
+                       autocomplete={autocomplete}
+                       max={normalizedMax}
+                       min={normalizedMin}
+                       inputmode={_inputMode}
+                       step={step}
+                       maxlength={maxLength}
+                       minlength={minLength}
+                       pattern={pattern}
+                       placeholder={placeholder}
+                       name={name}
+                       required={required}
+                       readonly={readOnly}
+                       disabled={disabled}>
+
+                <template if:true={isTypeSearch}>
+                    <lightning-primitive-icon icon-name="utility:search" variant="bare" svg-class="slds-input__icon slds-input__icon_left slds-icon-text-default"></lightning-primitive-icon>
+                    <div class="slds-input__icon-group slds-input__icon-group_right">
+                        <template if:true={isLoading}>
+                            <div role="status" class="slds-spinner slds-spinner_brand slds-spinner_x-small slds-input__spinner">
+                                <span class="slds-assistive-text">{i18n.loading}</span>
+                                <div class="slds-spinner__dot-a"></div>
+                                <div class="slds-spinner__dot-b"></div>
+                            </div>
+                        </template>
+                        <template if:true={_showClearButton}>
+                            <button data-element-id="searchClear" class="slds-input__icon slds-input__icon_right slds-button slds-button_icon" onblur={handleBlur} onclick={_clearAndSetFocusOnInput}>
+                                <lightning-primitive-icon icon-name="utility:clear" variant="bare" svg-class="slds-button__icon"></lightning-primitive-icon>
+                                <span class="slds-assistive-text">{i18n.clear}</span>
+                            </button>
+                        </template>
+                    </div>
+                </template>
+            </div>
+        </div>
+    </template>
+
+    <template if:true={isTypeToggle}>
+        <div class="slds-form-element__control">
+            <label class="slds-checkbox_toggle slds-grid" for="checkbox-toggle">
+                <template if:true={required}>
+                    <abbr class="slds-required" title={i18n.required}>*</abbr>
+                </template>
+                <span class={computedLabelClass}>{label}</span>
+                <input type="checkbox" id="checkbox-toggle"
+                    aria-label={computedAriaLabel}
+                    aria-invalid={computedAriaInvalid}
+                    accesskey={accesskey}
+                    onblur={handleBlur}
+                    onfocus={handleFocus}
+                    onchange={handleChange}
+                    name={name}
+                    required={required}
+                    readonly={readOnly}
+                    disabled={disabled}>
+                <span id="toggle-description" data-toggle-description  class="slds-checkbox_faux_container" aria-live="assertive">
+                <span class="slds-checkbox_faux"></span>
+                <span class="slds-checkbox_on">{messageToggleActive}</span>
+                <span class="slds-checkbox_off">{messageToggleInactive}</span>
+            </span>
+            </label>
+        </div>
+    </template>
+
+    <template if:true={isTypeCheckbox}>
+        <template if:false={isStandardVariant}>
+            <label for="checkbox" part="label-container" class="slds-checkbox__label">
+                <template if:true={required}>
+                    <abbr class="slds-required" title={i18n.required}>*</abbr>
+                </template>
+                <span class={computedLabelClass}>{label}</span>
+            </label>
+            <lightning-helptext if:true={fieldLevelHelp} content={fieldLevelHelp} alternative-text={helptextAlternativeText}></lightning-helptext>
+        </template>
+        <div class={computedFormElementClass}>
+                <span part="input-checkbox" class={computedCheckboxClass}>
+                    <template if:true={isStandardVariant}>
+                        <template if:true={required}>
+                            <abbr class="slds-required" title={i18n.required}>*</abbr>
+                        </template>
+                    </template>
+                    <input type="checkbox" 
+                        part="checkbox"
+                        id="checkbox"
+                        aria-label={computedAriaLabel}
+                        aria-invalid={computedAriaInvalid}
+                        accesskey={accesskey}
+                        onblur={handleBlur}
+                        onfocus={handleFocus}
+                        onchange={handleChange}
+                        name={name}
+                        required={required}
+                        readonly={readOnly}
+                        disabled={disabled}>
+                    <template if:false={isStandardVariant}>
+                         <span part="indicator" class="slds-checkbox_faux"></span>
+                    </template>
+                    <template if:true={isStandardVariant}>
+                        <label for="checkbox" part="label-container" class="slds-checkbox__label">
+                            <span part="indicator" class="slds-checkbox_faux"></span>
+                            <span part="label" class={computedLabelClass}>{label}</span>
+                        </label>
+                        <lightning-helptext if:true={fieldLevelHelp} content={fieldLevelHelp} alternative-text={helptextAlternativeText}></lightning-helptext>
+                     </template>
+                </span>
+            </div>
+        </template>
+
+    <template if:true={isTypeCheckboxButton}>
+        <div class="slds-checkbox_add-button">
+            <input type="checkbox" id="checkbox-button"
+                aria-label={computedAriaLabel}
+                aria-invalid={computedAriaInvalid}
+                accesskey={accesskey}
+                class="slds-assistive-text"
+                onblur={handleBlur}
+                onfocus={handleFocus}
+                onchange={handleChange}
+                name={name}
+                required={required}
+                readonly={readOnly}
+                disabled={disabled}>
+            <label for="checkbox-button" class="slds-checkbox_faux">
+                <span class="slds-assistive-text">{label}</span>
+            </label>
+        </div>
+    </template>
+
+    <template if:true={isTypeRadio}>
+        <div class="slds-form-element__control">
+        <span class="slds-radio">
+            <input type="radio" id="radio"
+                aria-invalid={computedAriaInvalid}
+                accesskey={accesskey}
+                onblur={handleBlur}
+                onfocus={handleFocus}
+                onchange={handleChange}
+                name={name}
+                required={required}
+                readonly={readOnly}
+                disabled={disabled}>
+            <label for="radio" class="slds-radio__label">
+                <span class="slds-radio_faux"></span>
+                <span class={computedLabelClass}>{label}</span>
+            </label>
+            </span>
+        </div>
+    </template>
+
+    <template if:true={isTypeFile}>
+        <span id="form-label" class={computedLabelClass} data-form-label>
+            <template if:true={required}>
+                <abbr class="slds-required" title={i18n.required}>*</abbr>
+            </template>
+            {label}
+        </span>
+        <div class="slds-form-element__control">
+            <div class="slds-file-selector slds-file-selector_files" ondrop={handleDropFiles}>
+                <lightning-primitive-file-droppable-zone multiple={multiple} disabled={disabled}>
+                    <input type="file" id="input-file"
+                        aria-label={computedAriaLabel}
+                        aria-invalid={computedAriaInvalid}
+                        accesskey={accesskey}
+                        class="slds-file-selector__input slds-assistive-text"
+                        onblur={handleBlur}
+                        onclick={handleFileClick}
+                        onfocus={handleFocus}
+                        onchange={handleChange}
+                        accept={accept}
+                        multiple={multiple}
+                        name={name}
+                        required={required}
+                        readonly={readOnly}
+                        disabled={disabled}>
+                    <label id="file-selector-label" data-file-selector-label for="input-file" aria-hidden="true"
+                        class="slds-file-selector__body">
+                        <span class="slds-file-selector__button slds-button slds-button_neutral">
+                            <lightning-primitive-icon icon-name="utility:upload" variant="bare" svg-class="slds-button__icon slds-button__icon_left">
+                            </lightning-primitive-icon>
+                            {i18n.inputFileButtonLabel}
+                        </span>
+                        <span class="slds-file-selector__text slds-medium-show">
+                            {i18n.inputFileBodyText}
+                        </span>
+                    </label>
+                </lightning-primitive-file-droppable-zone>
+            </div>
+        </div>
+    </template>
+
+    <template if:true={isTypeColor}>
+        <div class="slds-color-picker">
+            <div class="slds-form-element slds-color-picker__summary">
+                <template if:false={hasExternalLabel}>
+                    <label class={computedColorLabelClass} for="color">
+                        <template if:true={required}>
+                            <abbr class="slds-required" title={i18n.required}>*</abbr>
+                        </template>
+                        {label}
+                    </label>
+                    <lightning-helptext if:true={fieldLevelHelp} content={fieldLevelHelp} alternative-text={helptextAlternativeText}></lightning-helptext>
+                </template>
+                <div class="slds-form-element__control">
+                    <lightning-primitive-colorpicker-button
+                        value={value}
+                        disabled={disabled}
+                        onblur={handleBlur}
+                        onfocus={handleFocus}
+                        onchange={handleColorChange}>
+                    </lightning-primitive-colorpicker-button>
+                    <div class="slds-color-picker__summary-input">
+                        <input type="text" id="color" class="slds-input slds-m-right_x-small"
+                            name={name}
+                            autocomplete={autocomplete}
+                            accesskey={accesskey}
+                            aria-label={computedAriaLabel}
+                            aria-invalid={computedAriaInvalid}
+                            disabled={disabled}
+                            minlength="4"
+                            maxlength="7"
+                            placeholder={placeholder}
+                            pattern={pattern}
+                            onblur={handleBlur}
+                            onfocus={handleFocus}
+                            onchange={handleChange}
+                            oninput={handleInput}>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </template>
+
+    <template if:true={isTypeDesktopDate}>
+        <lightning-datepicker
+            max={max}
+            min={min}
+            label={label}
+            name={name}
+            variant={variant}
+            aria-label={ariaLabel}
+            date-style={dateStyle}
+            placeholder={placeholder}
+            onchange={handleChange}
+            onblur={handleBlur}
+            onfocus={handleFocus}
+            required={required}
+            readonly={readOnly}
+            field-level-help={fieldLevelHelp}
+            autocomplete="off"
+            message-when-bad-input={messageWhenBadInput}
+            message-when-value-missing={messageWhenValueMissing}
+            message-when-range-overflow={messageWhenRangeOverflow}
+            message-when-range-underflow={messageWhenRangeUnderflow}
+            disabled={disabled}>
+        </lightning-datepicker>
+    </template>
+
+    <template if:true={isTypeDesktopTime}>
+        <lightning-timepicker
+            max={max}
+            min={min}
+            label={label}
+            name={name}
+            aria-label={ariaLabel}
+            variant={variant}
+            time-style={timeStyle}
+            placeholder={placeholder}
+            onchange={handleChange}
+            onblur={handleBlur}
+            onfocus={handleFocus}
+            required={required}
+            readonly={readOnly}
+            autocomplete="off"
+            field-level-help={fieldLevelHelp}
+            message-when-bad-input={messageWhenBadInput}
+            message-when-value-missing={messageWhenValueMissing}
+            message-when-range-overflow={messageWhenRangeOverflow}
+            message-when-range-underflow={messageWhenRangeUnderflow}
+            disabled={disabled}>
+        </lightning-timepicker>
+    </template>
+
+    <template if:true={isTypeDesktopDateTime}>
+        <lightning-datetimepicker
+            date-aria-controls={dateAriaControls}
+            date-aria-label={dateAriaLabel}
+            date-aria-labelled-by={dateAriaLabelledBy}
+            date-aria-described-by={dateAriaDescribedBy}
+            date-style={dateStyle}
+            time-style={timeStyle}
+            time-aria-controls={timeAriaControls}
+            time-aria-label={timeAriaLabel}
+            time-aria-labelled-by={timeAriaLabelledBy}
+            time-aria-described-by={timeAriaDescribedBy}
+            max={max}
+            min={min}
+            timezone={timezone}
+            label={label}
+            name={name}
+            variant={variant}
+            placeholder={placeholder}
+            onchange={handleChange}
+            onblur={handleBlur}
+            onfocus={handleFocus}
+            required={required}
+            readonly={readOnly}
+            field-level-help={fieldLevelHelp}
+            autocomplete="off"
+            message-when-bad-input={messageWhenBadInput}
+            message-when-value-missing={messageWhenValueMissing}
+            message-when-range-overflow={messageWhenRangeOverflow}
+            message-when-range-underflow={messageWhenRangeUnderflow}
+            disabled={disabled}>
+        </lightning-datetimepicker>
+    </template>
+
+    <template if:true={_helpMessage}>
+        <div id="help-message" class="slds-form-element__help" data-help-message role="alert" part="help-text">{_helpMessage}</div>
+    </template>
+</template>

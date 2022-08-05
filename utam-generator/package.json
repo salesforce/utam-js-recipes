@@ -26,7 +26,7 @@
         }
     },
     "devDependencies": {
-        "utam": "^1.0.9"
+        "utam": "^1.0.8"
     },
     "volta": {
         "node": "14.15.4",

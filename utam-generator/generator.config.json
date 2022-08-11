@@ -9,5 +9,6 @@
     "namespaces" : {
         "c" : "utam-generator/pageObjects/"
     },
-    "generateCustomContent": true
+    "generateCustomContent": true,
+    "descriptionAuthor" : "my team"
 }

@@ -36,7 +36,7 @@
         "rimraf": "^3.0.2",
         "salesforce-pageobjects": "^1.2.0",
         "wdio-chromedriver-service": "^6.0.4",
-        "wdio-utam-service": "^1.0.8"
+        "wdio-utam-service": "^1.0.9-alpha"
     },
     "volta": {
         "node": "14.15.4",

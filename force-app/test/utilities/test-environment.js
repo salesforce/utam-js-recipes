@@ -39,6 +39,8 @@ export class TestEnvironment {
     #username;
     #password;
     #sfdxLoginUrl;
+    #accountId;
+    #contactId;
 
     /**
      * Create a new test environment utility class
@@ -51,6 +53,8 @@ export class TestEnvironment {
         this.#username = this.#getKeyFromEnv('username');
         this.#password = this.#getKeyFromEnv('password');
         this.#sfdxLoginUrl = this.#getKeyFromEnv('loginUrl');
+        this.#accountId = this.#getKeyFromEnv('accountId');
+        this.#contactId = this.#getKeyFromEnv('contactId');
 
         // Halt process if Salesforce session timed out
         if (this.#envPrefix === SCRATCH_ORG_PREFIX) {
@@ -141,5 +145,25 @@ export class TestEnvironment {
             throw new Error(`Property ${this.#getEnvKeyName('loginUrl')} is not set in '.env' property file`);
         }
         return this.#sfdxLoginUrl;
+    }
+
+    /**
+     * Returns account ID for record update test
+     */
+    get accountId() {
+        if (!this.#accountId) {
+            throw new Error(`Property ${this.#getEnvKeyName('accountId')} is not set in '.env' property file`);
+        }
+        return this.#accountId;
+    }
+
+    /**
+     * Returns contact ID for record update test
+     */
+    get contactId() {
+        if (!this.#accountId) {
+            throw new Error(`Property ${this.#getEnvKeyName('contactId')} is not set in '.env' property file`);
+        }
+        return this.#contactId;
     }
 }

@@ -17,10 +17,6 @@ import { TestEnvironment } from './utilities/test-environment';
 
 // TODO: replace with prefix of the environment from .env file
 const TEST_ENVIRONMENT_PREFIX = 'na45';
-// TODO: replace with existing Account Id for the environment
-const ACCOUNT_RECORD_ID = '001S7000002X6FSIA0';
-// TODO: replace with existing Contact Id for the environment
-const CONTACT_RECORD_ID = '003S7000001vfDXIAY';
 
 describe('Record update test', () => {
     const testEnvironment = new TestEnvironment(TEST_ENVIRONMENT_PREFIX);
@@ -49,7 +45,7 @@ describe('Record update test', () => {
     });
 
     it('Update an existing Account Record', async () => {
-        await gotoRecordHomeByUrl(RecordType.Account, ACCOUNT_RECORD_ID);
+        await gotoRecordHomeByUrl(RecordType.Account, testEnvironment.accountId);
 
         console.log('Load Accounts Record Home page');
         const recordHome = await utam.load(RecordHomeFlexipage2);
@@ -82,7 +78,7 @@ describe('Record update test', () => {
 
     it('Update an existing Contact Record', async () => {
         const detailsTabLabel = 'Details';
-        await gotoRecordHomeByUrl(RecordType.Contact, CONTACT_RECORD_ID);
+        await gotoRecordHomeByUrl(RecordType.Contact, testEnvironment.contactId);
 
         console.log('Load Accounts Record Home page');
         const recordHome = await utam.load(RecordHomeFlexipage2);

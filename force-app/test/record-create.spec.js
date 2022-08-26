@@ -15,7 +15,7 @@ import { TestEnvironment } from './utilities/test-environment';
 import RecordActionWrapper from 'salesforce-pageobjects/global/pageObjects/recordActionWrapper';
 
 // TODO: replace with prefix of the environment from .env file
-const TEST_ENVIRONMENT_PREFIX = 'na45';
+const TEST_ENVIRONMENT_PREFIX = 'na44';
 
 describe('Record creation tests', () => {
     const testEnvironment = new TestEnvironment(TEST_ENVIRONMENT_PREFIX);
@@ -26,11 +26,11 @@ describe('Record creation tests', () => {
     });
 
     it('Create a new Account Record', async () => {
-        let recordFormModal;
+        let recordFormModal = await openRecordModal(baseUrl, RecordType.Account);
         // TODO - depending on org setup, modal might not present, then comment next lines
         /*
         console.log('Load Change Record Type Modal');
-        recordFormModal = await openRecordModal(baseUrl, RecordType.Account);
+        recordFormModal = await utam.load(RecordActionWrapper);
         console.log("Change Record Type Modal: click button 'Next'");
         const changeRecordTypeFooter = await recordFormModal.waitForChangeRecordFooter();
         await changeRecordTypeFooter.clickButton('Next');

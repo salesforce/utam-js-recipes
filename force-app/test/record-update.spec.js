@@ -16,7 +16,7 @@ import { login } from './utilities/salesforce-test';
 import { TestEnvironment } from './utilities/test-environment';
 
 // TODO: replace with prefix of the environment from .env file
-const TEST_ENVIRONMENT_PREFIX = 'na45';
+const TEST_ENVIRONMENT_PREFIX = 'na44';
 
 describe('Record update test', () => {
     const testEnvironment = new TestEnvironment(TEST_ENVIRONMENT_PREFIX);
@@ -76,7 +76,7 @@ describe('Record update test', () => {
         await recordFormModal.waitForAbsence();
     });
 
-    it('Update an existing Contact Record', async () => {
+    it('Inline edit existing Contact Record', async () => {
         const detailsTabLabel = 'Details';
         await gotoRecordHomeByUrl(RecordType.Contact, testEnvironment.contactId);
 

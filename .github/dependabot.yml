@@ -1,0 +1,24 @@
+version: 2
+updates:
+    - package-ecosystem: 'npm'
+      directory: '/'
+      schedule:
+          interval: 'weekly'
+          day: 'thursday'
+          time: '09:00'
+          timezone: 'America/Los_Angeles'
+      ignore:
+          # Base TS image (used for tsserver) must be update manually
+          # when updating the default node.js runtime
+          - dependency-name: '@tsconfig/*'
+          # TODO: remove this line once UTAM has been updated to latest version of wdio
+          - dependency-name: '@wdio/*'
+      open-pull-requests-limit: 10
+
+    - package-ecosystem: 'github-actions'
+      directory: '/'
+      schedule:
+          interval: 'weekly'
+          day: 'thursday'
+          time: '09:00'
+          timezone: 'America/Los_Angeles'

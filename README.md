@@ -123,6 +123,10 @@ SANDBOX_PASSWORD=strongPassword
 # Optional variables
 # sometimes after login URL changes
 SANDBOX_REDIRECT_URL=https://lightningapp.lightning.test1234.salesforce.com/
+
+# Used in force-app/test/record-update.spec.js
+SANDBOX_ACCOUNT_ID=accountId
+SANDBOX_CONTACT_ID=contactId
 ```
 
 Replace SANDBOX with your test environment name.
@@ -158,8 +162,12 @@ For each test file, update the value of the `TEST_ENVIRONMENT_PREFIX` global var
 const TEST_ENVIRONMENT_PREFIX = 'sandbox';
 ```
 
-For the `force-app/test/record-update.spec.js` file, also update the `ACCOUNT_RECORD_ID` global variable to match an
-account ID in your test environment.
+For the `force-app/test/record-update.spec.js` file, update your `.env` file with the account and contact IDs of your test environment. That's how it looks like for an environment named `sandbox`:
+
+```
+SANDBOX_ACCOUNT_ID=XXXXXXXXXXXXXXXXXX
+SANDBOX_CONTACT_ID=XXXXXXXXXXXXXXXXXX
+````
 
 ## Setup SFDX scratch org test
 

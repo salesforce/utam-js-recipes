@@ -16,7 +16,7 @@
     },
     "devDependencies": {
         "@babel/cli": "^7.12.17",
-        "@babel/core": "^7.12.17",
+        "@babel/core": "^7.19.6",
         "@babel/preset-env": "^7.12.17",
         "@babel/register": "^7.12.13",
         "@tsconfig/node14": "^1.0.1",

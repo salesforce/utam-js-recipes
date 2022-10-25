@@ -10,5 +10,7 @@
         "c" : "utam-generator/pageObjects/"
     },
     "generateCustomContent": true,
-    "descriptionAuthor" : "my team"
+    "descriptionAuthor" : "my team",
+    "ignoreCustomTags" : [ "c-flex-card-state" ],
+    "includeTags" : []
 }

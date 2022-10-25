@@ -1,0 +1,141 @@
+{
+    "description": {
+        "author": "my team",
+        "text": ["Page Object: cfCpqAdvancedSearchLineItem", "Root element: template"]
+    },
+    "shadow": {
+        "elements": [
+            {
+                "public": true,
+                "name": "toast",
+                "type": "utam-generator/pageObjects/toast",
+                "selector": {
+                    "css": "c-toast"
+                }
+            },
+            {
+                "public": true,
+                "name": "spinner",
+                "type": "utam-generator/pageObjects/spinner",
+                "selector": {
+                    "css": "c-spinner"
+                }
+            },
+            {
+                "public": true,
+                "name": "flexCardStates",
+                "type": [],
+                "selector": {
+                    "css": "c-flex-card-state",
+                    "returnAll": true
+                }
+            },
+            {
+                "public": true,
+                "name": "flexCardStateByIndex",
+                "type": [],
+                "selector": {
+                    "css": "c-flex-card-state:nth-of-type(%d)",
+                    "args": [
+                        {
+                            "name": "index",
+                            "type": "number"
+                        }
+                    ]
+                },
+                "shadow": {
+                    "elements": [
+                        {
+                            "public": true,
+                            "name": "baseInputElement",
+                            "type": "utam-generator/pageObjects/baseInputElement",
+                            "selector": {
+                                "css": "c-base-input-element"
+                            }
+                        },
+                        {
+                            "public": true,
+                            "name": "baseInputElement1",
+                            "type": "utam-generator/pageObjects/baseInputElement",
+                            "selector": {
+                                "css": "c-base-input-element:nth-of-type(2)"
+                            }
+                        },
+                        {
+                            "public": true,
+                            "name": "baseInputElement2",
+                            "type": "utam-generator/pageObjects/baseInputElement",
+                            "selector": {
+                                "css": "c-base-input-element:nth-of-type(3)"
+                            }
+                        },
+                        {
+                            "public": true,
+                            "name": "baseInputElement3",
+                            "type": "utam-generator/pageObjects/baseInputElement",
+                            "selector": {
+                                "css": "c-base-input-element:nth-of-type(4)"
+                            }
+                        },
+                        {
+                            "public": true,
+                            "name": "baseInputElement4",
+                            "type": "utam-generator/pageObjects/baseInputElement",
+                            "selector": {
+                                "css": "c-base-input-element:nth-of-type(5)"
+                            }
+                        },
+                        {
+                            "public": true,
+                            "name": "baseInputElement5",
+                            "type": "utam-generator/pageObjects/baseInputElement",
+                            "selector": {
+                                "css": "c-base-input-element:nth-of-type(6)"
+                            }
+                        },
+                        {
+                            "public": true,
+                            "name": "baseInputElement6",
+                            "type": "utam-generator/pageObjects/baseInputElement",
+                            "selector": {
+                                "css": "c-base-input-element:nth-of-type(7)"
+                            }
+                        },
+                        {
+                            "public": true,
+                            "name": "baseInputElement7",
+                            "type": "utam-generator/pageObjects/baseInputElement",
+                            "selector": {
+                                "css": "c-base-input-element:nth-of-type(8)"
+                            }
+                        },
+                        {
+                            "public": true,
+                            "name": "action",
+                            "type": "utam-generator/pageObjects/action",
+                            "selector": {
+                                "css": "c-action"
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "public": true,
+                "name": "action2",
+                "type": "utam-generator/pageObjects/action",
+                "selector": {
+                    "css": "c-action"
+                }
+            },
+            {
+                "public": true,
+                "name": "action3",
+                "type": "utam-generator/pageObjects/action",
+                "selector": {
+                    "css": "c-action:nth-of-type(2)"
+                }
+            }
+        ]
+    }
+}

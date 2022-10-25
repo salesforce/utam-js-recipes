@@ -39,4 +39,4 @@ packages/*/dist/
 utam-generator/__utam__/**.json
 utam-generator/__generated__/**.json
 # HTML sources
-utam-generator/src/x**
+utam-generator/src/**

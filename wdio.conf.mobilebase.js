@@ -13,7 +13,7 @@ const { DEBUG } = process.env;
 const path = require('path');
 const { UtamWdioService } = require('wdio-utam-service');
 
-exports.baseMobileConfig = {
+exports.mobileBaseConfig = {
     //
     // ====================
     // Runner Configuration
@@ -24,13 +24,6 @@ exports.baseMobileConfig = {
     runner: 'local',
     port: 4444,
 
-    //
-    // ==================
-    // Specify Test Files
-    // ==================
-    // Define which test specs should run. The pattern is relative to the directory
-    // from which `wdio` was called.
-    specs: ['force-app/test/mobile/**/*.spec.js'],
     //
     // ============
     // Capabilities
@@ -48,21 +41,6 @@ exports.baseMobileConfig = {
     waitforTimeout: DEBUG ? DEBUG_TIMEOUT : EXPLICIT_TIMEOUT,
     connectionRetryTimeout: 120000,
     connectionRetryCount: 3,
-    services: [
-        [
-            'appium',
-            {
-                command: 'appium',
-            },
-        ],
-        [
-            UtamWdioService,
-            {
-                implicitTimeout: 0,
-                injectionConfigs: ['salesforce-pageobjects/utam-salesforceapp-pageobjects.config.json'],
-            },
-        ],
-    ],
     framework: 'jasmine',
     reporters: ['spec'],
     jasmineNodeOpts: {

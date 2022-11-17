@@ -292,10 +292,11 @@ The test doesn't require any special setup. The instructions to run it are insid
 
 ## Run Salesforce Mobile test
 
+- There are two sample tests under `force-app/test/mobile`: `navigation.spec.js` is against Community playground application and `login.spec.js` is against Salelsforce application.
 - Follow the instructions at [Get Started for Mobile](https://utam.dev/guide/get_started_utam#get-started-for-mobile) to set up your local simulator/emulator.
 - Make sure that [Appium](https://github.com/appium/appium#readme) and [node.js](https://nodejs.org/en/) are installed on your machine.
 - Update the wdio configuration file:
-For an iOS test, update `wdio.conf.ios.js` file to configure the test device name(appium:deviceName), iOS version(appium:platformVersion), and the full path for the test application(appium:app):
+For an iOS test, update `wdio.conf.xx.ios.js` ((wdio.conf.sapp.ios.js is for test against Salesforce App, and wdio.conf.mpcc.ios.js is for test against Community Playground App) file to configure the test device name(appium:deviceName), iOS version(appium:platformVersion), and the full path for the test application(appium:app):
 
 ```js
 'appium:deviceName': 'iPhone 12',
@@ -303,19 +304,17 @@ For an iOS test, update `wdio.conf.ios.js` file to configure the test device nam
 'appium:platformVersion': '15.2',
 ```
 
-For an Android test, update the `wdio.conf.android.js` file to configure the test device name(appium:deviceName), application bundleid(appium:appPackage), the full path for the test application(appium:app), and the application's initial activity(appium:appActivity):
+For an Android test, update the `wdio.conf.xx.android.js` (wdio.conf.sapp.android.js is for test against Salesforce App, and wdio.conf.mpcc.android.js is for test against Community Playground App) file to configure the test device name(appium:deviceName) and the full path for the test application(appium:app):
 
 ```js
 'appium:deviceName': 'emulator-5554',
 'appium:app': '<path to Android test app>',
-'appium:appActivity': 'com.salesforce.chatter.Chatter',
-'appium:appPackage': 'com.salesforce.chatter',
 ```
 
-- Download the [debug build](https://developer.salesforce.com/tools/mobile-debugging) for the Salesforce iOS and Android mobile apps.
+- Download the [Salesforce application Build](https://developer.salesforce.com/tools/mobile-debugging) and [Community playground application build](https://help.salesforce.com/s/articleView?id=sf.s1_branded_apps_playground_preview_exp_site.htm&type=5) for the Salesforce iOS and Android mobile application debug builds.
 - Commands to execute a test: 
-For iOS: yarn test wdio.conf.ios.js
-For Android: yarn test wdio.conf.android.js
+For iOS: yarn test wdio.conf.xx.ios.js (wdio.conf.sapp.ios.js is for test against Salesforce App, and wdio.conf.mpcc.ios.js is for test against Community Playground App)
+For Android: yarn test wdio.conf.xx.android.js (wdio.conf.sapp.android.js is for test against Salesforce App, and wdio.conf.mpcc.android.js is for test against Community Playground App)
 - For a test on Android, make sure to start an emulator before the test run. Otherwise, you will get an error like this: "Error: Failed to create session.
 An unknown server-side error occurred while processing the command. Original error: Could not find a connected Android device in 20190ms.".
 - Install the appropriate version of chromedriver based on the instructions on this [site](https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/web/chromedriver.md).

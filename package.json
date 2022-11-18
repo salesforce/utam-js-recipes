@@ -31,7 +31,7 @@
         "envfile": "^6.18.0",
         "husky": "^8.0.2",
         "isbinaryfile": "^5.0.0",
-        "lint-staged": "11.2.6",
+        "lint-staged": "13.0.3",
         "prettier": "2.7.1",
         "rimraf": "^3.0.2",
         "salesforce-pageobjects": "^2.1.0",

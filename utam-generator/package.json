@@ -29,10 +29,9 @@
         "utam": "^1.1.0"
     },
     "volta": {
-        "node": "14.15.4",
-        "yarn": "1.22.5"
+        "extends": "../package.json"
     },
     "engines": {
-        "node": ">=14.15.4 <15"
+        "node": ">=14.15.4"
     }
 }

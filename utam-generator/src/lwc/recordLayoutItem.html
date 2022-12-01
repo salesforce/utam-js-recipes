@@ -1,0 +1,60 @@
+<template>
+    <div if:true={computedShowItem} class={computedRootCss}>
+        <div class={computedViewContainerClass} ondblclick={activateInlineEditDblClick} if:true={computedShowOutputField}>
+            <div if:true={showFieldLabel} class={computedLabelClassList}>
+                <span class="test-id__field-label">{fieldLabel}</span>
+            </div>
+            <template if:true={inlineHelpText}>
+                <lightning-helptext content={inlineHelpText} alternative-text={computedInlineEditHelpTitle} icon-name="utility:info"></lightning-helptext>
+            </template>
+            <div class="slds-form-element__control">
+                <span class={computedOutputFieldContainerClass}
+                      oninlineeditbehavioroverride={handleInlineEditBehaviorOverride}>
+                    <slot name="outputField"></slot>
+                    <!-- default slot for non-field components -->
+                    <slot></slot>
+                </span>
+                <template if:true={computedShowInlineEditLoadingIndicator}>
+                    <div class="test-id__inline-edit-loading-indicator inline-edit-loading-indicator-container">
+                        <div role="status" class="slds-spinner slds-spinner--x-small">
+                            <span class="slds-assistive-text">Loading</span>
+                            <div class="slds-spinner__dot-a"></div>
+                            <div class="slds-spinner__dot-b"></div>
+                        </div>
+                    </div>
+                </template>
+                <template if:true={computedShowInlineEditTrigger}>
+                    <button class="test-id__inline-edit-trigger slds-shrink-none inline-edit-trigger slds-button slds-button_icon-bare"
+                            title={computedInlineEditTriggerTitle}
+                            onclick={activateInlineEdit}>
+                        <span class="inline-edit-trigger-icon slds-button__icon slds-button__icon_hint" aria-hidden="true"></span>
+                        <span class="slds-assistive-text">{computedInlineEditTriggerTitle}</span>
+                    </button>
+                </template>
+            </div>
+        </div>
+
+        <template if:false={computedShowOutputField}>
+            <template if:true={isDirty}>
+                <lightning-button-icon
+                    class="slds-shrink-none inline-edit-undo inline-edit-undo-direction"
+                    icon-class="slds-button__icon_hint"
+                    title={computedInlineEditUndoTitle}
+                    alternative-text={computedInlineEditUndoTitle}
+                    icon-name="utility:undo"
+                    variant="bare"
+                    size="medium"
+                    onclick={onUndo}>
+                </lightning-button-icon>
+            </template>
+
+            <span class="test-id__field-value slds-size_1-of-1"
+                  onfocusout={handleFocusOut}
+                  onkeydown={handleKeyDown}
+                  onfocusin={handleFocusIn}
+                  onchange={handleInputValueChange}>
+                <slot name="inputField"></slot>
+            </span>
+        </template>
+    </div>
+</template>

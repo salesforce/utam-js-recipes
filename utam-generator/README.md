@@ -9,7 +9,7 @@ Documentation is available on [utam.dev](https://utam.dev/tools/generator-start)
 > To setup this repository please follow instructions in [root README](https://github.com/salesforce/utam-js#readme)
 
 - Create new folder under `packages/utam-generator/src`
-- Copy HTML files or component sources in the folder. Generator will recursively scan inside the folder, so folder can have any number of subfolders
+- Copy HTML files you generate from to the folder. Generator will recursively scan inside the folder, so folder can have any number of subfolders.
 - Run generator __from the project root__
 
 ```bash

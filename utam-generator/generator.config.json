@@ -7,7 +7,8 @@
     "outputDir": "__generated__",
     "defaultNamespace": "utam-generator/pageObjects/", 
     "namespaces" : {
-        "c" : "utam-generator/pageObjects/"
+        "c" : "utam-generator/pageObjects/",
+        "lightning" : "utam-lightning/pageObjects/"
     },
     "generateCustomContent": true,
     "descriptionAuthor" : "my team"

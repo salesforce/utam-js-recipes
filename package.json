@@ -20,7 +20,7 @@
         "@babel/preset-env": "^7.20.2",
         "@babel/register": "^7.18.9",
         "@tsconfig/node14": "^1.0.3",
-        "@types/jasmine": "4.3.0",
+        "@types/jasmine": "4.3.1",
         "@wdio/appium-service": "^7.26.0",
         "@wdio/cli": "^7.26.0",
         "@wdio/jasmine-framework": "^7.26.0",

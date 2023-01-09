@@ -43,7 +43,7 @@ exports.config = {
     ],
     framework: 'jasmine',
     reporters: ['spec'],
-    jasmineNodeOpts: {
+    jasmineOpts: {
         // max execution time for a script, set to 5 min
         defaultTimeoutInterval: 1000 * 60 * 5,
         // Temporary workaround to get babel to work in wdio tests

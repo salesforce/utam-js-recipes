@@ -7,7 +7,6 @@
 
 require('dotenv').config();
 
-const path = require('path');
 const { UtamWdioService } = require('wdio-utam-service');
 // use prefix 'DEBUG=true' to run test in debug mode
 const { DEBUG } = process.env;
@@ -46,7 +45,5 @@ exports.config = {
     jasmineOpts: {
         // max execution time for a script, set to 5 min
         defaultTimeoutInterval: 1000 * 60 * 5,
-        // Temporary workaround to get babel to work in wdio tests
-        helpers: [path.resolve(process.cwd(), 'wdioJasmineHelper.js')],
     },
 };

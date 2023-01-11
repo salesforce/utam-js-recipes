@@ -1,0 +1,18 @@
+{
+    "description": {
+        "author": "UI page services",
+        "text": ["Page Object: button", "Root element: template"]
+    },
+    "shadow": {
+        "elements": [
+            {
+                "public": true,
+                "name": "button",
+                "type": "utam-lightning/pageObjects/button",
+                "selector": {
+                    "css": "lightning-button"
+                }
+            }
+        ]
+    }
+}

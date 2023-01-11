@@ -4654,7 +4654,7 @@ wdio-chromedriver-service@^7.3.2:
     split2 "^3.2.2"
     tcp-port-used "^1.0.1"
 
-wdio-utam-service@^1.2.2:
+wdio-utam-service@^1.2.1:
   version "1.2.2"
   resolved "https://registry.yarnpkg.com/wdio-utam-service/-/wdio-utam-service-1.2.2.tgz#c46afbf400a403d129442b5dc680562c55bafac9"
   integrity sha512-4rC4H6XTLVZQQDcwwkcBq7754bHy5r41eH7GGRG3rKy6IzH26yeMclmOZU4rbsXB2dDQ+rhdgdYs8eAAJJuJYA==

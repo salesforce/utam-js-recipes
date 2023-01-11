@@ -2,5 +2,39 @@
     "description": {
         "author": "UI page services",
         "text": ["Page Object: image", "Root element: template"]
-    }
+    },
+    "shadow": {
+        "elements": [
+            {
+                "name": "div",
+                "type": [],
+                "selector": {
+                    "css": ".slds-image__title"
+                },
+                "elements": [
+                    {
+                        "name": "span",
+                        "type": [],
+                        "selector": {
+                            "css": ".slds-image__text"
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    "methods": [
+        {
+            "description": {
+                "text": ["method getSpanText"]
+            },
+            "name": "getSpanText",
+            "compose": [
+                {
+                    "element": "span",
+                    "apply": "getText"
+                }
+            ]
+        }
+    ]
 }

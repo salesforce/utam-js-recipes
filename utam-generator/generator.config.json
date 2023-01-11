@@ -10,5 +10,7 @@
         "lightning": "utam-lightning/pageObjects/"
     },
     "generateCustomContent": false,
-    "descriptionAuthor": "UI page services"
+    "descriptionAuthor": "UI page services",
+    "includeClasses": ["slds-image"],
+    "includeTags": ["if:"]
 }

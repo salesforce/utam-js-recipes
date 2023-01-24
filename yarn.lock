@@ -1277,20 +1277,47 @@
     "@utam/diagnostics" "1.2.1"
     jsonc-parser "^3.0.0"
 
+"@utam/compiler@1.2.2":
+  version "1.2.2"
+  resolved "https://registry.yarnpkg.com/@utam/compiler/-/compiler-1.2.2.tgz#780062e1a6d707e2fea489fc91e3d5bdd2964553"
+  integrity sha512-I+CXk3defXyA4AvFolSGnXBSE5JVqlQQmn+bfcns4xpYYM02eDcXi4ouBTT7E6Z63y6N9PYK1aitkacExDgnUQ==
+  dependencies:
+    "@utam/diagnostics" "1.2.2"
+    jsonc-parser "^3.0.0"
+
 "@utam/core@1.2.1":
   version "1.2.1"
   resolved "https://registry.yarnpkg.com/@utam/core/-/core-1.2.1.tgz#ad86d534f0855dbfa09187102787881c8593d6a7"
   integrity sha512-CKHkGXnyoUeweok/gu4VqPnFu3CPdbeOQybQs75GSTzwQ0gYXfWGiU1u5AMWczx6bKxCFxbvUkas0pvraZs1sA==
+
+"@utam/core@1.2.2":
+  version "1.2.2"
+  resolved "https://registry.yarnpkg.com/@utam/core/-/core-1.2.2.tgz#ad66b1a34e50bc2ba5c9e915856343d743338738"
+  integrity sha512-ShwyIZu/r72I4ZaTMg5MZrH7CgA0od0avjtLJIXrtmsBKg5umBtNFWB8wL5SGRHjQhT6Zw8mFyRVAg5A1VtM1Q==
 
 "@utam/diagnostics@1.2.1":
   version "1.2.1"
   resolved "https://registry.yarnpkg.com/@utam/diagnostics/-/diagnostics-1.2.1.tgz#59d62b6d735f327731eaf647e17ff7ab1ee74817"
   integrity sha512-yZUn23wQA64w47mCV6mzedKTDCHusyDfxWivzwaVwSVmE4J+ojrv7mvaB0/EKX+ilKxDCx5FBsck2Jhx/ZLwpA==
 
+"@utam/diagnostics@1.2.2":
+  version "1.2.2"
+  resolved "https://registry.yarnpkg.com/@utam/diagnostics/-/diagnostics-1.2.2.tgz#01205afa8f5bddbc8b287e1ed3e7141fcbb80b6f"
+  integrity sha512-zN65ewK/2/4j5PvS56mSrsk0ep8JWWcY0Dir2gp2BODKuhh7xCqnoU79Q2wMSAEdoX0xoeLlK8VVXdVjlNXe2A==
+
 "@utam/generator@1.2.1":
   version "1.2.1"
   resolved "https://registry.yarnpkg.com/@utam/generator/-/generator-1.2.1.tgz#984886631cf28466b64e5baa8c44ebb41bcf9897"
   integrity sha512-oNJQ0tUcb46+l0I1u5bY4ewnxe8Ji0wAu7K1Xdf9fbZWa+lNuQ+j+zyS5X6ZIttsiu5eTXAgzhiNMyc2PIrtsg==
+  dependencies:
+    fast-glob "^3.2.11"
+    parse5 "^6.0.1"
+    prettier "2.7.1"
+
+"@utam/generator@1.2.2":
+  version "1.2.2"
+  resolved "https://registry.yarnpkg.com/@utam/generator/-/generator-1.2.2.tgz#76b377afd51e92d11e68ff31ccc73f675cb24df0"
+  integrity sha512-MsOegObwh8LQpxCYYnPCfa6UuSvHObnzTLWpRo73BehxUWpI6Wrf2RL47TOfmgOENuebrNjXuR/49pW4ye265Q==
   dependencies:
     fast-glob "^3.2.11"
     parse5 "^6.0.1"
@@ -1302,6 +1329,13 @@
   integrity sha512-sXLd5++ganH5h8fJTo7wjxg9/B7Vf4PIElqdhpOzxGzIx0d+y89pYVCFPDfEGLNW9OP5djIYCUDCcbpLzqjTmA==
   dependencies:
     "@utam/core" "1.2.1"
+
+"@utam/loader@1.2.2":
+  version "1.2.2"
+  resolved "https://registry.yarnpkg.com/@utam/loader/-/loader-1.2.2.tgz#7e43992e4ceedcc0f5d0de6533e6a44dd57a78da"
+  integrity sha512-nPT+QpEzBezDNaMO+kkGkSw70CRqNqtrbvOppJyMS9TlV9ZyAGAYYzLZ7XXz2CX57UMpccSuImFkqeYbX5v1Og==
+  dependencies:
+    "@utam/core" "1.2.2"
 
 "@wdio/appium-service@^7.26.0":
   version "7.26.0"
@@ -1897,15 +1931,6 @@ cli-width@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/cli-width/-/cli-width-3.0.0.tgz#a2f48437a2caa9a22436e794bf071ec9e61cedf6"
   integrity sha512-FxqpkPPwu1HjuN93Omfm4h8uIanXofW0RxVEW3k5RKx+mJJYSthzNhp32Kzxxy3YAEZ/Dc/EWN1vZRY0+kOhbw==
-
-cliui@^7.0.2:
-  version "7.0.4"
-  resolved "https://registry.yarnpkg.com/cliui/-/cliui-7.0.4.tgz#a0265ee655476fc807aea9df3df8df7783808b4f"
-  integrity sha512-OcRE68cOsVMXp1Yvonl/fzkQOyjLSu/8bhPDfQt0e0/Eb283TKP20Fs2MqoPsr9SwA595rRCA+QMzYc9nBP+JQ==
-  dependencies:
-    string-width "^4.2.0"
-    strip-ansi "^6.0.0"
-    wrap-ansi "^7.0.0"
 
 cliui@^8.0.1:
   version "8.0.1"
@@ -4564,7 +4589,7 @@ update-browserslist-db@^1.0.9:
     escalade "^3.1.1"
     picocolors "^1.0.0"
 
-utam@1.2.1, utam@^1.1.0:
+utam@1.2.1:
   version "1.2.1"
   resolved "https://registry.yarnpkg.com/utam/-/utam-1.2.1.tgz#05b45f4e00f0f79c8d5cc71b53234f372553ca10"
   integrity sha512-JStr4CSY63QbdaAzBKJ2aQtsbaSUrQSVKsFJUv8IHv6E44mkWoYfRJ+QE7jtlRwhc71dY/OfsGrenUdPD9Jpmg==
@@ -4573,6 +4598,19 @@ utam@1.2.1, utam@^1.1.0:
     "@utam/core" "1.2.1"
     "@utam/generator" "1.2.1"
     "@utam/loader" "1.2.1"
+    fast-glob "^3.2.11"
+    rollup "^2.77.0"
+    yargs "^17.5.1"
+
+utam@^1.2.2:
+  version "1.2.2"
+  resolved "https://registry.yarnpkg.com/utam/-/utam-1.2.2.tgz#c45f7a76a0afb8b2f4a7ff60a2c067a753057904"
+  integrity sha512-wBtPU+64qJE6hvRK2pz2xX/6tSKe/GdqpxcDMKJaLSn9c4dHU0TRZ+T0QbPTfPOPvpS16IroIjZ1YL3XwqmmJw==
+  dependencies:
+    "@utam/compiler" "1.2.2"
+    "@utam/core" "1.2.2"
+    "@utam/generator" "1.2.2"
+    "@utam/loader" "1.2.2"
     fast-glob "^3.2.11"
     rollup "^2.77.0"
     yargs "^17.5.1"
@@ -4775,17 +4813,12 @@ yaml@^1.10.0:
   resolved "https://registry.yarnpkg.com/yaml/-/yaml-1.10.2.tgz#2301c5ffbf12b467de8da2333a459e29e7920e4b"
   integrity sha512-r3vXyErRCYJ7wg28yvBY5VSoAF8ZvlcW9/BwUzEtUsjvX/DKs24dIkuwjtuprwJJHsbyUbLApepYTR1BN4uHrg==
 
-yargs-parser@^21.0.0:
-  version "21.0.0"
-  resolved "https://registry.yarnpkg.com/yargs-parser/-/yargs-parser-21.0.0.tgz#a485d3966be4317426dd56bdb6a30131b281dc55"
-  integrity sha512-z9kApYUOCwoeZ78rfRYYWdiU/iNL6mwwYlkkZfJoyMR1xps+NEBX5X7XmRpxkZHhXJ6+Ey00IwKxBBSW9FIjyA==
-
 yargs-parser@^21.1.1:
   version "21.1.1"
   resolved "https://registry.yarnpkg.com/yargs-parser/-/yargs-parser-21.1.1.tgz#9096bceebf990d21bb31fa9516e0ede294a77d35"
   integrity sha512-tVpsJW7DdjecAiFpbIB1e3qxIQsE6NoPc5/eTdrbbIC4h0LVsWhnoa3g+m2HclBIujHzsxZ4VJVA+GUuc2/LBw==
 
-yargs@^17.0.0:
+yargs@^17.0.0, yargs@^17.5.1:
   version "17.6.2"
   resolved "https://registry.yarnpkg.com/yargs/-/yargs-17.6.2.tgz#2e23f2944e976339a1ee00f18c77fedee8332541"
   integrity sha512-1/9UrdHjDZc0eOU0HxOHoS78C69UD3JRMvzlJ7S79S2nTaWRA/whGCTV8o9e/N/1Va9YIV7Q4sOxD8VV4pCWOw==
@@ -4797,19 +4830,6 @@ yargs@^17.0.0:
     string-width "^4.2.3"
     y18n "^5.0.5"
     yargs-parser "^21.1.1"
-
-yargs@^17.5.1:
-  version "17.5.1"
-  resolved "https://registry.yarnpkg.com/yargs/-/yargs-17.5.1.tgz#e109900cab6fcb7fd44b1d8249166feb0b36e58e"
-  integrity sha512-t6YAJcxDkNX7NFYiVtKvWUz8l+PaKTLiL63mJYWR2GnHq2gjEWISzsLp9wg3aY36dY1j+gfIEL3pIF+XlJJfbA==
-  dependencies:
-    cliui "^7.0.2"
-    escalade "^3.1.1"
-    get-caller-file "^2.0.5"
-    require-directory "^2.1.1"
-    string-width "^4.2.3"
-    y18n "^5.0.5"
-    yargs-parser "^21.0.0"
 
 yarn-install@^1.0.0:
   version "1.0.0"

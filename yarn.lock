@@ -4171,10 +4171,10 @@ safe-buffer@~5.2.0:
   resolved "https://registry.yarnpkg.com/safer-buffer/-/safer-buffer-2.1.2.tgz#44fa161b0187b9549dd84bb91802f9bd8385cd6a"
   integrity sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==
 
-salesforce-pageobjects@^2.1.0:
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/salesforce-pageobjects/-/salesforce-pageobjects-2.1.0.tgz#c964815ab69967602c6caf89154f314dc7523f8c"
-  integrity sha512-bphBrUuFYh5ni2mKFFt7cjEJt6cIpb+umSOwuIPdZQKOliSsp5i7ZG4b8Spa78gpXi+b40PzC9KTRL7FhnhnVA==
+salesforce-pageobjects@^3.0.1:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/salesforce-pageobjects/-/salesforce-pageobjects-3.0.1.tgz#f4392313e5bce4ba016723b06997ceee87991592"
+  integrity sha512-9h1YjrfCKBX/Sl7+bDSzEY/ElXovHXjvkS4RLclyTub03hNohInjjFYC677fygaDl6WVK0RZw/SpAFavCAaNCw==
 
 semver-compare@^1.0.0:
   version "1.0.0"

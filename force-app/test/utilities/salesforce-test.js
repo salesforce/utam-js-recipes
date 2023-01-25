@@ -8,7 +8,6 @@
 import Login from 'salesforce-pageobjects/helpers/pageObjects/login';
 import ConsoleObjectHome from 'salesforce-pageobjects/global/pageObjects/consoleObjectHome';
 import RecordActionWrapper from 'salesforce-pageobjects/global/pageObjects/recordActionWrapper';
-import { RecordType } from './record-type';
 
 /**
  * Helper function used in crud tests to login in STMFA environment

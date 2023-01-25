@@ -38,18 +38,14 @@ function getUpdatedEnvFile(filePath, url, timestamp) {
  * @returns {string} the scratch org url fetched from the getUrlCmd
  */
 async function getScratchOrgLoginUrl() {
-    try {
-        const getUrlCmd = 'sfdx force:org:open -p /lightning -r --json';
-        console.log('Executing the following command: ', getUrlCmd);
-        const { stderr, stdout } = await exec(getUrlCmd, { cwd: __dirname });
-        if (stderr) throw new Error(stderr);
-        const response = JSON.parse(stdout);
-        const { url } = response.result;
-        console.log(`Command returned with response: ${url}`);
-        return url;
-    } catch (err) {
-        throw err;
-    }
+    const getUrlCmd = 'sfdx force:org:open -p /lightning -r --json';
+    console.log('Executing the following command: ', getUrlCmd);
+    const { stderr, stdout } = await exec(getUrlCmd, { cwd: __dirname });
+    if (stderr) throw new Error(stderr);
+    const response = JSON.parse(stdout);
+    const { url } = response.result;
+    console.log(`Command returned with response: ${url}`);
+    return url;
 }
 
 /**

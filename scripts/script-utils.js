@@ -15,7 +15,7 @@ const SCRATCH_ORG_TIMESTAMP = 'SCRATCH_ORG_LOGIN_TIMESTAMP';
 
 const DOTENV_FILEPATH = join(__dirname, '../.env');
 
-const ENV_REGEX = /^([a-z0-9_\-]*)=(.*)$/gim;
+const ENV_REGEX = /^([a-z0-9_-]*)=(.*)$/gim;
 
 /**
  * Replaces the value of a target key in a property file.
@@ -28,7 +28,7 @@ const ENV_REGEX = /^([a-z0-9_\-]*)=(.*)$/gim;
  */
 function upsertKeyValue(envFile, targetKey, newValue) {
     const parsedEnv = parse(envFile);
-    if (parsedEnv.hasOwnProperty(targetKey)) {
+    if (Object.prototype.hasOwnProperty.call(parsedEnv, targetKey)) {
         // Replace key value
         return envFile.replace(ENV_REGEX, (match, key, value) => {
             return key === targetKey ? `${key}=${newValue}` : `${key}=${value}`;

@@ -13,13 +13,13 @@ import { login } from './utilities/salesforce-test';
 import { TestEnvironment } from './utilities/test-environment';
 
 // TODO: replace with prefix of the environment from .env file
-const TEST_ENVIRONMENT_PREFIX = 'na44';
+const TEST_ENVIRONMENT_PREFIX = 'na45';
 
 describe('Sales app navigation tests', () => {
     const testEnvironment = new TestEnvironment(TEST_ENVIRONMENT_PREFIX);
 
     it('Application bar navigation', async () => {
-        await login(testEnvironment, 'home');
+        await login(testEnvironment, testEnvironment.redirectUrl);
         console.log('Load Home Page');
         const homePage = await utam.load(ApplicationHome);
         const appNav = await homePage.getAppNav();

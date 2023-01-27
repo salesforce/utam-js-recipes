@@ -10,13 +10,14 @@
 
 import RecordHomeFlexipage2 from 'salesforce-pageobjects/global/pageObjects/recordHomeFlexipage2';
 import RecordActionWrapper from 'salesforce-pageobjects/global/pageObjects/recordActionWrapper';
+import BaseRecordForm from 'salesforce-pageobjects/records/pageObjects/baseRecordForm';
 import Tab2 from 'salesforce-pageobjects/flexipage/pageObjects/tab2';
 import { RecordType } from './utilities/record-type';
 import { login } from './utilities/salesforce-test';
 import { TestEnvironment } from './utilities/test-environment';
 
 // TODO: replace with prefix of the environment from .env file
-const TEST_ENVIRONMENT_PREFIX = 'na44';
+const TEST_ENVIRONMENT_PREFIX = 'na45';
 
 describe('Record update test', () => {
     const testEnvironment = new TestEnvironment(TEST_ENVIRONMENT_PREFIX);
@@ -77,26 +78,28 @@ describe('Record update test', () => {
     });
 
     it('Inline edit existing Contact Record', async () => {
-        const detailsTabLabel = 'Details';
-        await gotoRecordHomeByUrl(RecordType.Contact, testEnvironment.contactId);
+        async function gotToRecordDetailsTab() {
+            console.log('Load Record Home page');
+            const recordHome = await utam.load(RecordHomeFlexipage2);
+            const tabset = await recordHome.getTabset();
 
-        console.log('Load Accounts Record Home page');
-        const recordHome = await utam.load(RecordHomeFlexipage2);
-        const tabset = await recordHome.getTabset();
-
-        console.log('Select "Details" tab');
-        const tabBar = await tabset.getTabBar();
-        const activeTabName = await tabBar.getActiveTabText();
-        if (!equalsIgnoreCase(activeTabName, detailsTabLabel)) {
-            await tabBar.clickTab(detailsTabLabel);
+            const detailsTabLabel = 'Details';
+            console.log('Select "Details" tab');
+            const tabBar = await tabset.getTabBar();
+            const activeTabName = await tabBar.getActiveTabText();
+            if (!equalsIgnoreCase(activeTabName, detailsTabLabel)) {
+                await tabBar.clickTab(detailsTabLabel);
+            }
+            const detailPanel = await (await tabset.getActiveTabContent(Tab2)).getDetailPanel();
+            return await detailPanel.getBaseRecordForm();
         }
 
-        console.log('Access Name field on Details panel');
-        const detailPanel = await (await tabset.getActiveTabContent(Tab2)).getDetailPanel();
-        const baseRecordForm = await detailPanel.getBaseRecordForm();
-        const recordLayout = await baseRecordForm.getRecordLayout();
-        const nameItem = await recordLayout.getItem(1, 2, 1);
+        await gotoRecordHomeByUrl(RecordType.Contact, testEnvironment.contactId);
+        const baseRecordForm = await gotToRecordDetailsTab();
+        let recordLayout = await baseRecordForm.getRecordLayout();
 
+        console.log('Access Name field on Details panel');
+        let nameItem = await recordLayout.getItem(1, 2, 1);
         console.log('Remember value of the name field');
         let formattedName = await nameItem.getFormattedName();
         const nameString = await formattedName.getInnerText();
@@ -113,10 +116,16 @@ describe('Record update test', () => {
         const button = await headlessAction.getLightningButton();
         await button.click();
 
+        console.log('Wait for page to reload');
+        await button.waitForAbsence();
+        await baseRecordForm.waitForAbsence();
+
+        const reloaded = await gotToRecordDetailsTab();
+        recordLayout = await reloaded.getRecordLayout();
+        nameItem = await recordLayout.getItem(1, 2, 1);
+
         console.log('Wait for field to be updated');
         await nameItem.waitForOutputField();
-
-        console.log('Check that field value has not changed');
         formattedName = await nameItem.getFormattedName();
         expect(await formattedName.getInnerText()).toBe(nameString);
     });

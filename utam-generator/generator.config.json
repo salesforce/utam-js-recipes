@@ -1,15 +1,16 @@
 {
     "inputRootDir": "./",
     "ignoreFolders": ["**/node_modules/**", "**/build/**"],
-    "inputFileMask": ["**/*.html"],
+    "inputFileMask": ["**/cards/*.html"],
     "outputFileExtension": ".utam.json",
     "relativeOutputDir": false,
     "outputDir": "__generated__",
     "defaultNamespace": "utam-generator/pageObjects/",
     "namespaces": {
-        "c": "utam-generator/pageObjects/",
         "lightning": "utam-lightning/pageObjects/"
     },
-    "generateCustomContent": true,
-    "descriptionAuthor": "my team"
+    "generateCustomContent": false,
+    "descriptionAuthor": "my team",
+    "includeClasses": ["slds-image"],
+    "includeTags": ["if:"]
 }

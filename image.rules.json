@@ -1,0 +1,12 @@
+{
+    "elementNames": {
+        "div": "title",
+        "span": "titleText"
+    },
+    "methodNames": {
+        "getSpanText": "getTitleTextContent"
+    },
+    "methodDescriptions": {
+        "getSpanText": "get text for my field"
+    }
+}

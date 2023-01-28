@@ -1,0 +1,17 @@
+<!--
+Copyright (c) 2022, salesforce.com, inc.
+All rights reserved.
+SPDX-License-Identifier: MIT
+For full license text, see the LICENSE file in the repo root or https://opensource.org/licenses/MIT
+-->
+<template>
+    <div class={getClasses}>
+        <div if:true={src}>
+            <img src={src} alt={alternativeText} />
+        </div>
+        <span if:false={src}>{alternativeText}</span>
+        <div if:true={title} class="slds-image__title slds-image__title--card">
+            <span class="slds-image__text slds-truncate" title={title}> {title} </span>
+        </div>
+    </div>
+</template>

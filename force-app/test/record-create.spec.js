@@ -15,7 +15,7 @@ import { TestEnvironment } from './utilities/test-environment';
 import RecordActionWrapper from 'salesforce-pageobjects/global/pageObjects/recordActionWrapper';
 
 // TODO: replace with prefix of the environment from .env file
-const TEST_ENVIRONMENT_PREFIX = 'na45';
+const TEST_ENVIRONMENT_PREFIX = 'na44';
 
 describe('Record creation tests', () => {
     const testEnvironment = new TestEnvironment(TEST_ENVIRONMENT_PREFIX);
@@ -28,11 +28,13 @@ describe('Record creation tests', () => {
     it('Create a new Account Record', async () => {
         let recordFormModal = await openRecordModal(baseUrl, RecordType.Account);
         // TODO - depending on org setup, modal might not present, then comment next lines
+        /* 
         console.log('Load Change Record Type Modal');
         recordFormModal = await utam.load(RecordActionWrapper);
         console.log("Change Record Type Modal: click button 'Next'");
         const changeRecordTypeFooter = await recordFormModal.waitForChangeRecordFooter();
         await changeRecordTypeFooter.clickButton('Next');
+        */
 
         console.log('Load Record Form Modal');
         recordFormModal = await utam.load(RecordActionWrapper);
@@ -69,8 +71,14 @@ describe('Record creation tests', () => {
         console.log("Pick first option in a 'Stage' combobox");
         const stageItem = await recordLayout.getItem(1, 2, 2);
         const stageCombobox = await (await stageItem.getStageNamePicklist()).getBaseCombobox();
-        await stageCombobox.expandForDisabledInput();
-        await stageCombobox.pickItem(2);
+        await utam.waitFor(
+            async () => {
+                await stageCombobox.expandForDisabledInput();
+                await stageCombobox.pickItem(2);
+                return true;
+            },
+            { message: 'cant pick opportunity name' },
+        );
 
         console.log('Find and pick first account, link it to the opportunity');
         const accountLookupItem = await recordLayout.getItem(1, 3, 1);

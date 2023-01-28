@@ -13,14 +13,14 @@ import { login, openRecordModal } from './utilities/salesforce-test';
 import { TestEnvironment } from './utilities/test-environment';
 
 // TODO: replace with prefix of the environment from .env file
-const TEST_ENVIRONMENT_PREFIX = 'na45';
+const TEST_ENVIRONMENT_PREFIX = 'na44';
 
 describe('Test LwcRecordLayout methods', () => {
     const testEnvironment = new TestEnvironment(TEST_ENVIRONMENT_PREFIX);
     const baseUrl = testEnvironment.redirectUrl;
 
     it('Test LwcRecordLayout.getSections() waits for sections', async () => {
-        await login(testEnvironment, 'home');
+        await login(testEnvironment, baseUrl);
         const recordFormModal = await openRecordModal(baseUrl, RecordType.Opportunity);
         const recordForm = await recordFormModal.getRecordForm();
         const recordLayout = await recordForm.getRecordLayout();

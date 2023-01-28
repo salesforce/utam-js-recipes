@@ -34,9 +34,9 @@
         "lint-staged": "11.2.6",
         "prettier": "2.8.3",
         "rimraf": "^4.1.2",
-        "salesforce-pageobjects": "^2.1.0",
+        "salesforce-pageobjects": "^3.0.1",
         "wdio-chromedriver-service": "^7.3.2",
-        "wdio-utam-service": "^1.2.1"
+        "wdio-utam-service": "^1.6.0"
     },
     "volta": {
         "node": "16.18.1",

@@ -19,7 +19,7 @@ describe('Sales app navigation tests', () => {
     const testEnvironment = new TestEnvironment(TEST_ENVIRONMENT_PREFIX);
 
     it('Application bar navigation', async () => {
-        await login(testEnvironment, 'home');
+        await login(testEnvironment, testEnvironment.redirectUrl);
         console.log('Load Home Page');
         const homePage = await utam.load(ApplicationHome);
         const appNav = await homePage.getAppNav();

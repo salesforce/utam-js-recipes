@@ -64,11 +64,11 @@ describe('Test utam.dev portal', () => {
         let homePage = await utam.load(UtamDevHome);
         await homePage.waitForVisible();
         expect(await homePage.isPresent()).toBeTrue();
-        expect(await homePage.isVisible());
+        expect(await homePage.isVisible()).toBeTrue();
 
         console.log('Get home page content, save as a variable');
         let pageContent = await homePage.getContent();
-        expect(await pageContent.isPresent());
+        expect(await pageContent.isPresent()).toBeTrue();
 
         console.log('Reload web page by navigating to its URL again');
         await browser.navigateTo('https://utam.dev');

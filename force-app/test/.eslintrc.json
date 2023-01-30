@@ -1,18 +1,19 @@
 {
-    "extends": "eslint:recommended",
-    "plugins": ["jasmine"],
+    "extends": ["eslint:recommended", "plugin:jasmine/recommended", "plugin:wdio/recommended"],
+    "plugins": ["jasmine", "wdio"],
     "env": {
         "node": true,
         "es2021": true,
         "jasmine": true
     },
     "globals": {
-        "utam": "readonly",
-        "browser": "readonly"
+        "utam": "readonly"
     },
     "parserOptions": {
         "sourceType": "module",
         "ecmaVersion": "latest"
     },
-    "rules": {}
+    "rules": {
+        "jasmine/new-line-before-expect": "off"
+    }
 }

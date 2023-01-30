@@ -35,7 +35,7 @@ function getUpdatedEnvFile(filePath, url, timestamp) {
 
 /**
  * Get the scratch org login url from a child CLI process and parse it
- * @returns {string} the scratch org url fetched from the getUrlCmd
+ * @returns {Promise<string>} the scratch org url fetched from the getUrlCmd
  */
 async function getScratchOrgLoginUrl() {
     const getUrlCmd = 'sfdx force:org:open -p /lightning -r --json';

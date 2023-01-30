@@ -4,7 +4,7 @@ This repository contains examples of how to test the Salesforce UI using the [UT
 
 > Note: This repository uses UTAM JavaScript. If you want to use UTAM with Java, visit the [UTAM Java recipes repository][utam-java-recipes].
 
-__IMPORTANT: This repository's page objects and UI tests are compatible with the Salesforce Winter'23 release.__
+__IMPORTANT: This repository's page objects and UI tests are compatible with the Salesforce Spting'23 release.__
 
 > Note: These recipes are designed to work with a generic Salesforce org. If your org has customizations, you might need to modify page objects or tests locally to avoid errors.
 
@@ -46,7 +46,6 @@ The repo has a [hello](https://github.com/salesforce/utam-recipes-sfdx/tree/main
 ### 2) utam-preview package
 
 This package contains the page objects used in the UI tests that interact with the Salesforce UI. 
-__Important: Page Objects from this package are compatible with application version Spring'22__
 
 Both packages demonstrate how to setup page objects authoring and compilation.
 

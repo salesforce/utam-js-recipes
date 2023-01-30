@@ -37,6 +37,9 @@ export class RecordType {
      * @returns {string} the record home URL of a specific record type
      */
     getRecordHomeUrl(redirectUrl, recordId) {
+        if (!recordId) {
+            throw new Error('Record ID is not set');
+        }
         return `${redirectUrl}lightning/r/${this.name}/${recordId}/view`;
     }
 }

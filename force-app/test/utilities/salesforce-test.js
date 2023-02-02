@@ -8,7 +8,6 @@
 import Login from 'salesforce-pageobjects/helpers/pageObjects/login';
 import ConsoleObjectHome from 'salesforce-pageobjects/global/pageObjects/consoleObjectHome';
 import RecordActionWrapper from 'salesforce-pageobjects/global/pageObjects/recordActionWrapper';
-import { RecordType } from './record-type';
 
 /**
  * Helper function used in crud tests to login in STMFA environment
@@ -32,7 +31,7 @@ export async function login(testEnvironment, landingPagePartialUrl) {
 /**
  * Utility function that open a given record type modal
  * @param {string} baseUrl test environment
- * @param {RecordType} recordType type of record used in the UI test
+ * @param {import("./record-type").RecordType} recordType type of record used in the UI test
  * @returns {Promise<RecordActionWrapper>} instance of the record modal Page Object
  */
 export async function openRecordModal(baseUrl, recordType) {

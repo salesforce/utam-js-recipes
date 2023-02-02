@@ -10,7 +10,6 @@
 
 import RecordHomeFlexipage2 from 'salesforce-pageobjects/global/pageObjects/recordHomeFlexipage2';
 import RecordActionWrapper from 'salesforce-pageobjects/global/pageObjects/recordActionWrapper';
-import BaseRecordForm from 'salesforce-pageobjects/records/pageObjects/baseRecordForm';
 import Tab2 from 'salesforce-pageobjects/flexipage/pageObjects/tab2';
 import { RecordType } from './utilities/record-type';
 import { login } from './utilities/salesforce-test';

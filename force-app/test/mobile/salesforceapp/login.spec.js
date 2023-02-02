@@ -32,6 +32,7 @@ describe('Test Salesforce App', () => {
         }
 
         utam.setBridgeAppTitle('Login | Salesforce');
+        // eslint-disable-next-line no-unused-vars
         const login = await utam.load(Login);
     });
 });

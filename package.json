@@ -43,7 +43,7 @@
         "husky": "^8.0.3",
         "isbinaryfile": "^5.0.0",
         "lint-staged": "11.2.6",
-        "prettier": "2.8.3",
+        "prettier": "2.8.4",
         "rimraf": "^4.1.2",
         "salesforce-pageobjects": "^3.0.1",
         "wdio-chromedriver-service": "^7.3.2",

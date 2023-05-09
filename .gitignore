@@ -40,3 +40,6 @@ utam-generator/__utam__/**.json
 utam-generator/__generated__/**.json
 # HTML sources
 utam-generator/src/**
+
+# Generated sarif reports
+**/utam-lint.sarif

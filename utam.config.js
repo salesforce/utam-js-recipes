@@ -15,4 +15,7 @@ module.exports = {
         'utam-sfdx/': 'utam-js-recipes/',
         'utam-*/': 'utam-preview/',
     },
+    lint: {
+        printToConsole: false,
+    },
 };

@@ -14,4 +14,7 @@ module.exports = {
     alias: {
         'utam-*/': 'utam-preview/',
     },
+    lint: {
+        printToConsole: false,
+    },
 };

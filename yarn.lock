@@ -1992,47 +1992,47 @@
     "@typescript-eslint/types" "5.49.0"
     eslint-visitor-keys "^3.3.0"
 
-"@utam/compiler@2.0.1":
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/@utam/compiler/-/compiler-2.0.1.tgz#66b68655a4a3ea370b45f792521c290ebe927456"
-  integrity sha512-iDI7ZlVwGosv3fQFAb8JiJwLGLKVW/ITWvh3FdIhJAUQwOsThlojyz+X72a3aE8wmV8L0ZdPBq24xr8qAA0ONw==
+"@utam/compiler@2.0.2":
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/@utam/compiler/-/compiler-2.0.2.tgz#0b0121e0779de70444b49ae93d8038a76e4a5621"
+  integrity sha512-EQ85wPsVB41Y3v8PSWanzh5jSsMtRQTneCPlOHUgbmd08wpm2C3tRIVKjnaY+TZ7/Kzsujo0osfZnNhYGZ8DzQ==
   dependencies:
-    "@utam/diagnostics" "2.0.1"
+    "@utam/diagnostics" "2.0.2"
     jsonc-parser "^3.0.0"
 
-"@utam/core@2.0.1":
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/@utam/core/-/core-2.0.1.tgz#531c1702651272123059d6fb4904802117765689"
-  integrity sha512-wQedJ3cktqv/sXAkxofXBAnkHF3zbQXf3B9Ea/ccILu1iE/lTXB6H+Xp9aciZNiZJTXHXDfSpk5k7vKedUBppw==
+"@utam/core@2.0.2":
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/@utam/core/-/core-2.0.2.tgz#ee077a5689955cbef9a42a1a1f4bf61b258b74f0"
+  integrity sha512-d6YlULlhH0CfqPvIFXhI6vdOt0/G3lwSJzxg5oOWkGsq4xdrNAKQMdJwkAjaEk7wCLHjeCKQJlCOU3/2sbupqA==
 
-"@utam/diagnostics@2.0.1":
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/@utam/diagnostics/-/diagnostics-2.0.1.tgz#8c3f9f1e5066117f64517a28cc303c43c90ca056"
-  integrity sha512-S/bYXeAwIAvMRtA1BwCA07qCxFzGwF4mAn7Em0GfT+/oOe+MI/zedlfQcZPmkldfQvsgOuaXSsc1+iYESYenGA==
+"@utam/diagnostics@2.0.2":
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/@utam/diagnostics/-/diagnostics-2.0.2.tgz#324ce131d8bc78c55101e457007698805b62ea6a"
+  integrity sha512-ArBhgjUph7PNJIbNyGBi6/AEHJ2f+kO1zvDuP7/Z24UHvHQugkvg9EqWEd667JrCxDVwNwfR0ngYqTePA24lgw==
 
-"@utam/generator@2.0.1":
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/@utam/generator/-/generator-2.0.1.tgz#a38c48baea8eac60432ab9bafa9399cd3d1ae9a4"
-  integrity sha512-lx2CFHF/+9BKGyKt5ittjjivLlQyONhC1/EppkmakqIa+RUZVN0T9F9aXES+dIJUdLdTGVCRqhaU/2roU6Wsgg==
+"@utam/generator@2.0.2":
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/@utam/generator/-/generator-2.0.2.tgz#13b1f9111e72cd59dc0ea71e5d96afee6a9a5c35"
+  integrity sha512-qt5SKMGQVeArT17SYavnTgDrNnHfVYUjkh/6nmKjBq0ea2iQiGCboIR0Saw1rlVKtMYp6mSsfcNGLAt+fwHLig==
   dependencies:
     fast-glob "^3.2.11"
     parse5 "^6.0.1"
     prettier "2.8.8"
 
-"@utam/lint@2.0.1":
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/@utam/lint/-/lint-2.0.1.tgz#03189acfa5afd7e5526b105aeed38c96a5f238b4"
-  integrity sha512-v7Ep2wdnHsJH0YKnNnN19kIzhRfOUfxKhExdMeGo6169AjcsfV+QRJQt8D9HWzpNnSK9s3KV0tyL7qq1pHnjbg==
+"@utam/lint@2.0.2":
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/@utam/lint/-/lint-2.0.2.tgz#179c31d5ba3de36e0a614a0fa3e3c76a1881bf9c"
+  integrity sha512-GvEKJvpZnIUhHb9K+gdzPCU6+2Chwa+ykEBpG3w7NO2i4dZyHw6Rf1tBHqDe2k3BEPSP5JiDLHQEttwwaAiFmA==
   dependencies:
-    "@utam/diagnostics" "2.0.1"
+    "@utam/diagnostics" "2.0.2"
     node-sarif-builder "^2.0.3"
 
-"@utam/loader@2.0.1":
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/@utam/loader/-/loader-2.0.1.tgz#1ff19b8fe4d2f7202f41c9720b92af05a55753de"
-  integrity sha512-180SC1JVP474eueePUQh/lOjfdAXYgrkjg1PCFPG2n1caKibvU5fRONnPVgPpjOELDKhANORGMjhYMykYt20dA==
+"@utam/loader@2.0.2":
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/@utam/loader/-/loader-2.0.2.tgz#b67f91e065363f75bd1c33a547093dbf8c7e87dc"
+  integrity sha512-KnWUZOQx1RDq28bdCbohUqQ3cVf1XUKNedok4uWHZ0fwAmbaq0hQ6mu+Vb3xfXToW2JxhLVzyf4ITZ7ab8DDOw==
   dependencies:
-    "@utam/core" "2.0.1"
+    "@utam/core" "2.0.2"
 
 "@wdio/appium-service@^7.26.0":
   version "7.26.0"
@@ -6426,10 +6426,10 @@ safe-regex-test@^1.0.0:
   resolved "https://registry.yarnpkg.com/safer-buffer/-/safer-buffer-2.1.2.tgz#44fa161b0187b9549dd84bb91802f9bd8385cd6a"
   integrity sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==
 
-salesforce-pageobjects@^3.0.1:
-  version "3.0.1"
-  resolved "https://registry.yarnpkg.com/salesforce-pageobjects/-/salesforce-pageobjects-3.0.1.tgz#f4392313e5bce4ba016723b06997ceee87991592"
-  integrity sha512-9h1YjrfCKBX/Sl7+bDSzEY/ElXovHXjvkS4RLclyTub03hNohInjjFYC677fygaDl6WVK0RZw/SpAFavCAaNCw==
+salesforce-pageobjects@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/salesforce-pageobjects/-/salesforce-pageobjects-4.0.0.tgz#4d3fabfb2d52ce4707bf8595faeb384332e3ae8c"
+  integrity sha512-NMxVGX7hZK2wvUCjXoIW3GGvd3/fTWBLojD08SDAYIstnXwthF5pqUHLoMm6KlvrJU3nPp1lub//svwH+TkGEQ==
 
 saxes@^5.0.1:
   version "5.0.1"
@@ -7046,16 +7046,16 @@ url-parse@^1.5.3:
     querystringify "^2.1.1"
     requires-port "^1.0.0"
 
-utam@2.0.1, utam@^2.0.1:
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/utam/-/utam-2.0.1.tgz#71b664253c232c8eb9bddd19b21f3dad38b85065"
-  integrity sha512-j3Q/INWuBd/8s5tbZKzNO8ofLWEPdcqO60fsv9jpB9p0IOb0WbsFanWi+P0bU8xu86NWwxmyuvx4+ww6xkXUNw==
+utam@2.0.2, utam@^2.0.2:
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/utam/-/utam-2.0.2.tgz#63dfde7a448b8c700feebc0488335ca7274030db"
+  integrity sha512-qS+iG6GbcszguKtfT6W8I9rm3p1AgHwcceRRWmyy+a9umNVGFncBxA7SPn/JmGN0ONS03Zel5TTAikGt/5Tr5g==
   dependencies:
-    "@utam/compiler" "2.0.1"
-    "@utam/core" "2.0.1"
-    "@utam/generator" "2.0.1"
-    "@utam/lint" "2.0.1"
-    "@utam/loader" "2.0.1"
+    "@utam/compiler" "2.0.2"
+    "@utam/core" "2.0.2"
+    "@utam/generator" "2.0.2"
+    "@utam/lint" "2.0.2"
+    "@utam/loader" "2.0.2"
     fast-glob "^3.2.11"
     jsondiffpatch "0.4.1"
     rollup "^3.20.2"
@@ -7126,13 +7126,13 @@ wdio-chromedriver-service@^7.3.2:
     split2 "^3.2.2"
     tcp-port-used "^1.0.1"
 
-wdio-utam-service@^2.0.1:
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/wdio-utam-service/-/wdio-utam-service-2.0.1.tgz#6a8d3bf881aae0ce38ba785d748c2e88b75abc33"
-  integrity sha512-LE43fp5znv8lhcyHXwa+vnj7o8BleoFHZUsIJfSm+rNn5IvDz4b1v5NJzyW0HQqKSAmKHqT+9Mgv+BYwzLx4/Q==
+wdio-utam-service@^2.0.2:
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/wdio-utam-service/-/wdio-utam-service-2.0.2.tgz#88cf6328ac4af03988bb2731a5693180d8c46693"
+  integrity sha512-DgkWeD7Y2gDWUGJP1QoJRSgiUdATpIQ7eIPzbGhScArqlDu5txHTzIdoyd/Y8UUYFZiIR8rNa+cLjuhfCHKPjw==
   dependencies:
     "@wdio/logger" "^7.26.0"
-    utam "2.0.1"
+    utam "2.0.2"
 
 webdriver@7.27.0:
   version "7.27.0"

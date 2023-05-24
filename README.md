@@ -52,7 +52,7 @@ Both packages demonstrate how to setup page objects authoring and compilation.
 ## Requirements
 
 - [Salesforce CLI](https://developer.salesforce.com/tools/sfdxcli)
-- [Node](https://nodejs.org/) >= 14.15.4
+- [Node](https://nodejs.org/) >= 16
 - [Yarn](https://yarnpkg.com/) >= 1.22.5
 
 ## Initial setup

@@ -285,7 +285,6 @@ The repository contains a [test against utam.dev](https://github.com/salesforce/
 The test doesn't require any special setup. The instructions to run it are inside the test.
 
 [enable-dev-hub]: https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_setup_enable_devhub.htm
-[utam-js]: https://www.github.com/salesforce/utam-js
 [utam-doc]: https://utam.dev
 [utam-java-recipes]: https://www.github.com/salesforce/utam-java-recipes
 

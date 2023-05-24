@@ -35,7 +35,6 @@ describe('Test Community Playground App', () => {
         await tabBar.clickTabBarItem('Blog');
         utam.setBridgeAppTitle('All Blogs Final');
         const blogs = await utam.load(Blogs);
-        await blogs.waitForBlogPostCellList();
         const blogList = await blogs.getBlogPostCellList();
         expect((await blogList.getBlogPostCells()).length).toBeGreaterThan(0);
 

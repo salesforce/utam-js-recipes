@@ -50,7 +50,7 @@
         "wdio-utam-service": "^2.0.2"
     },
     "volta": {
-        "node": "16.18.1",
+        "node": "18.16.0",
         "yarn": "1.22.5"
     },
     "engines": {

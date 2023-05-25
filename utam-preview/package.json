@@ -35,6 +35,6 @@
         "extends": "../package.json"
     },
     "engines": {
-        "node": ">=14.15.4"
+        "node": ">= 16"
     }
 }

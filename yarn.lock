@@ -6691,6 +6691,11 @@ salesforce-pageobjects@^4.0.0:
   resolved "https://registry.yarnpkg.com/salesforce-pageobjects/-/salesforce-pageobjects-4.0.0.tgz#4d3fabfb2d52ce4707bf8595faeb384332e3ae8c"
   integrity sha512-NMxVGX7hZK2wvUCjXoIW3GGvd3/fTWBLojD08SDAYIstnXwthF5pqUHLoMm6KlvrJU3nPp1lub//svwH+TkGEQ==
 
+salesforce-pageobjects@^4.0.1:
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/salesforce-pageobjects/-/salesforce-pageobjects-4.0.1.tgz#b1f360c5c03705a48f3ce091a0f51fb593c9140d"
+  integrity sha512-MBSDy8xsW/mV0M8jBbJqwz28nVO3Osx7pnrhYN0kKh6bO6H8qLWs1hYBLtcbHIumPswntT7dCfbqTWxu5NBOVQ==
+
 saxes@^5.0.1:
   version "5.0.1"
   resolved "https://registry.yarnpkg.com/saxes/-/saxes-5.0.1.tgz#eebab953fa3b7608dbe94e5dadb15c888fa6696d"

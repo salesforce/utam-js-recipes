@@ -58,7 +58,8 @@
     },
     "workspaces": [
         "./",
-        "utam-preview"
+        "utam-preview",
+        "utam-generator"
     ],
     "lint-staged": {
         "*.{js,css,md}": "prettier --write",

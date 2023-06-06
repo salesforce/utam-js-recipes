@@ -47,7 +47,7 @@
         "rimraf": "^4.1.2",
         "salesforce-pageobjects": "^4.0.1",
         "wdio-chromedriver-service": "^7.3.2",
-        "wdio-utam-service": "^2.0.2"
+        "wdio-utam-service": "^2.0.3"
     },
     "volta": {
         "node": "18.16.0",
@@ -58,7 +58,8 @@
     },
     "workspaces": [
         "./",
-        "utam-preview"
+        "utam-preview",
+        "utam-generator"
     ],
     "lint-staged": {
         "*.{js,css,md}": "prettier --write",

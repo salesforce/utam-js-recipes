@@ -18,7 +18,7 @@
     "devDependencies": {
         "@babel/cli": "^7.20.7",
         "@babel/core": "^7.20.12",
-        "@babel/preset-env": "^7.20.2",
+        "@babel/preset-env": "^7.22.5",
         "@babel/register": "^7.18.9",
         "@lwc/eslint-plugin-lwc": "^1.6.2",
         "@salesforce/eslint-config-lwc": "^3.4.0",

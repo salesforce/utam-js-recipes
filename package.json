@@ -19,7 +19,7 @@
         "@babel/cli": "^7.20.7",
         "@babel/core": "^7.20.12",
         "@babel/preset-env": "^7.20.2",
-        "@babel/register": "^7.18.9",
+        "@babel/register": "^7.22.5",
         "@lwc/eslint-plugin-lwc": "^1.6.2",
         "@salesforce/eslint-config-lwc": "^3.4.0",
         "@salesforce/eslint-plugin-lightning": "^1.0.0",

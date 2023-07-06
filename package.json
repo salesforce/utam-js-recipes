@@ -16,7 +16,7 @@
         "prepare": "husky install"
     },
     "devDependencies": {
-        "@babel/cli": "^7.22.5",
+        "@babel/cli": "^7.22.6",
         "@babel/core": "^7.22.5",
         "@babel/preset-env": "^7.22.5",
         "@babel/register": "^7.22.5",

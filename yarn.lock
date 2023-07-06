@@ -2381,15 +2381,33 @@
     "@utam/diagnostics" "2.0.4"
     jsonc-parser "^3.0.0"
 
+"@utam/compiler@2.1.0":
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/@utam/compiler/-/compiler-2.1.0.tgz#149abd633ca9447fe7153804861a9122cae1ace6"
+  integrity sha512-45fhovLKC6gHiDWtXRAtRl6fg0jPLWRDONsEU+vjox6O7PwMACIcP/irLhWaODlsH2bztnPprtajpb2FmZnN5A==
+  dependencies:
+    "@utam/diagnostics" "2.1.0"
+    jsonc-parser "^3.0.0"
+
 "@utam/core@2.0.4":
   version "2.0.4"
   resolved "https://registry.yarnpkg.com/@utam/core/-/core-2.0.4.tgz#d814f67006be77671da240f6ec37444b67053e49"
   integrity sha512-E7f8fCVVwodiTICr7bsvrGkFsYroaOfXxqc0bJebZeuAOS+8uzEU1xWeKPX/Sa0jJ/1BEvBaijOmYk6KzQVyJQ==
 
+"@utam/core@2.1.0":
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/@utam/core/-/core-2.1.0.tgz#15e9c880089a8fcb22542d79da50a158128a0aa2"
+  integrity sha512-z0EZ5rJbs1McIAj6ZLu5tJ9rXg8/lz98Ax3Yi8BEt+KVpzvZ3Qlqlgend1McfadYEsAY3jTa//QEbo+sGa0BLw==
+
 "@utam/diagnostics@2.0.4":
   version "2.0.4"
   resolved "https://registry.yarnpkg.com/@utam/diagnostics/-/diagnostics-2.0.4.tgz#29c8ee0f861dd25ce0cc8bfea019b54bb629c304"
   integrity sha512-xPkwKb3RcKBTGWndzy97+3lRhTpsCZwqZ7ovkHn1vlGe1GNW8014YXaB7EswnM5TnxpQVWsB5ggJ4xHULrlI5g==
+
+"@utam/diagnostics@2.1.0":
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/@utam/diagnostics/-/diagnostics-2.1.0.tgz#4db0f3c85d15ec21920a0a771e0cb1b720f3b8ae"
+  integrity sha512-StpbMizG8W2ZFq0TIEb6exH2D22o2X1IyQLr6BLXpnq6lOEFL4GS1ORx/AaoA5iir64gh9KEcA8F09GgE8cAJQ==
 
 "@utam/generator@2.0.4":
   version "2.0.4"
@@ -2397,6 +2415,16 @@
   integrity sha512-G5DCWF6mEBu8TK9pY1WkzqBX1oMV6RvoRogn7LoRiJ6H42GgcZO/IJLtk0NPQNmnSTBBog/tJ8owD27VsswP8g==
   dependencies:
     fast-glob "^3.2.11"
+    parse5 "^6.0.1"
+    prettier "2.8.8"
+
+"@utam/generator@2.1.0":
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/@utam/generator/-/generator-2.1.0.tgz#09ce493a500d93a7f30828caaf9a7d07b49154b6"
+  integrity sha512-Ln+xAdHAbe0rn4p6H4SBjRmz4iFdhs8XmzuuPEdBpsJnRQNzUbT7UyAKIi18EGZH+PKMvObngBKQlHmWQybZiQ==
+  dependencies:
+    "@babel/parser" "^7.22.5"
+    "@babel/traverse" "^7.22.5"
     parse5 "^6.0.1"
     prettier "2.8.8"
 
@@ -2408,12 +2436,27 @@
     "@utam/diagnostics" "2.0.4"
     node-sarif-builder "^2.0.3"
 
+"@utam/lint@2.1.0":
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/@utam/lint/-/lint-2.1.0.tgz#745743604e517e02bd5dfce268860b8381dff175"
+  integrity sha512-bB31zgcklXi9K5qKYS0CXUe/YbvZUQScl4UGQxF8yNb1ZN6JMfaUVqYnU5YBrQCs3JJT+1AC07oUjhWAvGdsDw==
+  dependencies:
+    "@utam/diagnostics" "2.1.0"
+    node-sarif-builder "^2.0.3"
+
 "@utam/loader@2.0.4":
   version "2.0.4"
   resolved "https://registry.yarnpkg.com/@utam/loader/-/loader-2.0.4.tgz#4741b76808796ce4bdbd59d73bff297401383277"
   integrity sha512-/LGMhU/kpzfgZRROYP7uu2NJfBp6LRhtRZYqNO4n5X1P1DJIv3gUvtgLLLQAYXZn2jqn1mtol6+ktyvO1Zrm8A==
   dependencies:
     "@utam/core" "2.0.4"
+
+"@utam/loader@2.1.0":
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/@utam/loader/-/loader-2.1.0.tgz#5244cffd5709b91cba1f8fcc81961c313b61692f"
+  integrity sha512-OswCF9XvyyvvWQ7fUUSXDcQk7IULmDhIkmIrjqM/a462pQgYrEtsiJl1cjuRxcBmSd/k43olBo/gU1i2sdAl2A==
+  dependencies:
+    "@utam/core" "2.1.0"
 
 "@wdio/appium-service@^7.26.0":
   version "7.26.0"
@@ -7606,7 +7649,7 @@ url-parse@^1.5.3:
     querystringify "^2.1.1"
     requires-port "^1.0.0"
 
-utam@2.0.4, utam@^2.0.3:
+utam@2.0.4:
   version "2.0.4"
   resolved "https://registry.yarnpkg.com/utam/-/utam-2.0.4.tgz#f9c467b5dd4c60eaeb30f8b3c1bfbf3a3f476229"
   integrity sha512-+mgSedf+GKfmbV2u8bY5zGqCMBQTzTIomhLKB29nKr3nSL/Zs9OaFT6EwJJ3C1H9bePNKyZOpJyZJhTbCsVx+w==
@@ -7616,6 +7659,21 @@ utam@2.0.4, utam@^2.0.3:
     "@utam/generator" "2.0.4"
     "@utam/lint" "2.0.4"
     "@utam/loader" "2.0.4"
+    fast-glob "^3.2.11"
+    jsondiffpatch "0.4.1"
+    rollup "^3.20.2"
+    yargs "^17.5.1"
+
+utam@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/utam/-/utam-2.1.0.tgz#2c35da714e604635f0cc05275202d5a92e8edb16"
+  integrity sha512-Sx83vjtGDibFFHhXQW3bWFKCCfew+WBGUb5LDO7dZqtm9LtOTDjJu3MdcBG4TyIz/h0dfGPgmZTq/NpnYUbXrg==
+  dependencies:
+    "@utam/compiler" "2.1.0"
+    "@utam/core" "2.1.0"
+    "@utam/generator" "2.1.0"
+    "@utam/lint" "2.1.0"
+    "@utam/loader" "2.1.0"
     fast-glob "^3.2.11"
     jsondiffpatch "0.4.1"
     rollup "^3.20.2"

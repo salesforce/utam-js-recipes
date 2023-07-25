@@ -54,7 +54,7 @@
         "yarn": "1.22.5"
     },
     "engines": {
-        "node": ">= 16"
+        "node": ">= 16.14"
     },
     "workspaces": [
         "./",

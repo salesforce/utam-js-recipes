@@ -7607,7 +7607,7 @@ url-parse@^1.5.3:
     querystringify "^2.1.1"
     requires-port "^1.0.0"
 
-utam@2.1.1, utam@^2.0.3:
+utam@2.1.1, utam@^2.1.1:
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/utam/-/utam-2.1.1.tgz#36b14999e78e1461a5c54f9d7699b50f429e4687"
   integrity sha512-J4tWCcvC3rmEw0roGx4cesHxilwWy+yjPuakv5o9zl9G2EYeiFdZQdvqkYJ3tX7k9dmgPkFK7VM7/5II9UPWVQ==

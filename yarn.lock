@@ -3171,14 +3171,14 @@ chrome-launcher@^0.15.0:
     is-wsl "^2.2.0"
     lighthouse-logger "^1.0.0"
 
-chromedriver@^114.0.2:
-  version "114.0.2"
-  resolved "https://registry.yarnpkg.com/chromedriver/-/chromedriver-114.0.2.tgz#1ddaa6738f2b60e6b832a39f791c8c54bf840837"
-  integrity sha512-v0qrXRBknbxqmtklG7RWOe3TJ/dLaHhtB0jVxE7BAdYERxUjEaNRyqBwoGgVfQDibHCB0swzvzsj158nnfPgZw==
+chromedriver@^115.0.0:
+  version "115.0.0"
+  resolved "https://registry.yarnpkg.com/chromedriver/-/chromedriver-115.0.0.tgz#2d50dd1d12d553c1c6cad22d329dc5cf63487ada"
+  integrity sha512-mkPL+sXMLMUenoXCiKREw+cBl3ibfhiWxkiv9ByIPpqtrrInCt9zKdOolAsbmN/ndlH51WtT5ukUKbeRdrpikg==
   dependencies:
     "@testim/chrome-version" "^1.1.3"
     axios "^1.4.0"
-    compare-versions "^5.0.3"
+    compare-versions "^6.0.0"
     extract-zip "^2.0.1"
     https-proxy-agent "^5.0.1"
     proxy-from-env "^1.1.0"
@@ -3334,10 +3334,10 @@ commondir@^1.0.1:
   resolved "https://registry.yarnpkg.com/commondir/-/commondir-1.0.1.tgz#ddd800da0c66127393cca5950ea968a3aaf1253b"
   integrity sha1-3dgA2gxmEnOTzKWVDqloo6rxJTs=
 
-compare-versions@^5.0.3:
-  version "5.0.3"
-  resolved "https://registry.yarnpkg.com/compare-versions/-/compare-versions-5.0.3.tgz#a9b34fea217472650ef4a2651d905f42c28ebfd7"
-  integrity sha512-4UZlZP8Z99MGEY+Ovg/uJxJuvoXuN4M6B3hKaiackiHrgzQFEe3diJi1mf1PNHbFujM7FvLrK2bpgIaImbtZ1A==
+compare-versions@^6.0.0:
+  version "6.0.0"
+  resolved "https://registry.yarnpkg.com/compare-versions/-/compare-versions-6.0.0.tgz#a3edb527e4487bfab9a8b62ffe70cebc9b87675b"
+  integrity sha512-s2MzYxfRsE9f/ow8hjn7ysa7pod1xhHdQMsgiJtKx6XSNf4x2N1KG4fjrkUmXcP/e9Y2ZX4zB6sHIso0Lm6evQ==
 
 compress-brotli@^1.3.8:
   version "1.3.8"

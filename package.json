@@ -20,7 +20,7 @@
         "@babel/preset-env": "^7.22.9",
         "@babel/register": "^7.22.5",
         "@lwc/eslint-plugin-lwc": "^1.6.3",
-        "@salesforce/eslint-config-lwc": "^3.5.0",
+        "@salesforce/eslint-config-lwc": "^3.5.2",
         "@salesforce/eslint-plugin-lightning": "^1.0.0",
         "@salesforce/sfdx-lwc-jest": "^1.4.1",
         "@tsconfig/node16": "^1.0.4",

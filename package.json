@@ -17,6 +17,7 @@
     "devDependencies": {
         "@babel/cli": "^7.22.9",
         "@babel/core": "^7.22.9",
+        "@babel/eslint-parser": "^7.22.15",
         "@babel/preset-env": "^7.22.9",
         "@babel/register": "^7.22.5",
         "@lwc/eslint-plugin-lwc": "^1.6.3",
@@ -43,7 +44,7 @@
         "isbinaryfile": "^5.0.0",
         "lint-staged": "11.2.6",
         "prettier": "3.0.0",
-        "salesforce-pageobjects": "^4.0.3",
+        "salesforce-pageobjects": "^5.0.0",
         "wdio-chromedriver-service": "^8.1.1",
         "wdio-utam-service": "^2.1.1"
     },

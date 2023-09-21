@@ -64,12 +64,12 @@ describe('Record creation tests', () => {
         const recordLayout = await recordForm.getRecordLayout();
 
         console.log("Enter 'Close date' as 01/01/2020");
-        const closeDateItem = await recordLayout.getItem(1, 1, 2);
+        const closeDateItem = await recordLayout.getItem(1, 2, 2);
         const datePicker = await closeDateItem.getDatepicker();
         await datePicker.setDateText('01/01/2020');
 
         console.log("Pick first option in a 'Stage' combobox");
-        const stageItem = await recordLayout.getItem(1, 2, 2);
+        const stageItem = await recordLayout.getItem(1, 4, 2);
         const stageCombobox = await (await stageItem.getStageNamePicklist()).getBaseCombobox();
         await utam.waitFor(
             async () => {
@@ -81,13 +81,13 @@ describe('Record creation tests', () => {
         );
 
         console.log('Find and pick first account, link it to the opportunity');
-        const accountLookupItem = await recordLayout.getItem(1, 3, 1);
+        const accountLookupItem = await recordLayout.getItem(1, 4, 1);
         const accountLookup = await (await accountLookupItem.getLookup()).getBaseCombobox();
         await accountLookup.expand();
         await accountLookup.pickItem(1);
 
         console.log('Enter opportunity name');
-        const nameItem = await recordLayout.getItem(1, 2, 1);
+        const nameItem = await recordLayout.getItem(1, 3, 1);
         const nameInput = await nameItem.getTextInput();
         await nameInput.setText('Opportunity name');
 

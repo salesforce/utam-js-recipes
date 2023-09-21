@@ -46,7 +46,7 @@
         "prettier": "3.0.0",
         "salesforce-pageobjects": "^5.0.0",
         "wdio-chromedriver-service": "^8.1.1",
-        "wdio-utam-service": "^2.1.1"
+        "wdio-utam-service": "^2.2.0"
     },
     "volta": {
         "node": "18.16.0",

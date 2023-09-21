@@ -120,6 +120,15 @@
     json5 "^2.2.2"
     semver "^6.3.0"
 
+"@babel/eslint-parser@^7.22.15":
+  version "7.22.15"
+  resolved "https://registry.yarnpkg.com/@babel/eslint-parser/-/eslint-parser-7.22.15.tgz#263f059c476e29ca4972481a17b8b660cb025a34"
+  integrity sha512-yc8OOBIQk1EcRrpizuARSQS0TWAcOMpEJ1aafhNznaeYkeL+OhqnDObGFylB8ka8VFF/sZc+S4RzHyO+3LjQxg==
+  dependencies:
+    "@nicolo-ribaudo/eslint-scope-5-internals" "5.1.1-v1"
+    eslint-visitor-keys "^2.1.0"
+    semver "^6.3.1"
+
 "@babel/eslint-parser@~7.19.1":
   version "7.19.1"
   resolved "https://registry.yarnpkg.com/@babel/eslint-parser/-/eslint-parser-7.19.1.tgz#4f68f6b0825489e00a24b41b6a1ae35414ecd2f4"
@@ -6928,10 +6937,10 @@ safe-regex-test@^1.0.0:
   resolved "https://registry.yarnpkg.com/safer-buffer/-/safer-buffer-2.1.2.tgz#44fa161b0187b9549dd84bb91802f9bd8385cd6a"
   integrity sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==
 
-salesforce-pageobjects@^4.0.3:
-  version "4.0.3"
-  resolved "https://registry.yarnpkg.com/salesforce-pageobjects/-/salesforce-pageobjects-4.0.3.tgz#de7522e591193cb1fb55c525cdd0c87d035a636f"
-  integrity sha512-48XR9QgGZm0jC6lU7yjT/NSvn2Va/zcaPpuT+j6iAInmaKSkyV0BovaVe2wuYELAYWuDhgjBR8Kznre1Qczvmw==
+salesforce-pageobjects@^5.0.0:
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/salesforce-pageobjects/-/salesforce-pageobjects-5.0.0.tgz#0186ffc8d180ef6f90c036219c51ed633b491d39"
+  integrity sha512-S0qyJIb+sNboS4XF4vSGi3Z2tl4THQ/BZX+RUF+Rb8KPDokU/esMYjCuJRpX4U0hef7zMLZAFq8YoYwro5hgzQ==
 
 saxes@^5.0.1:
   version "5.0.1"

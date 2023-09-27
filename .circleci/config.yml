@@ -25,7 +25,7 @@ executors:
     node:
         working_directory: ~/utam-js-recipes
         docker:
-            - image: circleci/node:16
+            - image: circleci/node:18
 
 # Custom commands definition
 commands:

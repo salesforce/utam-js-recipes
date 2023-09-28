@@ -1,0 +1,74 @@
+{
+    "beforeLoad": [
+        {
+            "apply": "waitFor",
+            "args": [
+                {
+                    "type": "function",
+                    "predicate": [
+                        {
+                            "element": "root",
+                            "apply": "containsElement",
+                            "args": [
+                                {
+                                    "type": "locator",
+                                    "value": {
+                                        "css": "button"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "elements" : [
+        {
+            "name": "profileBtn",
+            "type": ["clickable"],
+            "selector": {
+                "css": "button"
+            }
+        }
+    ],
+    "methods" : [
+        {
+            "description": {
+                "text": [
+                    "Click view profile button and wait for profile card to appear"
+                ],
+                "return": "none"
+            },
+            "name": "viewProfile",
+            "compose": [
+                {
+                    "element": "profileBtn",
+                    "apply": "click"
+                },
+                {
+                    "apply": "waitFor",
+                    "args": [
+                        {
+                            "type": "function",
+                            "predicate": [
+                                {
+                                    "element": "document",
+                                    "apply": "containsElement",
+                                    "args": [
+                                        {
+                                            "type": "locator",
+                                            "value": {
+                                                "css": ".oneUserProfileCard"
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

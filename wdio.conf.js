@@ -21,6 +21,7 @@ exports.config = {
         {
             maxInstances: 1,
             browserName: 'chrome',
+            browserVersion: '116.0.5845.96',
         },
     ],
     logLevel: 'debug',
@@ -31,7 +32,6 @@ exports.config = {
     connectionRetryCount: 3,
     automationProtocol: 'webdriver',
     services: [
-        'chromedriver',
         [
             UtamWdioService,
             {

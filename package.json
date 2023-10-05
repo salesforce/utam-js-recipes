@@ -15,7 +15,7 @@
         "prepare": "husky install"
     },
     "devDependencies": {
-        "@babel/cli": "^7.22.9",
+        "@babel/cli": "^7.23.0",
         "@babel/core": "^7.23.0",
         "@babel/eslint-parser": "^7.22.15",
         "@babel/preset-env": "^7.22.9",

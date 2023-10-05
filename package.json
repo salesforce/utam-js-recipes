@@ -18,7 +18,7 @@
         "@babel/cli": "^7.22.9",
         "@babel/core": "^7.23.0",
         "@babel/eslint-parser": "^7.22.15",
-        "@babel/preset-env": "^7.22.9",
+        "@babel/preset-env": "^7.22.20",
         "@babel/register": "^7.22.5",
         "@lwc/eslint-plugin-lwc": "^1.6.3",
         "@salesforce/eslint-config-lwc": "^3.5.2",

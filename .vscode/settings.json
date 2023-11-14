@@ -4,8 +4,10 @@
     },
     "json.schemas": [
         {
-            "fileMatch": ["*.utam.json"],
-            "url": "https://utam.dev/schemas/v1/utam.json"
+            "fileMatch": [
+                "*.utam.json"
+            ],
+            "url": "https://json.schemastore.org/utam-page-object.json"
         }
     ]
 }

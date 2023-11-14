@@ -11,9 +11,19 @@ updates:
           # Base TS image (used for tsserver) must be update manually
           # when updating the default node.js runtime
           - dependency-name: '@tsconfig/*'
-          # TODO: remove this line once UTAM has been updated to latest version of wdio
-          - dependency-name: '@wdio/*'
       open-pull-requests-limit: 10
+      groups:
+          babel:
+              patterns:
+                  - "@babel/*"
+          utam:
+              patterns:
+                  - "@utam/*"
+                  - "utam"
+                  - "wdio-utam-service"
+          webdriverio:
+              patterns:
+                  - "@wdio/*"
 
     - package-ecosystem: 'github-actions'
       directory: '/'

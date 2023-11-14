@@ -24,7 +24,7 @@
         "@salesforce/eslint-config-lwc": "^3.5.2",
         "@salesforce/eslint-plugin-lightning": "^1.0.0",
         "@salesforce/sfdx-lwc-jest": "^3.0.1",
-        "@tsconfig/node16": "^1.0.4",
+        "@tsconfig/node18": "^18.2.2",
         "@types/jasmine": "5.1.2",
         "@wdio/appium-service": "^8.23.0",
         "@wdio/cli": "^8.23.0",

@@ -3685,10 +3685,10 @@ entities@^4.4.0:
   resolved "https://registry.yarnpkg.com/entities/-/entities-4.5.0.tgz#5d268ea5e7113ec74c4d033b79ea5a35a488fb48"
   integrity sha512-V0hjH4dGPh9Ao5p0MoRY6BVqtwCjhz6vI5LT8AJ55H+4g9/4vbHx1I54fS0XuclLhDHArPQCiMjDxjaL8fPxhw==
 
-envfile@^6.18.0:
-  version "6.18.0"
-  resolved "https://registry.yarnpkg.com/envfile/-/envfile-6.18.0.tgz#bcb6275af19ba5c961c70c3f3b5c8baf568bdbf6"
-  integrity sha512-IsYv64dtlNXTm4huvCBpbXsdZQurYUju9WoYCkSj+SDYpO3v4/dq346QsCnNZ3JcnWw0G3E6+saVkVtmPw98Gg==
+envfile@^6.19.0:
+  version "6.19.0"
+  resolved "https://registry.yarnpkg.com/envfile/-/envfile-6.19.0.tgz#1220b3b3a80cd072b17947c607d9aafa6a9d0beb"
+  integrity sha512-JL6ypQVcNvtWv9Uenlst4cJLHPqRaLY0acOwPZoquLPLOlQpq/yoEQlBcnEubsXwiy/rw9dPnHEZqOUJp6h+Zg==
 
 error-ex@^1.2.0, error-ex@^1.3.1, error-ex@^1.3.2:
   version "1.3.2"

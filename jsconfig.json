@@ -1,5 +1,8 @@
 {
-    "extends": "@tsconfig/node18/tsconfig.json",
+    "extends": [
+        "@tsconfig/node18/tsconfig.json",
+        "@tsconfig/strictest"
+    ],
     "include": [
         "force-app/test/**/*"
     ],
@@ -10,8 +13,6 @@
     ],
     "compilerOptions": {
         "noEmit": true,
-        "checkJs": true,
-        "strict": true,
         "types": [
             "node",
             "@wdio/globals/types",

@@ -1645,13 +1645,13 @@
   resolved "https://registry.yarnpkg.com/@lwc/errors/-/errors-3.2.0.tgz#e7091ded8e8b330af4404053f1fb5521e6812dbd"
   integrity sha512-dB4HvAB0oqIZZ+m5SJLGuvlUGko8WAoshd925GLsFaSGGiJsIOFgV9efYTft0BNLh1vLj0+xNol+9x91Rcyuvg==
 
-"@lwc/eslint-plugin-lwc@^1.6.3":
-  version "1.6.3"
-  resolved "https://registry.yarnpkg.com/@lwc/eslint-plugin-lwc/-/eslint-plugin-lwc-1.6.3.tgz#d7cfe614189d05c58389c334fa4a727b588b3270"
-  integrity sha512-CpZDkdxdbw8s+qyTib4keFN9lPlMO6UFSVtVem44xB2k+YvGGc1r4E3ihnkbutcuMqLws3gNGCEpUeRUqX28Ig==
+"@lwc/eslint-plugin-lwc@^1.6.4":
+  version "1.6.4"
+  resolved "https://registry.yarnpkg.com/@lwc/eslint-plugin-lwc/-/eslint-plugin-lwc-1.6.4.tgz#f49fd14a7645deaebe04e6ff304189702f27e851"
+  integrity sha512-zxHwSzMKpFfsgNjC6qEUMUfVleB103NhyXnKE/3xVskef2bAG+QgfsUzzf3Tk4tLrGZPnX4SavPsfcFW30NJzA==
   dependencies:
     globals "^13.20.0"
-    minimatch "^6.2.0"
+    minimatch "^9.0.2"
 
 "@lwc/jest-preset@14.1.0":
   version "14.1.0"
@@ -5959,14 +5959,7 @@ minimatch@^5.0.1, minimatch@^5.1.0:
   dependencies:
     brace-expansion "^2.0.1"
 
-minimatch@^6.2.0:
-  version "6.2.0"
-  resolved "https://registry.yarnpkg.com/minimatch/-/minimatch-6.2.0.tgz#2b70fd13294178c69c04dfc05aebdb97a4e79e42"
-  integrity sha512-sauLxniAmvnhhRjFwPNnJKaPFYyddAgbYdeUpHULtCT/GhzdCx/MDNy+Y40lBxTQUrMzDE8e0S43Z5uqfO0REg==
-  dependencies:
-    brace-expansion "^2.0.1"
-
-minimatch@^9.0.0, minimatch@^9.0.1:
+minimatch@^9.0.0, minimatch@^9.0.1, minimatch@^9.0.2:
   version "9.0.3"
   resolved "https://registry.yarnpkg.com/minimatch/-/minimatch-9.0.3.tgz#a6e00c3de44c3a542bfaae70abfc22420a6da825"
   integrity sha512-RHiac9mvaRw0x3AYRgDC1CxAP7HTcNrrECeA8YYJeWnpo+2Q5CegtZjaotWTWxDG3UeGA1coE05iH1mPjT/2mg==

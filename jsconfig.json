@@ -1,5 +1,8 @@
 {
-    "extends": "@tsconfig/node16/tsconfig.json",
+    "extends": [
+        "@tsconfig/node18/tsconfig.json",
+        "@tsconfig/strictest"
+    ],
     "include": [
         "force-app/test/**/*"
     ],
@@ -10,12 +13,11 @@
     ],
     "compilerOptions": {
         "noEmit": true,
-        "checkJs": true,
-        "strict": true,
-        "paths": {
-            "salesforce-pageobjects/*": [
-                "./node_modules/salesforce-pageobjects/dist/*"
-            ]
-        }
+        "types": [
+            "node",
+            "@wdio/globals/types",
+            "@wdio/jasmine-framework",
+            "wdio-utam-service"
+        ]
     }
 }

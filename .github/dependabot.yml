@@ -15,15 +15,15 @@ updates:
       groups:
           babel:
               patterns:
-                  - "@babel/*"
+                  - '@babel/*'
           utam:
               patterns:
-                  - "@utam/*"
-                  - "utam"
-                  - "wdio-utam-service"
+                  - '@utam/*'
+                  - 'utam'
+                  - 'wdio-utam-service'
           webdriverio:
               patterns:
-                  - "@wdio/*"
+                  - '@wdio/*'
 
     - package-ecosystem: 'github-actions'
       directory: '/'

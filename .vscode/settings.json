@@ -4,9 +4,7 @@
     },
     "json.schemas": [
         {
-            "fileMatch": [
-                "*.utam.json"
-            ],
+            "fileMatch": ["*.utam.json"],
             "url": "https://json.schemastore.org/utam-page-object.json"
         }
     ]

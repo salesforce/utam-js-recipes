@@ -41,7 +41,7 @@
         "eslint-plugin-wdio": "^8.20.0",
         "husky": "^8.0.3",
         "isbinaryfile": "^5.0.0",
-        "lint-staged": "11.2.6",
+        "lint-staged": "15.1.0",
         "prettier": "3.0.3",
         "salesforce-pageobjects": "^5.0.1",
         "wdio-utam-service": "^2.2.0"

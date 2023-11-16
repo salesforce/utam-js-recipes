@@ -1645,13 +1645,13 @@
   resolved "https://registry.yarnpkg.com/@lwc/errors/-/errors-3.2.0.tgz#e7091ded8e8b330af4404053f1fb5521e6812dbd"
   integrity sha512-dB4HvAB0oqIZZ+m5SJLGuvlUGko8WAoshd925GLsFaSGGiJsIOFgV9efYTft0BNLh1vLj0+xNol+9x91Rcyuvg==
 
-"@lwc/eslint-plugin-lwc@^1.6.4":
-  version "1.6.4"
-  resolved "https://registry.yarnpkg.com/@lwc/eslint-plugin-lwc/-/eslint-plugin-lwc-1.6.4.tgz#f49fd14a7645deaebe04e6ff304189702f27e851"
-  integrity sha512-zxHwSzMKpFfsgNjC6qEUMUfVleB103NhyXnKE/3xVskef2bAG+QgfsUzzf3Tk4tLrGZPnX4SavPsfcFW30NJzA==
+"@lwc/eslint-plugin-lwc@^1.7.0":
+  version "1.7.0"
+  resolved "https://registry.yarnpkg.com/@lwc/eslint-plugin-lwc/-/eslint-plugin-lwc-1.7.0.tgz#2d440800dede6fe12acb3f486dce95e34dd55b9d"
+  integrity sha512-nmyoIFAbUFR5lUEvmHdEqgIqbHquUHjiLBKmrGzocFOu8PKI4jMgZdjI53Wrcn2ddLwBUwLZyEdkcvms3ni00A==
   dependencies:
-    globals "^13.20.0"
-    minimatch "^9.0.2"
+    globals "^13.23.0"
+    minimatch "^9.0.3"
 
 "@lwc/jest-preset@14.1.0":
   version "14.1.0"
@@ -4394,10 +4394,10 @@ globals@^11.1.0:
   resolved "https://registry.yarnpkg.com/globals/-/globals-11.12.0.tgz#ab8795338868a0babd8525758018c2a7eb95c42e"
   integrity sha512-WOBp/EEGUiIsJSp7wcv/y6MO+lV9UoncWqxuFfm8eBwzWNgyfBd6Gz+IeKQ9jCmyhoH99g15M3T+QaVHFjizVA==
 
-globals@^13.19.0, globals@^13.20.0:
-  version "13.20.0"
-  resolved "https://registry.yarnpkg.com/globals/-/globals-13.20.0.tgz#ea276a1e508ffd4f1612888f9d1bad1e2717bf82"
-  integrity sha512-Qg5QtVkCy/kv3FUSlu4ukeZDVf9ee0iXLAUYX13gbR17bnejFTzr4iS9bY7kwCf1NztRNm1t91fjOiyx4CSwPQ==
+globals@^13.19.0, globals@^13.23.0:
+  version "13.23.0"
+  resolved "https://registry.yarnpkg.com/globals/-/globals-13.23.0.tgz#ef31673c926a0976e1f61dab4dca57e0c0a8af02"
+  integrity sha512-XAmF0RjlrjY23MA51q3HltdlGxUpXPvg0GioKiD9X6HD28iMjo2dKC8Vqwm7lne4GNr78+RHTfliktR6ZH09wA==
   dependencies:
     type-fest "^0.20.2"
 
@@ -5959,7 +5959,7 @@ minimatch@^5.0.1, minimatch@^5.1.0:
   dependencies:
     brace-expansion "^2.0.1"
 
-minimatch@^9.0.0, minimatch@^9.0.1, minimatch@^9.0.2:
+minimatch@^9.0.0, minimatch@^9.0.1, minimatch@^9.0.3:
   version "9.0.3"
   resolved "https://registry.yarnpkg.com/minimatch/-/minimatch-9.0.3.tgz#a6e00c3de44c3a542bfaae70abfc22420a6da825"
   integrity sha512-RHiac9mvaRw0x3AYRgDC1CxAP7HTcNrrECeA8YYJeWnpo+2Q5CegtZjaotWTWxDG3UeGA1coE05iH1mPjT/2mg==

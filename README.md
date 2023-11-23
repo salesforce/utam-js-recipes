@@ -2,15 +2,19 @@
 
 This repository contains examples of how to test the Salesforce UI using the [UTAM][utam-doc] framework.
 
-> Note: This repository uses UTAM JavaScript. If you want to use UTAM with Java, visit the [UTAM Java recipes repository][utam-java-recipes].
+> [!NOTE]  
+> This repository uses UTAM JavaScript. If you want to use UTAM with Java, visit the [UTAM Java recipes repository][utam-java-recipes].
 
-__IMPORTANT: This repository's page objects and UI tests are compatible with the Salesforce Winter'24 release.__
+> [!NOTE]
+> These recipes are designed to work with a generic Salesforce org. If your org has customizations, you might need to modify page objects or tests locally to avoid errors.
 
-> Note: These recipes are designed to work with a generic Salesforce org. If your org has customizations, you might need to modify page objects or tests locally to avoid errors.
+> [!IMPORTANT] 
+> __This repository's page objects and UI tests are compatible with the Salesforce Winter'24 release.__
 
 ## Project structure
 
 This repository contains two npm packages. Both packages demonstrate how to set up page object authoring and compilation.
+
 
 ### 1) utam-js-recipes package (project root)
 
@@ -97,7 +101,8 @@ The `package.json` file contains a dependency for the `salesforce-pageobjects` p
 
 We use a `.env` file to contain the URL and authentication credentials for test environments that we use.
 
-> Note: don't commit your `.env` files. Those files contain sensitive credentials. The repository is set up so that we don't track those files by default.
+> [!NOTE]
+> Do not commit your `.env` files. Those files contain sensitive credentials. The repository is set up so that we don't track those files by default.
 
 Create a `.env` file by executing:
 
@@ -139,7 +144,8 @@ const testEnvironment = new TestEnvironment(TEST_ENVIRONMENT_PREFIX);
 
 The environment name must be all uppercase in the `.env` file but the name is case insensitive in the JavaScript code. The environment name of `sandbox` in the test code matches the uppercase `SANDBOX` name in the `.env` file. A camel case environment name of `sandboxOrg` in the test code would match an uppercase `SANDBOX_ORG` name in the `.env` file.
 
-> Note: Add as many test environments as needed in your `.env` file. Just duplicate the variables and adjust the prefix and the values.
+> [!NOTE]
+> Add as many test environments as needed in your `.env` file. Just duplicate the variables and adjust the prefix and the values.
 
 Alternatively, if you don't want to configure a `.env` file, you can prefix the test command with environment variables:
 
@@ -193,15 +199,16 @@ Follow the steps in the [Quick Start: Lightning Web Components](https://trailhea
     $ sfdx force:org:create -s -f config/project-scratch-def.json -a utam-js-recipes
     ```
 
-> Note: If this step throws an error `ERROR running force:org:create:  You do not have access to the [ScratchOrgInfo] object`, you must [**enable Dev Hub**][enable-dev-hub].
+> [!NOTE]
+> If this step throws an error `ERROR running force:org:create:  You do not have access to the [ScratchOrgInfo] object`, you must [**enable Dev Hub**][enable-dev-hub].
 > To enable **Dev Hub**:
-    1. Log in to the org you authenticated against during step 1 in a web browser.
-    2. Click on the Setup icon in the upper right corner.
-    3. Click Setup.
-    4. Search for `dev hub` using the quick find search box on the left pane.
-    5. Click on the `Dev Hub` item under `Development`.
-    6. Click on the `Enable Dev Hub` toggle.
-    7. Create a scratch org using the `sfdx force:org:create` command mentioned previously
+>    1. Log in to the org you authenticated against during step 1 in a web browser.
+>    2. Click on the Setup icon in the upper right corner.
+>    3. Click Setup.
+>    4. Search for `dev hub` using the quick find search box on the left pane.
+>    5. Click on the `Dev Hub` item under `Development`.
+>    6. Click on the `Enable Dev Hub` toggle.
+>    7. Create a scratch org using the `sfdx force:org:create` command mentioned previously
 
 3. Push the app to your scratch org:
 
@@ -215,7 +222,8 @@ Follow the steps in the [Quick Start: Lightning Web Components](https://trailhea
     $ sfdx force:user:permset:assign -n utam
     ```
 
-> Note: if this step throws an error `Permission set not found in target org`, run `sfdx plugins:install user` and repeat from step 3
+> [!NOTE]
+> If this step throws an error `Permission set not found in target org`, run `sfdx plugins:install user` and repeat from step 3
 
 5. Open the scratch org:
 
@@ -255,8 +263,8 @@ To run all tests related to records, run:
 ```sh
 $ yarn test --spec force-app/test/record-*.spec.js
 ```
-
-> Note: CRUD tests will modify real records in the org so only sandbox or development-specific orgs should be used.
+> [!NOTE]
+> CRUD tests will modify real records in the org so only sandbox or development-specific orgs should be used.
 
 ### Run the local app in a scratch org test
 

@@ -26,7 +26,7 @@
         "@salesforce/sfdx-lwc-jest": "^3.0.1",
         "@tsconfig/node18": "^18.2.2",
         "@tsconfig/strictest": "^2.0.2",
-        "@types/jasmine": "5.1.2",
+        "@types/jasmine": "5.1.4",
         "@wdio/appium-service": "^8.23.0",
         "@wdio/cli": "^8.23.0",
         "@wdio/jasmine-framework": "^8.23.0",

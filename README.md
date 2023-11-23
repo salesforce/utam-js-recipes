@@ -31,7 +31,7 @@ Here's an outline of the directory structure and few of the important configurat
 └── wdio.conf.js
 ```
 
-The repo has a [hello](https://github.com/salesforce/utam-recipes-sfdx/tree/main/force-app/main/default/lwc/hello) Lightning web component. The JSON page object is in a `__utam__` folder beside the component source.
+The repo has a [hello](./force-app/main/default/lwc/hello) Lightning web component. The JSON page object is in a `__utam__` folder beside the component source.
 
 ```txt
 ├── lwc
@@ -315,4 +315,4 @@ For iOS: yarn test wdio.conf.xx.ios.js (wdio.conf.sapp.ios.js is for test agains
 For Android: yarn test wdio.conf.xx.android.js (wdio.conf.sapp.android.js is for test against Salesforce App, and wdio.conf.mpcc.android.js is for test against Community Playground App)
 - For a test on Android, make sure to start an emulator before the test run. Otherwise, you will get an error like this: "Error: Failed to create session.
 An unknown server-side error occurred while processing the command. Original error: Could not find a connected Android device in 20190ms.".
-- Install the appropriate version of chromedriver based on the instructions on this [site](https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/web/chromedriver.md).
+- Install the appropriate version of chromedriver based on the instructions on this [site](https://github.com/appium/appium/tree/master#drivers).

@@ -23,7 +23,7 @@
         "@lwc/eslint-plugin-lwc": "^1.6.4",
         "@salesforce/eslint-config-lwc": "^3.5.2",
         "@salesforce/eslint-plugin-lightning": "^1.0.0",
-        "@salesforce/sfdx-lwc-jest": "^3.0.1",
+        "@salesforce/sfdx-lwc-jest": "^3.1.0",
         "@tsconfig/node18": "^18.2.2",
         "@tsconfig/strictest": "^2.0.2",
         "@types/jasmine": "5.1.4",

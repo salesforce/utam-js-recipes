@@ -1796,10 +1796,10 @@
   dependencies:
     "@types/istanbul-lib-report" "*"
 
-"@types/jasmine@5.1.2":
-  version "5.1.2"
-  resolved "https://registry.yarnpkg.com/@types/jasmine/-/jasmine-5.1.2.tgz#bc57b64871f82561ab48c1f4fbf7486c2d2f2aed"
-  integrity sha512-GJzYZWAr7aZuVsQwo77ErgdnqiXiz1lwsXXKgsJEwMlAxWQqjpiTGh0JOpLGXSlIFvIAFbgZTHs0u+jBzh/GFg==
+"@types/jasmine@5.1.4":
+  version "5.1.4"
+  resolved "https://registry.yarnpkg.com/@types/jasmine/-/jasmine-5.1.4.tgz#0de3f6ca753e10d1600ce1864ae42cfd47cf9924"
+  integrity sha512-px7OMFO/ncXxixDe1zR13V1iycqWae0MxTaw62RpFlksUi5QuNWgQJFkTQjIOvrmutJbI7Fp2Y2N1F6D2R4G6w==
 
 "@types/jest@^29.5.8":
   version "29.5.10"
@@ -3345,7 +3345,7 @@ entities@^4.4.0:
   resolved "https://registry.yarnpkg.com/entities/-/entities-4.5.0.tgz#5d268ea5e7113ec74c4d033b79ea5a35a488fb48"
   integrity sha512-V0hjH4dGPh9Ao5p0MoRY6BVqtwCjhz6vI5LT8AJ55H+4g9/4vbHx1I54fS0XuclLhDHArPQCiMjDxjaL8fPxhw==
 
-envfile@^6.20.0:
+envfile@^6.22.0:
   version "6.22.0"
   resolved "https://registry.yarnpkg.com/envfile/-/envfile-6.22.0.tgz#c6f3c789a2ec522ef377e44ed9136d1e069ccab3"
   integrity sha512-G9vwmk9O+eJzHh6JEfva0aTmyKtbolqGx9l/KnEVslsR3hl5XZ+g+wgY/j8gTJoikgP5upt6wxXM+E19o36iUg==
@@ -3555,7 +3555,7 @@ eslint-visitor-keys@^3.3.0, eslint-visitor-keys@^3.4.1, eslint-visitor-keys@^3.4
   resolved "https://registry.yarnpkg.com/eslint-visitor-keys/-/eslint-visitor-keys-3.4.3.tgz#0cd72fe8550e3c2eae156a96a4dddcd1c8ac5800"
   integrity sha512-wpc+LXeiyiisxPlEkUzU6svyS1frIO3Mgxj1fdy7Pm8Ygzguax2N3Fa/D/ag1WqbOprdI+uY6wMUl8/a2G+iag==
 
-eslint@^8.53.0:
+eslint@^8.54.0:
   version "8.54.0"
   resolved "https://registry.yarnpkg.com/eslint/-/eslint-8.54.0.tgz#588e0dd4388af91a2e8fa37ea64924074c783537"
   integrity sha512-NY0DfAkM8BIZDVl6PgSa1ttZbx3xHgJzSNJKYcQglem6CppHyMhRIQkBVSSMaSRnLhig3jsDbEzOjwCVt4AmmA==
@@ -6547,7 +6547,7 @@ safe-regex-test@^1.0.0:
   resolved "https://registry.yarnpkg.com/safer-buffer/-/safer-buffer-2.1.2.tgz#44fa161b0187b9549dd84bb91802f9bd8385cd6a"
   integrity sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==
 
-salesforce-pageobjects@^5.0.1:
+salesforce-pageobjects@^5.0.2:
   version "5.0.2"
   resolved "https://registry.yarnpkg.com/salesforce-pageobjects/-/salesforce-pageobjects-5.0.2.tgz#8fd9d23ba8bc74e989ff881f920c5ddf6f08dcb1"
   integrity sha512-s6rcMB5R0Uuaq9BCrnVYA8Ner1S3Z0TiS3R/nsTDMrj8MFIX/QQ1BCcdXGZ3KIx7oyLy20NOpgtTfZzZMr6WJQ==

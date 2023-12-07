@@ -3519,10 +3519,10 @@ eslint-plugin-jest@^27.6.0:
   dependencies:
     "@typescript-eslint/utils" "^5.10.0"
 
-eslint-plugin-wdio@^8.20.0:
-  version "8.20.0"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-wdio/-/eslint-plugin-wdio-8.20.0.tgz#05fc5db920e784efdb2fcd541a8c035109e815c9"
-  integrity sha512-wETczlZzgnx1WaP7qVRl7WoLByARGpFg96UiiHKu5IqNDpUGK5l6qAA9wd0Lqqu9tG7U3mToiDN3pGLVaUl+rQ==
+eslint-plugin-wdio@^8.24.12:
+  version "8.24.12"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-wdio/-/eslint-plugin-wdio-8.24.12.tgz#ef35dad0230dd4bf13686abecc54a7f909440139"
+  integrity sha512-OmzGteXFOQnJDdkTNnTfksaVa18WlFCyeLjZXHvDpkbomLWAg9wc296Pr0wnTCagqNj8qfEHpy+N2XVew5VCMA==
 
 eslint-restricted-globals@~0.2.0:
   version "0.2.0"

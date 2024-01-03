@@ -43,3 +43,12 @@ utam-generator/src/**
 
 # Generated sarif reports
 **/utam-lint.sarif
+
+# yarn - If you're not using Zero-Installs: https://yarnpkg.com/features/caching#zero-installs
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions

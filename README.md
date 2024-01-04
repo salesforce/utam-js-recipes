@@ -245,7 +245,7 @@ Execute all tests at once by running:
 $ yarn test
 ```
 
-This command runs all UI tests in the repository, namely all tests in `force-app/test/crud.spec.js` and `force-app/test/sfdx-scratch-org.spec.js`.
+This command runs all UI tests in the repository, namely all tests in `force-app/test/` folder.
 
 ### Run the Web UI test
 

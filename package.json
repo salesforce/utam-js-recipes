@@ -16,10 +16,10 @@
     },
     "devDependencies": {
         "@babel/cli": "^7.23.0",
-        "@babel/core": "^7.23.3",
+        "@babel/core": "^7.23.7",
         "@babel/eslint-parser": "^7.23.3",
-        "@babel/preset-env": "^7.23.3",
-        "@babel/register": "^7.22.15",
+        "@babel/preset-env": "^7.23.7",
+        "@babel/register": "^7.23.7",
         "@lwc/eslint-plugin-lwc": "^1.6.4",
         "@salesforce/eslint-config-lwc": "^3.5.2",
         "@salesforce/eslint-plugin-lightning": "^1.0.0",

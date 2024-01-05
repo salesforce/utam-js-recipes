@@ -43,3 +43,7 @@ utam-generator/src/**
 
 # Generated sarif reports
 **/utam-lint.sarif
+
+# yarn
+.yarn/**
+.yarnrc.yml

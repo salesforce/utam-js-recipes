@@ -9,7 +9,7 @@ This repository contains examples of how to test the Salesforce UI using the [UT
 > These recipes are designed to work with a generic Salesforce org. If your org has customizations, you might need to modify page objects or tests locally to avoid errors.
 
 > [!IMPORTANT] 
-> __This repository's page objects and UI tests are compatible with the Salesforce Winter'24 release.__
+> __This repository's page objects and UI tests are compatible with the Salesforce Spring'24 release.__
 
 ## Project structure
 
@@ -245,7 +245,7 @@ Execute all tests at once by running:
 $ yarn test
 ```
 
-This command runs all UI tests in the repository, namely all tests in `force-app/test/crud.spec.js` and `force-app/test/sfdx-scratch-org.spec.js`.
+This command runs all UI tests in the repository, namely all tests in `force-app/test/` folder.
 
 ### Run the Web UI test
 

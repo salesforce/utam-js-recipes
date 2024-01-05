@@ -21,7 +21,7 @@ exports.config = {
         {
             maxInstances: 1,
             browserName: 'chrome',
-            browserVersion: '116.0.5845.96',
+            browserVersion: '120.0.6099.62',
         },
     ],
     logLevel: 'debug',

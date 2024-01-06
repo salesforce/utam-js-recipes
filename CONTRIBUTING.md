@@ -71,12 +71,22 @@ Once the project has been built, execute tests as indicated in the [running test
 
 The process of submitting a pull request is straightforward and generally follows the same pattern each time:
 
-1. [Fork the UTAM JS Recipes repo](#fork-the-utam-js-recipes-repo)
-2. [Create a feature branch](#create-a-feature-branch)
-3. [Make your changes](#make-your-changes)
-4. [Rebase](#rebase)
-5. [Create a pull request](#create-a-pull-request)
-6. [Update the pull request](#update-the-pull-request)
+- [Contributing to UTAM JavaScript recipes](#contributing-to-utam-javascript-recipes)
+  - [Code of Conduct](#code-of-conduct)
+  - [Requirements](#requirements)
+  - [Installation](#installation)
+    - [1) Setup your Salesforce DX environment](#1-setup-your-salesforce-dx-environment)
+    - [2) Fork the repository](#2-fork-the-repository)
+    - [3) Install dependencies](#3-install-dependencies)
+    - [4) Build the project](#4-build-the-project)
+    - [5) Run Tests](#5-run-tests)
+  - [Git Workflow](#git-workflow)
+    - [Fork the UTAM JS Recipes repo](#fork-the-utam-js-recipes-repo)
+    - [Create a feature branch](#create-a-feature-branch)
+    - [Make your changes](#make-your-changes)
+    - [Rebase](#rebase)
+    - [Create a pull request](#create-a-pull-request)
+    - [Update the pull request](#update-the-pull-request)
 
 ### Fork the UTAM JS Recipes repo
 

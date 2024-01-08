@@ -59,8 +59,7 @@ orbs:
 jobs:
     build:
         executor:
-            - name: node/default
-            - tag: '16'
+            - name: node/default-16
         steps:
             - checkout
             - node/install-packages:

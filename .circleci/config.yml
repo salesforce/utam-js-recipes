@@ -63,7 +63,7 @@ jobs:
             - tag: '16'
         steps:
             - checkout
-            - install-packages:
+            - node/install-packages:
                 check-cache: always
                 pkg-manager: yarn-berry
                 with-cache: false

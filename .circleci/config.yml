@@ -61,8 +61,13 @@ jobs:
     executor:
       name: node/default
       tag: '18.18'
+      resource_class: medium
     steps:
       - checkout
+      - node/install:
+          install-yarn: true
+          yarn-version: 4.0.2
+          node-version: '18.18'
       - node/install-packages:
           check-cache: always
           pkg-manager: yarn-berry

@@ -68,7 +68,7 @@ jobs:
             - run:
                   name: Install dependencies and build
                   command: |
-                      YARN_CACHE_FOLDER=~/.cache/yarn yarn install immutable
+                      YARN_CACHE_FOLDER=~/.cache/yarn yarn install --immutable
                       yarn build
             - run:
                   name: Check missing file headers

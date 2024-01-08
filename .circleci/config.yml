@@ -20,13 +20,6 @@ deploy_filters: &deploy_filters
 # Jobs definition
 version: 2.1
 
-# Custom executors definition
-executors:
-    node:
-        working_directory: ~/utam-js-recipes
-        docker:
-            - image: cimg/node:18.18
-
 # Custom commands definition
 commands:
     # Setup
@@ -58,31 +51,28 @@ commands:
             - attach_workspace:
                   at: ~/utam-js-recipes
 
+# Orb for yarn
+orbs:
+  node: circleci/node@5.2.0
+
 # Jobs definition
 jobs:
     build:
-        executor: node
+        executor:
+            - name: node/default
+            - tag: '16'
         steps:
-            - run:
-                command: corepack enable
             - checkout
-            - restore_yarn_cache
-            - run:
-                  name: Install dependencies and build
-                  command: |
-                      YARN_CACHE_FOLDER=~/.cache/yarn yarn install --immutable
-                      yarn build
+            - install-packages:
+                check-cache: always
+                pkg-manager: yarn-berry
+                with-cache: false
             - run:
                   name: Check missing file headers
                   command: node ./scripts/check-license-headers.js
             - run:
                   name: Check formatting
                   command: yarn prettier --check 'force-app/**/*.{js,ts,json,md}'
-            # - run:
-            #     name: Run linter
-            #     command: yarn lint
-            - save_yarn_cache
-            - save_workspace
 
 # Workflows definition
 workflows:

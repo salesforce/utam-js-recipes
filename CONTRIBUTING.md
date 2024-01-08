@@ -17,7 +17,7 @@ The UTAM JavaScript recipes project has a [Code of Conduct](./CODE_OF_CONDUCT.md
 
 -   [Salesforce CLI](https://developer.salesforce.com/tools/sfdxcli)
 -   [Node](https://nodejs.org/) >= 16
--   [Yarn](https://yarnpkg.com/) >= 1.22.5
+-   [Yarn](https://yarnpkg.com/) >= 4
 
 This project uses [Volta](https://volta.sh/) to ensure that all the contributors share the same version of `Node` and `Yarn` for development. If you are considering making frequent contributions to this project, we recommend installing Volta.
 
@@ -26,6 +26,8 @@ If you install Volta, run this command to install node and yarn:
 ```bash
 $ volta install node yarn
 ```
+
+If you're having issues with Yarn and Volta, see [Yarn's documentation on Corepack](https://yarnpkg.com/corepack#volta).
 
 ## Installation
 

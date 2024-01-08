@@ -64,10 +64,11 @@ jobs:
       resource_class: medium
     steps:
       - checkout
-      - node/install:
-          install-yarn: true
-          yarn-version: 4.0.2
-          node-version: '18.18'
+      - run:
+          name: Yarn Set Version Stable
+          command: |
+            npm install -g yarn || echo "Yarn may have already been installed."
+            yarn set version 4.0.2
       - node/install-packages:
           check-cache: always
           pkg-manager: yarn-berry

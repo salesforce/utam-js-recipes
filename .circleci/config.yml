@@ -57,22 +57,22 @@ orbs:
 
 # Jobs definition
 jobs:
-build:
-  executor:
-    name: node/default
-    tag: '18.18'
-  steps:
-    - checkout
-    - node/install-packages:
-        check-cache: always
-        pkg-manager: yarn-berry
-        with-cache: false
-    - run:
-        name: Check missing file headers
-        command: node ./scripts/check-license-headers.js
-    - run:
-        name: Check formatting
-        command: yarn prettier --check 'force-app/**/*.{js,ts,json,md}'
+  build:
+    executor:
+      name: node/default
+      tag: '18.18'
+    steps:
+      - checkout
+      - node/install-packages:
+          check-cache: always
+          pkg-manager: yarn-berry
+          with-cache: false
+      - run:
+          name: Check missing file headers
+          command: node ./scripts/check-license-headers.js
+      - run:
+          name: Check formatting
+          command: yarn prettier --check 'force-app/**/*.{js,ts,json,md}'
 
 # Workflows definition
 workflows:

@@ -57,6 +57,9 @@ jobs:
           pkg-manager: yarn-berry
           cache-path: '~/.yarn/cache'
       - run:
+          name: Build
+          command: yarn build
+      - run:
           name: Check missing file headers
           command: node ./scripts/check-license-headers.js
       - run:

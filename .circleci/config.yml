@@ -1,90 +1,74 @@
 # Shared config
 ignore_forks: &ignore_forks
-    branches:
-        # Forked pull requests have CIRCLE_BRANCH set to pull/XXX
-        ignore: /pull\/[0-9]+/
+  branches:
+    # Forked pull requests have CIRCLE_BRANCH set to pull/XXX
+    ignore: /pull\/[0-9]+/
 
 only_forks: &only_forks
-    branches:
-        # Forked pull requests have CIRCLE_BRANCH set to pull/XXX
-        only: /pull\/[0-9]+/
+  branches:
+    # Forked pull requests have CIRCLE_BRANCH set to pull/XXX
+    only: /pull\/[0-9]+/
 
 deploy_filters: &deploy_filters
-    filters:
-        branches:
-            ignore: /.*/
-        tags:
-            # Trigger on tags that begin with `v`
-            only: /^v.*/
+  filters:
+    branches:
+      ignore: /.*/
+    tags:
+      # Trigger on tags that begin with `v`
+      only: /^v.*/
 
 # Jobs definition
 version: 2.1
 
-# Custom executors definition
-executors:
-    node:
-        working_directory: ~/utam-js-recipes
-        docker:
-            - image: cimg/node:18.18
-
 # Custom commands definition
 commands:
-    # Setup
-    restore_yarn_cache:
-        description: Restore Yarn cache from previous build
-        steps:
-            - restore_cache:
-                  keys:
-                      - yarn-packages-v1-{{ checksum "yarn.lock" }}
+  save_workspace:
+    description: Save current workspace
+    steps:
+      - persist_to_workspace:
+          root: .
+          paths: .
 
-    save_yarn_cache:
-        description: Save Yarn cache for future builds
-        steps:
-            - save_cache:
-                  key: yarn-packages-v1-{{ checksum "yarn.lock" }}
-                  paths:
-                      - ~/.cache/yarn
+  load_workspace:
+    description: Load workspace
+    steps:
+      - attach_workspace:
+          at: ~/utam-js-recipes
 
-    save_workspace:
-        description: Save current workspace
-        steps:
-            - persist_to_workspace:
-                  root: .
-                  paths: .
-
-    load_workspace:
-        description: Load workspace
-        steps:
-            - attach_workspace:
-                  at: ~/utam-js-recipes
+# Orb for yarn
+orbs:
+  node: circleci/node@5.2.0
 
 # Jobs definition
 jobs:
-    build:
-        executor: node
-        steps:
-            - checkout
-            - restore_yarn_cache
-            - run:
-                  name: Install dependencies and build
-                  command: |
-                      yarn install --frozen-lockfile --cache-folder ~/.cache/yarn
-                      yarn build
-            - run:
-                  name: Check missing file headers
-                  command: node ./scripts/check-license-headers.js
-            - run:
-                  name: Check formatting
-                  command: yarn prettier --check 'force-app/**/*.{js,ts,json,md}'
-            # - run:
-            #     name: Run linter
-            #     command: yarn lint
-            - save_yarn_cache
-            - save_workspace
+  build:
+    executor:
+      name: node/default
+      tag: '18.18'
+      resource_class: medium
+    steps:
+      - checkout
+      - run:
+          name: Yarn Set Version Stable
+          command: |
+            yarn set version 4.0.2
+      - node/install-packages:
+          check-cache: always
+          pkg-manager: yarn-berry
+          cache-path: '~/.yarn/cache'
+      - run:
+          name: Build
+          command: yarn build
+      - run:
+          name: Check missing file headers
+          command: node ./scripts/check-license-headers.js
+      - run:
+          name: Check formatting
+          command: yarn prettier --check 'force-app/**/*.{js,ts,json,md}'
 
 # Workflows definition
 workflows:
-    version: 2
-    build:
-        jobs:
-            - build
+  version: 2
+  build:
+    jobs:
+      - build

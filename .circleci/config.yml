@@ -67,7 +67,6 @@ jobs:
       - run:
           name: Yarn Set Version Stable
           command: |
-            npm install -g yarn || echo "Yarn may have already been installed."
             yarn set version 4.0.2
       - node/install-packages:
           check-cache: always

@@ -1,55 +1,39 @@
 # Shared config
 ignore_forks: &ignore_forks
-    branches:
-        # Forked pull requests have CIRCLE_BRANCH set to pull/XXX
-        ignore: /pull\/[0-9]+/
+  branches:
+    # Forked pull requests have CIRCLE_BRANCH set to pull/XXX
+    ignore: /pull\/[0-9]+/
 
 only_forks: &only_forks
-    branches:
-        # Forked pull requests have CIRCLE_BRANCH set to pull/XXX
-        only: /pull\/[0-9]+/
+  branches:
+    # Forked pull requests have CIRCLE_BRANCH set to pull/XXX
+    only: /pull\/[0-9]+/
 
 deploy_filters: &deploy_filters
-    filters:
-        branches:
-            ignore: /.*/
-        tags:
-            # Trigger on tags that begin with `v`
-            only: /^v.*/
+  filters:
+    branches:
+      ignore: /.*/
+    tags:
+      # Trigger on tags that begin with `v`
+      only: /^v.*/
 
 # Jobs definition
 version: 2.1
 
 # Custom commands definition
 commands:
-    # Setup
-    restore_yarn_cache:
-        description: Restore Yarn cache from previous build
-        steps:
-            - restore_cache:
-                  keys:
-                      - yarn-packages-v1-{{ checksum "yarn.lock" }}
+  save_workspace:
+    description: Save current workspace
+    steps:
+      - persist_to_workspace:
+          root: .
+          paths: .
 
-    save_yarn_cache:
-        description: Save Yarn cache for future builds
-        steps:
-            - save_cache:
-                  key: yarn-packages-v1-{{ checksum "yarn.lock" }}
-                  paths:
-                      - ~/.cache/yarn
-
-    save_workspace:
-        description: Save current workspace
-        steps:
-            - persist_to_workspace:
-                  root: .
-                  paths: .
-
-    load_workspace:
-        description: Load workspace
-        steps:
-            - attach_workspace:
-                  at: ~/utam-js-recipes
+  load_workspace:
+    description: Load workspace
+    steps:
+      - attach_workspace:
+          at: ~/utam-js-recipes
 
 # Orb for yarn
 orbs:
@@ -71,7 +55,6 @@ jobs:
       - node/install-packages:
           check-cache: always
           pkg-manager: yarn-berry
-          with-cache: false
       - run:
           name: Check missing file headers
           command: node ./scripts/check-license-headers.js
@@ -81,7 +64,7 @@ jobs:
 
 # Workflows definition
 workflows:
-    version: 2
-    build:
-        jobs:
-            - build
+  version: 2
+  build:
+    jobs:
+      - build

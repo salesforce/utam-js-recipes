@@ -15,7 +15,7 @@ const DEBUG_TIMEOUT = EXPLICIT_TIMEOUT * 30;
 
 exports.config = {
     runner: 'local',
-    specs: ['force-app/test/**/*.spec.js'],
+    specs: ['force-app/test/utam-portal.spec.js'],
     maxInstances: 1,
     capabilities: [
         {

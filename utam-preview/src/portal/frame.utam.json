@@ -1,0 +1,16 @@
+{
+  "root": true,
+  "selector": {
+    "css": ".iframe-container"
+  },
+  "elements": [
+    {
+      "name": "iframe-window",
+      "public": true,
+      "type": "frame",
+      "selector": {
+        "css": "#iframe-window"
+      }
+    }
+  ]
+}

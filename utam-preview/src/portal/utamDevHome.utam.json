@@ -3,6 +3,12 @@
         "css": "body"
     },
     "root": true,
+    "beforeLoad": [
+        {
+            "element": "document",
+            "apply": "waitForDocumentReady"
+        }
+    ],
     "elements": [
         {
             "name": "persistentHeader",
@@ -42,6 +48,14 @@
             "public": true,
             "selector": {
                 "css": "main.content"
+            }
+        },
+        {
+            "name": "careers",
+            "public": true,
+            "type": "clickable",
+            "selector": {
+                "css": ".sf-links li:nth-child(3) a"
             }
         }
     ]

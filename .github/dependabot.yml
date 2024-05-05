@@ -1,34 +1,34 @@
 version: 2
 updates:
-    - package-ecosystem: 'npm'
-      directory: '/'
+    - package-ecosystem: "npm"
+      directory: "/"
       schedule:
-          interval: 'weekly'
-          day: 'thursday'
-          time: '09:00'
-          timezone: 'America/Los_Angeles'
+          interval: "weekly"
+          day: "thursday"
+          time: "09:00"
+          timezone: "America/Los_Angeles"
       ignore:
           # Base TS image (used for tsserver) must be update manually
           # when updating the default node.js runtime
-          - dependency-name: '@tsconfig/*'
+          - dependency-name: "@tsconfig/*"
       open-pull-requests-limit: 10
       groups:
           babel:
               patterns:
-                  - '@babel/*'
+                  - "@babel/*"
           utam:
               patterns:
-                  - '@utam/*'
-                  - 'utam'
-                  - 'wdio-utam-service'
+                  - "@utam/*"
+                  - "utam"
+                  - "wdio-utam-service"
           webdriverio:
               patterns:
-                  - '@wdio/*'
+                  - "@wdio/*"
 
-    - package-ecosystem: 'github-actions'
-      directory: '/'
+    - package-ecosystem: "github-actions"
+      directory: "/"
       schedule:
-          interval: 'weekly'
-          day: 'thursday'
-          time: '09:00'
-          timezone: 'America/Los_Angeles'
+          interval: "weekly"
+          day: "thursday"
+          time: "09:00"
+          timezone: "America/Los_Angeles"

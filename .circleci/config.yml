@@ -51,7 +51,7 @@ jobs:
       - run:
           name: Yarn Set Version Stable
           command: |
-            yarn set version 4.0.2
+            yarn set version 4.5.1
       - node/install-packages:
           check-cache: always
           pkg-manager: yarn-berry

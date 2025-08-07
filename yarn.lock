@@ -9729,10 +9729,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"salesforce-pageobjects@npm:^8.0.0":
-  version: 8.0.0
-  resolution: "salesforce-pageobjects@npm:8.0.0"
-  checksum: 10c0/26702b70711b70edccc3f8bc22e6f3487a66304cb112af6f702b33608707af2e362c3deabee25e134fbaa21bbf4f65766ad6699cefe5e77a41c4da1e95535b18
+"salesforce-pageobjects@npm:^10.0.2":
+  version: 10.0.2
+  resolution: "salesforce-pageobjects@npm:10.0.2"
+  checksum: 10c0/9a6a18adab1a65f1bd215c9842b66e734bde0ba568d4793846706bd4016822567463804aa69e095dd8c673a05bf6f9870778da077fe112202e28bc8bb03ef75a
   languageName: node
   linkType: hard
 
@@ -10738,7 +10738,7 @@ __metadata:
     isbinaryfile: "npm:^5.0.0"
     lint-staged: "npm:^15.2.2"
     prettier: "npm:3.1.1"
-    salesforce-pageobjects: "npm:^8.0.0"
+    salesforce-pageobjects: "npm:^10.0.2"
     wdio-utam-service: "npm:^3.2.2"
   languageName: unknown
   linkType: soft

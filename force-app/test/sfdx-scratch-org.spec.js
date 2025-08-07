@@ -8,10 +8,10 @@
 // to run:
 // yarn test --spec force-app/test/sfdx-scratch-org.spec.js
 
-import Hello from '../../pageObjects/hello';
-import HomePage from '../../pageObjects/homePage';
-import WireGetObjectInfo from '../../pageObjects/wireGetObjectInfo';
-import { TestEnvironment } from './utilities/test-environment';
+import Hello from '../../pageObjects/hello.js';
+import HomePage from '../../pageObjects/homePage.js';
+import WireGetObjectInfo from '../../pageObjects/wireGetObjectInfo.js';
+import { TestEnvironment } from './utilities/test-environment.js';
 
 describe('Scratch Org Tests', () => {
     const testEnvironment = new TestEnvironment('scratchOrg');

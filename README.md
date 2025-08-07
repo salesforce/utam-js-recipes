@@ -9,7 +9,7 @@ This repository contains examples of how to test the Salesforce UI using the [UT
 > These recipes are designed to work with a generic Salesforce org. If your org has customizations, you might need to modify page objects or tests locally to avoid errors.
 
 > [!IMPORTANT] 
-> __This repository's page objects and UI tests are compatible with the Salesforce Spring'24 release.__
+> __This repository's page objects and UI tests are compatible with the Salesforce Summer'25 release.__
 
 ## Project structure
 
@@ -190,13 +190,13 @@ Follow the steps in the [Quick Start: Lightning Web Components](https://trailhea
 1. If you haven't already done so, authorize your hub org and provide it with an alias (**myhuborg** in the command below). Use the login credentials generated from your Trailhead Playground in the Prerequisites section above or your own Developer Edition org if you prefer:
 
     ```sh
-    $ sfdx auth:web:login -d -a myhuborg
+    $ sf org login web --alias myhuborg
     ```
 
 2. Create a scratch org and provide it with an alias (**utam-js-recipes** in the command below):
 
     ```sh
-    $ sfdx force:org:create -s -f config/project-scratch-def.json -a utam-js-recipes
+    $ sf org create scratch -f config/project-scratch-def.json -a utam-js-recipes -o myhuborg
     ```
 
 > [!NOTE]
@@ -213,13 +213,13 @@ Follow the steps in the [Quick Start: Lightning Web Components](https://trailhea
 3. Push the app to your scratch org:
 
     ```sh
-    $ sfdx force:source:push
+    $ sf project deploy start -o myhuborg
     ```
 
 4. Assign the **utam** permission set to the default user:
 
     ```sh
-    $ sfdx force:user:permset:assign -n utam
+    $ sf org assign permset -o myhuborg -n utam
     ```
 
 > [!NOTE]
@@ -228,13 +228,13 @@ Follow the steps in the [Quick Start: Lightning Web Components](https://trailhea
 5. Open the scratch org:
 
     ```sh
-    $ sfdx force:org:open
+    $ sf force source open -o myhuborg
     ```
 
 If you need to recreate a scratch org:
 
-- find created org `sfdx force:org:list --all`
-- delete previously created org with `sfdx force:org:delete`. It will prompt you to delete the org from the list, or specify an org alias or email `sfdx force:org:delete -u utam-js-recipes`
+- find created org `sf org list --all`
+- delete previously created org with `sfdx force:org:delete`. It will prompt you to delete the org from the list, or specify an org alias or email `sf org delete -u utam-js-recipes`
 - recreate scratch orgs (repeat steps starting from step 3)
 
 ## Running UI tests

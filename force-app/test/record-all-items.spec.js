@@ -8,9 +8,9 @@
 // to run:
 // yarn test --spec force-app/test/record-all-items.spec.js
 
-import { RecordType } from './utilities/record-type';
-import { login, openRecordModal } from './utilities/salesforce-test';
-import { TestEnvironment } from './utilities/test-environment';
+import { RecordType } from './utilities/record-type.js';
+import { login, openRecordModal } from './utilities/salesforce-test.js';
+import { TestEnvironment } from './utilities/test-environment.js';
 
 // TODO: replace with prefix of the environment from .env file
 const TEST_ENVIRONMENT_PREFIX = 'na44';

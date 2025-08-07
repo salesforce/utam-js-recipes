@@ -6,8 +6,8 @@
  */
 
 import Login from 'salesforce-pageobjects/helpers/pageObjects/login';
-import ConsoleObjectHome from 'salesforce-pageobjects/global/pageObjects/consoleObjectHome';
 import RecordActionWrapper from 'salesforce-pageobjects/global/pageObjects/recordActionWrapper';
+import ObjectHome from 'salesforce-pageobjects/lists/pageObjects/objectHome';
 
 /**
  * Helper function used in crud tests to login in STMFA environment
@@ -38,12 +38,16 @@ export async function openRecordModal(baseUrl, recordType) {
     console.log(`Navigate to an Object Home for ${recordType.name}`);
     await browser.navigateTo(recordType.getObjectHomeUrl(baseUrl));
     console.log(`Load ${recordType.name} Object Home page`);
-    const objectHome = await utam.load(ConsoleObjectHome);
-    const listView = await objectHome.getListView();
+    const objectHome = await utam.load(ObjectHome);
+    await objectHome.waitFor(async () => (await objectHome.getListViewManager()).isPresent());
+    const listViewManager = await objectHome.getListViewManager();
+    await listViewManager.waitFor(async () => (await listViewManager.getCommonListInternal()).isPresent());
+    const listView = await listViewManager.getCommonListInternal();
     const listViewHeader = await listView.getHeader();
 
     console.log("List view header: click button 'New'");
-    const actionLink = await listViewHeader.waitForAction('New');
+    const actionsContainer = await listViewHeader.getAuraActionsContainer();
+    const actionLink = await actionsContainer.getActionLink('New');
     await actionLink.click();
 
     console.log('Load Record Form Modal');

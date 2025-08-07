@@ -9,8 +9,8 @@
 // yarn test --spec force-app/test/app-navigation.spec.js
 
 import ApplicationHome from 'salesforce-pageobjects/navex/pageObjects/desktopLayoutContainer';
-import { login } from './utilities/salesforce-test';
-import { TestEnvironment } from './utilities/test-environment';
+import { login } from './utilities/salesforce-test.js';
+import { TestEnvironment } from './utilities/test-environment.js';
 
 // TODO: replace with prefix of the environment from .env file
 const TEST_ENVIRONMENT_PREFIX = 'na44';

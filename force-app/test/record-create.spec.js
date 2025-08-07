@@ -9,10 +9,11 @@
 // yarn test --spec force-app/test/record-create.spec.js
 
 import RecordHomeFlexipage2 from 'salesforce-pageobjects/global/pageObjects/recordHomeFlexipage2';
-import { RecordType } from './utilities/record-type';
-import { login, openRecordModal } from './utilities/salesforce-test';
-import { TestEnvironment } from './utilities/test-environment';
+import { RecordType } from './utilities/record-type.js';
+import { login, openRecordModal } from './utilities/salesforce-test.js';
+import { TestEnvironment } from './utilities/test-environment.js';
 import RecordActionWrapper from 'salesforce-pageobjects/global/pageObjects/recordActionWrapper';
+import InputStageName from 'salesforce-pageobjects/sfa/pageObjects/inputStageName';
 
 // TODO: replace with prefix of the environment from .env file
 const TEST_ENVIRONMENT_PREFIX = 'na44';
@@ -42,7 +43,9 @@ describe('Record creation tests', () => {
         const recordLayout = await recordForm.getRecordLayout();
 
         console.log('Access record form item by index');
-        const item = await recordLayout.getItem(1, 2, 1);
+        const section = await recordLayout.getSection(1);
+        const row = await section.getRow(2);
+        const item = await row.getItem(1);
 
         console.log('Enter account name');
         const accountName = 'Utam';
@@ -64,30 +67,40 @@ describe('Record creation tests', () => {
         const recordLayout = await recordForm.getRecordLayout();
 
         console.log("Enter 'Close date' as 01/01/2020");
-        const closeDateItem = await recordLayout.getItem(1, 2, 2);
+        const section = await recordLayout.getSection(1);
+        const dateRow = await section.getRow(2);
+        const closeDateItem = await dateRow.getItem(2);
         const datePicker = await closeDateItem.getDatepicker();
         await datePicker.setDateText('01/01/2020');
 
         console.log("Pick first option in a 'Stage' combobox");
-        const stageItem = await recordLayout.getItem(1, 4, 2);
-        const stageCombobox = await (await stageItem.getStageNamePicklist()).getBaseCombobox();
+        const stageRow = await section.getRow(4);
+        const stageItem = await stageRow.getItem(2);
+        const inputStageNameField = await stageItem.getInputField(InputStageName);
+        const stagePicklist = await inputStageNameField.getRecordPicklist();
+        const basePicklist = await stagePicklist.getBasePicklist();
+        const stageCombobox = await basePicklist.getBaseCombobox();
         await utam.waitFor(
             async () => {
-                await stageCombobox.expandForDisabledInput();
-                await stageCombobox.pickItem(2);
+                await stageCombobox?.expandForDisabledInput();
+                await stageCombobox?.pickItem(2);
                 return true;
             },
             { message: 'cant pick opportunity name' },
         );
 
         console.log('Find and pick first account, link it to the opportunity');
-        const accountLookupItem = await recordLayout.getItem(1, 4, 1);
+        const accountLookupSection = await recordLayout.getSection(1);
+        const accountLookupRow = await accountLookupSection.getRow(4);
+        const accountLookupItem = await accountLookupRow.getItem(1);
         const accountLookup = await (await accountLookupItem.getLookup()).getBaseCombobox();
         await accountLookup.expand();
         await accountLookup.pickItem(1);
 
         console.log('Enter opportunity name');
-        const nameItem = await recordLayout.getItem(1, 3, 1);
+        const nameSection = await recordLayout.getSection(1);
+        const nameRow = await nameSection.getRow(3);
+        const nameItem = await nameRow.getItem(1);
         const nameInput = await nameItem.getTextInput();
         await nameInput.setText('Opportunity name');
 

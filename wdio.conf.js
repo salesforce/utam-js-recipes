@@ -21,7 +21,16 @@ exports.config = {
         {
             maxInstances: 1,
             browserName: 'chrome',
-            browserVersion: '120.0.6099.62',
+            browserVersion: '139.0.7258.67',
+            'goog:chromeOptions': {
+                args: [
+                    '--no-sandbox',
+                    '--disable-dev-shm-usage',
+                    '--disable-gpu',
+                    '--disable-web-security',
+                    '--disable-features=VizDisplayCompositor',
+                ],
+            },
         },
     ],
     logLevel: 'debug',

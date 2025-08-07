@@ -11,9 +11,9 @@
 import RecordHomeFlexipage2 from 'salesforce-pageobjects/global/pageObjects/recordHomeFlexipage2';
 import RecordActionWrapper from 'salesforce-pageobjects/global/pageObjects/recordActionWrapper';
 import Tab2 from 'salesforce-pageobjects/flexipage/pageObjects/tab2';
-import { RecordType } from './utilities/record-type';
-import { login } from './utilities/salesforce-test';
-import { TestEnvironment } from './utilities/test-environment';
+import { RecordType } from './utilities/record-type.js';
+import { login } from './utilities/salesforce-test.js';
+import { TestEnvironment } from './utilities/test-environment.js';
 
 // TODO: replace with prefix of the environment from .env file
 const TEST_ENVIRONMENT_PREFIX = 'na44';
@@ -64,7 +64,9 @@ describe('Record update test', () => {
         const recordLayout = await recordForm.getRecordLayout();
 
         console.log('Access record form item by index');
-        const item = await recordLayout.getItem(1, 2, 1);
+        const section = await recordLayout.getSection(1);
+        const row = await section.getRow(2);
+        const item = await row.getItem(1);
 
         console.log('Enter updated account name');
         const accountName = 'Utam';
@@ -98,7 +100,9 @@ describe('Record update test', () => {
         let recordLayout = await baseRecordForm.getRecordLayout();
 
         console.log('Access Name field on Details panel');
-        let nameItem = await recordLayout.getItem(1, 2, 1);
+        let section = await recordLayout.getSection(1);
+        let row = await section.getRow(2);
+        let nameItem = await row.getItem(1);
         console.log('Remember value of the name field');
         let formattedName = await nameItem.getFormattedName();
         const nameString = await formattedName.getInnerText();
@@ -120,7 +124,9 @@ describe('Record update test', () => {
 
         const reloaded = await gotToRecordDetailsTab();
         recordLayout = await reloaded.getRecordLayout();
-        nameItem = await recordLayout.getItem(1, 2, 1);
+        section = await recordLayout.getSection(1);
+        row = await section.getRow(2);
+        nameItem = await row.getItem(1);
 
         console.log('Wait for field to be updated');
         await nameItem.waitForOutputField();

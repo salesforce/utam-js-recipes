@@ -20,6 +20,10 @@ describe('Sales app navigation tests', () => {
 
     it('Application bar navigation', async () => {
         await login(testEnvironment, testEnvironment.redirectUrl);
+        // After the login, Salesforce opens the app the user worked in last, which can be
+        // Setup without an Accounts tab - so open the Sales app before using its navigation bar
+        console.log('Open the Sales app');
+        await browser.navigateTo(`${testEnvironment.redirectUrl}lightning/app/standard__LightningSales`);
         console.log('Load Home Page');
         const homePage = await utam.load(ApplicationHome);
         const appNav = await homePage.getAppNav();

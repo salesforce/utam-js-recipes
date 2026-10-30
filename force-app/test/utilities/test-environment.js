@@ -161,7 +161,7 @@ export class TestEnvironment {
      * Returns contact ID for record update test
      */
     get contactId() {
-        if (!this.#accountId) {
+        if (!this.#contactId) {
             throw new Error(`Property ${this.#getEnvKeyName('contactId')} is not set in '.env' property file`);
         }
         return this.#contactId;
